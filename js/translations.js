@@ -1390,1130 +1390,1265 @@ const TRANSLATIONS = {
     },
     "COPA": {
   1: {
-    "question": "કમ્પ્યુટર કયા ક્રમમાં કાર્ય કરે છે?",
-    "options": ["ઇનપુટ, આઉટપુટ, પ્રોસેસ", "ઇનપુટ, પ્રોસેસ, આઉટપુટ", "પ્રોસેસ, ઇનપુટ, આઉટપુટ", "આઉટપુટ, પ્રોસેસ, ઇનપુટ"],
-    "explanation": "કમ્પ્યુટર હંમેશા ઇનપુટ લે છે, તેના પર પ્રોસેસ કરે છે અને પછી આઉટપુટ આપે છે (IPO Cycle)."
-  },
-  2: {
-    "question": "પેરેલલ પોર્ટ એક બાઇટને કેવી રીતે સ્થાનાંતરિત કરે છે?",
-    "options": ["બીટ બાય બીટ", "એક સમયે 2 બીટ", "એક સમયે 4 બીટ", "એક સમયે 8 બીટ"],
-    "explanation": "પેરેલલ પોર્ટ એકસાથે 8 બીટ (1 બાઇટ) મોકલી શકે છે, જે તેને સીરીયલ પોર્ટ કરતા ઝડપી બનાવે છે."
-  },
-  3: {
-    "question": "CPU નો આંતરિક પાવર સપ્લાય યુનિટ કયો છે?",
-    "options": ["CVT", "UPS", "SMPS", "Stabilizer"],
-    "explanation": "SMPS (Switched Mode Power Supply) એ કમ્પ્યુટરના આંતરિક ભાગોને જરૂરી પાવર પૂરો પાડે છે."
-  },
-  4: {
-    "question": "મધરબોર્ડમાં એક્સપાન્શન સ્લોટનો હેતુ શું છે?",
-    "options": ["RAM દાખલ કરવા માટે", "માઉસ કનેક્ટ કરવા માટે", "કીબોર્ડ કનેક્ટ કરવા માટે", "વધારાના પેરિફેરલ્સ ઉમેરવા માટે"],
-    "explanation": "એક્સપાન્શન સ્લોટનો ઉપયોગ ગ્રાફિક્સ કાર્ડ અથવા નેટવર્ક કાર્ડ જેવા વધારાના સાધનો જોડવા માટે થાય છે."
-  },
-  5: {
-    "question": "ઇલેક્ટ્રિકલ શોકની ગંભીરતાને કયું પરિબળ અસર કરે છે?",
-    "options": ["ખૂબ ઓછું DC વોલ્ટેજ", "કરંટ પસાર થવાનો સમયગાળો", "માઇક્રો એમ્પિયરમાં કરંટનું સ્તર", "શોક મેળવનાર વ્યક્તિ"],
-    "explanation": "શરીરમાંથી કરંટ જેટલા લાંબા સમય સુધી પસાર થાય, શોકની ગંભીરતા એટલી જ વધારે હોય છે."
-  },
-  6: {
-    "question": "પ્રાથમિક સારવારમાં ABC નું પૂરું નામ શું છે?",
-    "options": ["Anyway, Breathing, Circulation", "Airway, Breathing, Circulation", "Anyway, Blood, Circulation", "Airway, Blood, Chest"],
-    "explanation": "ABC એટલે Airway (શ્વસનમાર્ગ), Breathing (શ્વાસોશ્વાસ) અને Circulation (રુધિરાભિસરણ)."
-  },
-  7: {
-    "question": "ALU નું પૂરું નામ શું છે?",
-    "options": ["Allowed Logic Unit", "Ascii Logic Unit", "Arithmetic-Logic Unit", "Arithmetic Least Unit"],
-    "explanation": "ALU એ કમ્પ્યુટરમાં ગાણિતિક અને તાર્કિક ગણતરીઓ કરવાનું કામ કરે છે."
-  },
-  8: {
-    "question": "વીજળીનો પ્રવાહ (Current) એટલે શું?",
-    "options": ["ન્યુટ્રોનનો પ્રવાહ", "ઇલેક્ટ્રોનનો પ્રવાહ", "પ્રોટોનનો પ્રવાહ", "રેઝિસ્ટન્સનો પ્રવાહ"],
-    "explanation": "ઇલેક્ટ્રોનનો સતત પ્રવાહ એટલે જ ઇલેક્ટ્રિક કરંટ."
-  },
-  9: {
-    "question": "ડેસ્કટોપ અને પર્સનલ કોમ્પ્યુટરને બીજા કયા નામે ઓળખવામાં આવે છે?",
-    "options": ["સુપર કોમ્પ્યુટર", "ક્વોન્ટમ કોમ્પ્યુટર", "મેઈનફ્રેમ કોમ્પ્યુટર", "માઈક્રો કોમ્પ્યુટર"],
-    "explanation": "સામાન્ય વપરાશ માટેના નાના કોમ્પ્યુટર્સને માઈક્રો કોમ્પ્યુટર કહેવામાં આવે છે."
-  },
-  10: {
-    "question": "નીચેનામાંથી કયું ઓપન સોર્સ સોફ્ટવેર છે?",
-    "options": ["Open Office", "Windows 10", "MacOs", "Microsoft Office 365"],
-    "explanation": "Open Office એ મફત અને ઓપન સોર્સ સોફ્ટવેર છે, જ્યારે બાકીના પેઇડ (Paid) છે."
-  },
-  11: {
-    "question": "Linux માં ફાઈલો દૂર કરવા માટે કયો કમાન્ડ વપરાય છે?",
-    "options": ["delete", "rm", "dm", "erase"],
-    "explanation": "Linux માં 'rm' (remove) કમાન્ડ ફાઇલ ડિલીટ કરવા માટે વપરાય છે."
-  },
-  12: {
-    "question": "OSS નું પૂરું નામ શું છે?",
-    "options": ["Open System Software", "Open Source Software", "Original Source Software", "Original System Software"],
-    "explanation": "OSS એટલે Open Source Software, જેનો કોડ કોઈ પણ જોઈ કે સુધારી શકે છે."
-  },
-  13: {
-    "question": "Python માં ફાઇલનું એક્સટેન્શન શું હોય છે?",
-    "options": [".py", ".python", ".pt", ".txt"],
-    "explanation": "Python પ્રોગ્રામ ફાઇલો હંમેશા .py એક્સટેન્શનથી સેવ થાય છે."
-  },
-  14: {
-    "question": "વેબ પેજ બનાવવા માટે કઈ લેંગ્વેજ વપરાય છે?",
-    "options": ["HTML", "C++", "Java", "Python"],
-    "explanation": "HTML (HyperText Markup Language) નો ઉપયોગ વેબ પેજનું માળખું તૈયાર કરવા થાય છે."
-  },
-  15: {
-    "question": "RAM કયા પ્રકારની મેમરી છે?",
-    "options": ["કાયમી", "કામચલાઉ", "સેકન્ડરી", "ઓપ્ટિકલ"],
-    "explanation": "RAM એ કામચલાઉ (Volatile) મેમરી છે, પાવર જતાં તેનો ડેટા ભૂંસાઈ જાય છે."
-  },
-  16: {
-    "question": "કમ્પ્યુટરની સ્પીડ શેમાં માપવામાં આવે છે?",
-    "options": ["Hertz", "Meter", "Liter", "Gram"],
-    "explanation": "કમ્પ્યુટર પ્રોસેસરની સ્પીડ GHz (Gigahertz) માં માપવામાં આવે છે."
-  },
-  17: {
-    "question": "કયો ભાગ કમ્પ્યુટરનું 'મગજ' કહેવાય છે?",
-    "options": ["Monitor", "Keyboard", "CPU", "Mouse"],
-    "explanation": "CPU (Central Processing Unit) બધી પ્રક્રિયાઓ કરતું હોવાથી તેને મગજ કહેવાય છે."
-  },
-  18: {
-    "question": "નીચેનામાંથી કયું આઉટપુટ ડિવાઇસ છે?",
-    "options": ["Scanner", "Printer", "Keyboard", "Mouse"],
-    "explanation": "Printer એ માહિતીને કાગળ પર છાપીને આઉટપુટ આપે છે."
-  },
-  19: {
-    "question": "Excel માં ફોર્મ્યુલા હંમેશા કયા ચિહ્નથી શરૂ થાય છે?",
-    "options": ["+", "-", "=", "*"],
-    "explanation": "Excel માં કોઈ પણ ગણતરી કરવા માટે '=' (બરાબર) નું ચિહ્ન મૂકવું ફરજિયાત છે."
-  },
-  20: {
-    "question": "IP Address નું પૂરું નામ શું છે?",
-    "options": ["Internet Protocol", "Internal Protocol", "Internet Program", "Internal Program"],
-    "explanation": "IP એટલે Internet Protocol, જે નેટવર્ક પર રહેલા દરેક ઉપકરણની ઓળખ આપે છે."
-  },
+  "question": "કમ્પ્યુટર કયા ક્રમમાં કાર્ય કરે છે?",
+  "options": ["ઇનપુટ, આઉટપુટ, પ્રોસેસ", "ઇનપુટ, પ્રોસેસ, આઉટપુટ", "પ્રોસેસ, ઇનપુટ, આઉટપુટ", "આઉટપુટ, પ્રોસેસ, ઇનપુટ"],
+  "explanation": "કમ્પ્યુટર IPO (ઇનપુટ-પ્રોસેસ-આઉટપુટ) ચક્ર પ્રમાણે કાર્ય કરે છે."
+},
+2: {
+  "question": "પેરાલેલ પોર્ટ એક બાઇટ કેવી રીતે ટ્રાન્સફર કરે છે?",
+  "options": ["બિટ બાય બિટ", "એક વખતે 2 બિટ", "એક વખતે 4 બિટ", "એક સમયે 8 બિટ"],
+  "explanation": "પેરાલેલ પોર્ટ એકસાથે 8 બિટ (1 બાઇટ) ટ્રાન્સફર કરે છે."
+},
+3: {
+  "question": "CPU નું આંતરિક પાવર સપ્લાય યુનિટ કયું છે?",
+  "options": ["CVT", "UPS", "SMPS", "સ્ટેબિલાઇઝર"],
+  "explanation": "SMPS AC વીજળી ને DC માં રૂપાંતરિત કરે છે."
+},
+4: {
+  "question": "મધરબોર્ડમાં એક્સપેન્શન સ્લોટનો ઉપયોગ શું છે?",
+  "options": ["RAM માટે", "માઉસ માટે", "કીબોર્ડ માટે", "વધારાના ઉપકરણો માટે"],
+  "explanation": "એક્સપેન્શન સ્લોટ દ્વારા વધારાના હાર્ડવેર ઉમેરવામાં આવે છે."
+},
+5: {
+  "question": "વીજ શોકની ગંભીરતા કઈ બાબત પર આધાર રાખે છે?",
+  "options": ["ઓછું DC વોલ્ટેજ", "કરંટ પસાર થવાનો સમય", "માઇક્રો એમ્પિયર લેવલ", "વ્યક્તિ"],
+  "explanation": "શરીરમાં કરંટ કેટલો સમય પસાર થાય છે તે મહત્વનું છે."
+},
+6: {
+  "question": "ફર્સ્ટ એઇડમાં ABC નો અર્થ શું છે?",
+  "options": ["એનિવે, બ્રેધિંગ, સર્ક્યુલેશન", "એરવે, બ્રેધિંગ, સર્ક્યુલેશન", "બ્લડ, સર્ક્યુલેશન", "એરવે, બ્લડ, ચેસ્ટ"],
+  "explanation": "ABC એટલે એરવે, બ્રેધિંગ અને સર્ક્યુલેશન."
+},
+7: {
+  "question": "ALU નું સંપૂર્ણ નામ શું છે?",
+  "options": ["Allowed Logic Unit", "Ascii Logic Unit", "Arithmetic Logic Unit", "Arithmetic Least Unit"],
+  "explanation": "ALU ગણિત અને લોજિકલ કાર્ય કરે છે."
+},
+8: {
+  "question": "કરંટ શું છે?",
+  "options": ["ન્યુટ્રોનનો પ્રવાહ", "ઇલેક્ટ્રોનનો પ્રવાહ", "પ્રોટોનનો પ્રવાહ", "રેઝિસ્ટન્સનો પ્રવાહ"],
+  "explanation": "વિદ્યુત પ્રવાહ એટલે ઇલેક્ટ્રોનનો પ્રવાહ."
+},
+9: {
+  "question": "Arm lift back pressure method કયું છે?",
+  "options": ["માઉથ ટુ માઉથ", "માઉથ ટુ નોઝ", "નિલ્સન પદ્ધતિ", "શેફર પદ્ધતિ"],
+  "explanation": "નિલ્સન પદ્ધતિ પ્રથમ સારવારની પદ્ધતિ છે."
+},
+10: {
+  "question": "ડેસ્કટોપ અને પર્સનલ કમ્પ્યુટર ને શું કહે છે?",
+  "options": ["સુપર કમ્પ્યુટર", "ક્વાન્ટમ કમ્પ્યુટર", "મેઇનફ્રેમ", "માઇક્રો કમ્પ્યુટર"],
+  "explanation": "માઇક્રો કમ્પ્યુટર વ્યક્તિગત ઉપયોગ માટે હોય છે."
+},
+11: {
+  "question": "SSD નું સંપૂર્ણ નામ શું છે?",
+  "options": ["Signal State Drive", "Solid State Drive", "Single Signal Drive", "Solid Signal Drive"],
+  "explanation": "SSD એટલે Solid State Drive."
+},
+12: {
+  "question": "વીજ શોક થાય ત્યારે પ્રથમ શું કરવું જોઈએ?",
+  "options": ["ડોક્ટરને બોલાવો", "મદદ લો", "વીજ પુરવઠો બંધ કરો", "એમ્બ્યુલન્સ બોલાવો"],
+  "explanation": "સૌ પ્રથમ વીજ પુરવઠો બંધ કરવો જોઈએ."
+},
+13: {
+  "question": "Operating System નું ઉદાહરણ કયું છે?",
+  "options": ["એન્ટીવાયરસ", "વિન્ડોઝ", "MS ઓફિસ", "મેક્રોમિડિયા"],
+  "explanation": "Windows એક ઓપરેટિંગ સિસ્ટમ છે."
+},
+14: {
+  "question": "કમ્પ્યુટર માહિતી માટે Control Panelમાં કયું વિકલ્પ છે?",
+  "options": ["સિસ્ટમ અને સિક્યુરિટી", "હાર્ડવેર અને સાઉન્ડ", "પ્રોગ્રામ્સ", "એપિયરન્સ"],
+  "explanation": "સિસ્ટમ અને સિક્યુરિટી માં માહિતી મળે છે."
+},
+15: {
+  "question": "Copy-Paste માટે કઈ કી છે?",
+  "options": ["Ctrl+X અને Ctrl+V", "Ctrl+A અને Ctrl+V", "Ctrl+Z અને Ctrl+V", "Ctrl+C અને Ctrl+V"],
+  "explanation": "Ctrl+C અને Ctrl+V ઉપયોગ થાય છે."
+},
+16: {
+  "question": "PDoS નો બીજો નામ શું છે?",
+  "options": ["Brute force", "Non technical", "Phlashing", "Smurf attack"],
+  "explanation": "PDoS ને Phlashing કહે છે."
+},
+17: {
+  "question": "Windowsમાં pinned apps ક્યાં રહે છે?",
+  "options": ["Desktop", "Notification Area", "Title bar", "Taskbar"],
+  "explanation": "Pinned apps Taskbar પર રહે છે."
+},
+18: {
+  "question": "Notepad ફાઈલનું extension શું છે?",
+  "options": [".fil", ".dll", ".doc", ".txt"],
+  "explanation": ".txt એ extension છે."
+},
+19: {
+  "question": "Voice command માટે Control Panelમાં કયું tool છે?",
+  "options": ["Ease of access", "System", "Appearance", "Hardware"],
+  "explanation": "Ease of access voice માટે ઉપયોગી છે."
+},
+20: {
+  "question": "Start menu ખોલવા માટે કઈ key છે?",
+  "options": ["Windows key", "Ctrl", "Shift", "Alt"],
+  "explanation": "Windows key દબાવતા Start menu ખૂલે છે."
+},
   21: {
-    "question": "કઈ શોર્ટકટ કીનો ઉપયોગ ટેક્સ્ટ કોપી કરવા માટે થાય છે?",
-    "options": ["Ctrl + V", "Ctrl + X", "Ctrl + C", "Ctrl + A"],
-    "explanation": "Ctrl + C એ પસંદ કરેલી ટેક્સ્ટ અથવા ફાઇલને કોપી કરવા માટેનો પ્રમાણભૂત કમાન્ડ છે."
-  },
-  22: {
-    "question": "MS Word માં નવી ફાઇલ ખોલવા માટે કઈ કી વપરાય છે?",
-    "options": ["Ctrl + N", "Ctrl + O", "Ctrl + S", "Ctrl + M"],
-    "explanation": "નવી ફાઇલ (New Document) બનાવવા માટે Ctrl + N શોર્ટકટનો ઉપયોગ થાય છે."
-  },
-  23: {
-    "question": "બ્રાઉઝરમાં રિફ્રેશ (Refresh) કરવા માટે કઈ કી વપરાય છે?",
-    "options": ["F1", "F2", "F5", "F12"],
-    "explanation": "વેબ પેજને ફરીથી લોડ કરવા અથવા રિફ્રેશ કરવા માટે F5 કીનો ઉપયોગ થાય છે."
-  },
-  24: {
-    "question": "નીચેનામાંથી કયું સર્ચ એન્જિન છે?",
-    "options": ["Google", "Windows", "Chrome", "Excel"],
-    "explanation": "Google એ માહિતી શોધવા માટેનું સર્ચ એન્જિન છે, જ્યારે Chrome એ બ્રાઉઝર છે."
-  },
-  25: {
-    "question": "કમ્પ્યુટરમાં કાયમી સ્ટોરેજ માટે શું વપરાય છે?",
-    "options": ["RAM", "Cache", "Hard Disk", "Register"],
-    "explanation": "હાર્ડ ડિસ્ક (Hard Disk) ડેટાને કાયમી ધોરણે સાચવી રાખે છે."
-  },
-  26: {
-    "question": "PDF નું પૂરું નામ શું છે?",
-    "options": ["Portable Document Format", "Printable Data File", "Personal Document File", "Public Data Format"],
-    "explanation": "PDF એટલે Portable Document Format, જે દસ્તાવેજોને ગમે તે ઉપકરણ પર જોવા માટે અનુકૂળ બનાવે છે."
-  },
-  27: {
-    "question": "બાયનરી સિસ્ટમમાં કેટલા અંકો હોય છે?",
-    "options": ["2", "8", "10", "16"],
-    "explanation": "બાયનરી સિસ્ટમ માત્ર 0 અને 1 એમ બે જ અંકો પર કામ કરે છે."
-  },
-  28: {
-    "question": "Python માં પ્રિન્ટ કરવા માટે કયું વિધાન વપરાય છે?",
-    "options": ["output()", "echo()", "print()", "show()"],
-    "explanation": "Python માં કોઈપણ માહિતી સ્ક્રીન પર દર્શાવવા માટે print() ફંક્શન વપરાય છે."
-  },
-  29: {
-    "question": "કયું સોફ્ટવેર પ્રેઝન્ટેશન બનાવવા માટે વપરાય છે?",
-    "options": ["MS Word", "MS Excel", "MS PowerPoint", "MS Access"],
-    "explanation": "પાવરપોઈન્ટ (PowerPoint) નો ઉપયોગ સ્લાઈડ શો અને પ્રેઝન્ટેશન બનાવવા માટે થાય છે."
-  },
-  30: {
-    "question": "LAN નું પૂરું નામ શું છે?",
-    "options": ["Local Area Network", "Long Area Network", "Link Area Network", "List Area Network"],
-    "explanation": "LAN એટલે Local Area Network, જે નાની ભૌગોલિક જગ્યા જેમ કે ઓફિસ કે ઘરમાં વપરાય છે."
-  },
-  31: {
-    "question": "કમ્પ્યુટર માઉસ કયા પ્રકારનું ડિવાઇસ છે?",
-    "options": ["ઇનપુટ", "આઉટપુટ", "સ્ટોરેજ", "પ્રોસેસિંગ"],
-    "explanation": "માઉસ દ્વારા આપણે કમ્પ્યુટરને આદેશ આપીએ છીએ, તેથી તે ઇનપુટ ડિવાઇસ છે."
-  },
-  32: {
-    "question": "નીચેનામાંથી કઈ સોશિયલ મીડિયા સાઇટ છે?",
-    "options": ["Amazon", "Facebook", "Flipkart", "Google"],
-    "explanation": "Facebook એ લોકો સાથે જોડાવા માટેનું સોશિયલ મીડિયા પ્લેટફોર્મ છે."
-  },
-  33: {
-    "question": "URL નું પૂરું નામ શું છે?",
-    "options": ["Uniform Resource Locator", "United Resource Link", "Universal Radio List", "Unique Resource Line"],
-    "explanation": "URL એટલે Uniform Resource Locator, જે ઇન્ટરનેટ પર કોઈ પણ વેબ પેજનું સરનામું છે."
-  },
-  34: {
-    "question": "કમ્પ્યુટરની સૌથી નાની મેમરી યુનિટ કઈ છે?",
-    "options": ["Byte", "Bit", "KB", "MB"],
-    "explanation": "બીટ (Bit) એ મેમરીનો સૌથી નાનો એકમ છે (0 અથવા 1)."
-  },
-  35: {
-    "question": "Ctrl + Z નો ઉપયોગ શાના માટે થાય છે?",
-    "options": ["Copy", "Paste", "Undo", "Redo"],
-    "explanation": "છેલ્લે કરેલા ફેરફારને પાછો ખેંચવા (Undo) માટે Ctrl + Z વપરાય છે."
-  },
-  36: {
-    "question": "નીચેનામાંથી કયું ઓપરેટિંગ સિસ્ટમનું ઉદાહરણ છે?",
-    "options": ["Windows", "MS Office", "Python", "Monitor"],
-    "explanation": "Windows એ એક ઓપરેટિંગ સિસ્ટમ છે જે હાર્ડવેર અને સોફ્ટવેર વચ્ચે સંકલન કરે છે."
-  },
-  37: {
-    "question": "કીબોર્ડમાં કુલ કેટલી ફંક્શન કી (Function Keys) હોય છે?",
-    "options": ["10", "12", "15", "8"],
-    "explanation": "કીબોર્ડમાં ઉપરના ભાગમાં F1 થી F12 સુધીની કુલ 12 ફંક્શન કી હોય છે."
-  },
-  38: {
-    "question": "Wi-Fi નું પૂરું નામ શું છે?",
-    "options": ["Wireless Fidelity", "Wireless Find", "Wired Fiber", "Wireless Fiber"],
-    "explanation": "Wi-Fi એટલે Wireless Fidelity, જે વાયર વગર ઇન્ટરનેટ કનેક્શન આપે છે."
-  },
-  39: {
-    "question": "Gmail માં આવેલા પત્રો કયા ફોલ્ડરમાં જોવા મળે છે?",
-    "options": ["Sent", "Drafts", "Inbox", "Trash"],
-    "explanation": "આપણને મળતા તમામ નવા ઈમેલ Inbox ફોલ્ડરમાં જમા થાય છે."
-  },
-  40: {
-    "question": "કમ્પ્યુટરમાં સમય અને તારીખ ક્યાં દેખાય છે?",
-    "options": ["Taskbar", "My Computer", "Start Menu", "Desktop Icons"],
-    "explanation": "ટાસ્કબાર (Taskbar) ની જમણી બાજુએ નોટિફિકેશન એરિયામાં સમય અને તારીખ જોવા મળે છે."
-  },
+  "question": "પ્રિન્ટર કયા પ્રકારનું ઉપકરણ છે?",
+  "options": ["ઇનપુટ ડિવાઇસ", "આઉટપુટ ડિવાઇસ", "પ્રોસેસિંગ ડિવાઇસ", "કેલ્ક્યુલેટિંગ ડિવાઇસ"],
+  "explanation": "પ્રિન્ટર કાગળ પર માહિતી આપે છે એટલે તે આઉટપુટ ડિવાઇસ છે."
+},
+22: {
+  "question": "ઓપરેટિંગ સિસ્ટમનું મુખ્ય કાર્ય શું છે?",
+  "options": ["વર્ડ પ્રોસેસિંગ", "ગણતરી", "પ્રોસેસ અને મેમરી મેનેજમેન્ટ", "ડ્રોઇંગ"],
+  "explanation": "ઓપરેટિંગ સિસ્ટમ પ્રોસેસ અને મેમરી મેનેજ કરે છે."
+},
+23: {
+  "question": "ડિલીટ કરેલી ફાઇલ ક્યાં મળે છે?",
+  "options": ["My Computer", "Recycle Bin", "Microsoft Edge", "Google Chrome"],
+  "explanation": "ડિલીટ થયેલી ફાઇલ Recycle Bin માં રહે છે."
+},
+24: {
+  "question": "સિસ્ટમ તારીખ બદલવા માટે કયું વિકલ્પ ઉપયોગી છે?",
+  "options": ["User Account", "System", "Date and Time", "Fonts"],
+  "explanation": "Date and Time દ્વારા તારીખ બદલી શકાય છે."
+},
+25: {
+  "question": "Windows Desktop refresh કરવા માટે કઈ કી છે?",
+  "options": ["F1", "F3", "F5", "F7"],
+  "explanation": "F5 કી refresh માટે ઉપયોગ થાય છે."
+},
+26: {
+  "question": "Scanner કયા પ્રકારનું ડિવાઇસ છે?",
+  "options": ["Processing", "Internal", "Output", "Input"],
+  "explanation": "Scanner માહિતી લે છે એટલે તે Input Device છે."
+},
+27: {
+  "question": "Printer કયા પ્રકારની copy બનાવે છે?",
+  "options": ["Hard Copy", "Soft Copy", "Scan Copy", "Xerox Copy"],
+  "explanation": "Printer Hard Copy બનાવે છે."
+},
+28: {
+  "question": "Scan image નું extension શું છે?",
+  "options": [".exe", ".doc", ".bak", ".jpg"],
+  "explanation": ".jpg સામાન્ય રીતે image માટે ઉપયોગ થાય છે."
+},
+29: {
+  "question": "DVD ની સામાન્ય ક્ષમતા કેટલી હોય છે?",
+  "options": ["40 MB", "50 MB", "60 MB", "4.7 GB"],
+  "explanation": "DVD ની ક્ષમતા સામાન્ય રીતે 4.7 GB હોય છે."
+},
+30: {
+  "question": "BIOS શું છે?",
+  "options": ["Firmware", "Hardware", "Middleware", "Software"],
+  "explanation": "BIOS એક firmware છે."
+},
+31: {
+  "question": "Nero Start Smart નો ઉપયોગ શું છે?",
+  "options": ["Format HDD", "Burn CD/DVD", "Format pen drive", "Format CD/DVD"],
+  "explanation": "તે CD/DVD burn કરવા માટે છે."
+},
+32: {
+  "question": "Bluetooth કઈ ટેક્નોલોજીથી કાર્ય કરે છે?",
+  "options": ["Satellite", "Microwaves", "Telephone lines", "Radio waves"],
+  "explanation": "Bluetooth Radio waves નો ઉપયોગ કરે છે."
+},
+33: {
+  "question": "Hard drive માંથી બધો ડેટા કાઢવાની પ્રક્રિયા શું છે?",
+  "options": ["Delete", "Erase", "Formatting", "Uninstall"],
+  "explanation": "Formatting દ્વારા બધો ડેટા કાઢી શકાય છે."
+},
+34: {
+  "question": "Monitor ને CPU સાથે જોડવા માટે કયો પોર્ટ ઉપયોગ થાય છે?",
+  "options": ["PS2", "Parallel", "LAN", "VGA"],
+  "explanation": "Monitor માટે VGA port ઉપયોગ થાય છે."
+},
+35: {
+  "question": "Statistical packages કયા સાથે મળતા આવે છે?",
+  "options": ["Presentation", "Spreadsheet", "Design", "Paint"],
+  "explanation": "તે Spreadsheet packages જેવા હોય છે."
+},
+36: {
+  "question": "કયો software hardware અને OS વચ્ચે interface કરે છે?",
+  "options": ["BIOS", "DOS", "POST", "CMOS"],
+  "explanation": "BIOS hardware અને OS વચ્ચે કામ કરે છે."
+},
+37: {
+  "question": "System software અને hardware વચ્ચે bridge કયું છે?",
+  "options": ["Management", "Application", "Utility", "Processing"],
+  "explanation": "Application software bridge તરીકે કાર્ય કરે છે."
+},
+38: {
+  "question": "કયો virus application files ને અસર કરે છે?",
+  "options": ["Macro Virus", "Trojan", "Worm", "Antivirus"],
+  "explanation": "Macro virus application files ને અસર કરે છે."
+},
+39: {
+  "question": "DOS માં directory delete કરવા કયો command છે?",
+  "options": ["RD", "REMOVE", "DEL", "DELETE"],
+  "explanation": "RD command directory delete કરે છે."
+},
+40: {
+  "question": "Linux માં parent directory માટે કયો symbol છે?",
+  "options": [".", "..", "~", "*"],
+  "explanation": "'..' parent directory દર્શાવે છે."
+},
   41: {
-    "question": "કઈ શોર્ટકટ કીનો ઉપયોગ ફાઈલને કાયમી ધોરણે ડિલીટ (Permanent Delete) કરવા માટે થાય છે?",
-    "options": ["Delete", "Shift + Delete", "Ctrl + Delete", "Alt + Delete"],
-    "explanation": "Shift + Delete દબાવવાથી ફાઇલ રિસાયકલ બિનમાં ગયા વગર સીધી જ ડિલીટ થઈ જાય છે."
-  },
-  42: {
-    "question": "કમ્પ્યુટર ચાલુ કરવાની પ્રક્રિયાને શું કહેવામાં આવે છે?",
-    "options": ["Starting", "Logging", "Booting", "Loading"],
-    "explanation": "કમ્પ્યુટર સ્વીચ ઓન કરીએ ત્યારે ઓપરેટિંગ સિસ્ટમ લોડ થવાની પ્રક્રિયાને 'બૂટિંગ' કહેવાય છે."
-  },
-  43: {
-    "question": "ઈમેલમાં 'BCC' નું પૂરું નામ શું છે?",
-    "options": ["Basic Carbon Copy", "Blind Carbon Copy", "Business Carbon Copy", "Backup Carbon Copy"],
-    "explanation": "Blind Carbon Copy (BCC) નો ઉપયોગ ત્યારે થાય છે જ્યારે તમે ઈમેલની નકલ અન્યને મોકલો પણ મુખ્ય પ્રાપ્તકર્તાને ખબર ન પડે."
-  },
-  44: {
-    "question": "નીચેનામાંથી કયું એન્ટિવાયરસ સોફ્ટવેર છે?",
-    "options": ["Quick Heal", "Google Chrome", "Adobe Reader", "VLC Player"],
-    "explanation": "Quick Heal એ કમ્પ્યુટરને વાયરસથી બચાવતું એન્ટિવાયરસ સોફ્ટવેર છે."
-  },
-  45: {
-    "question": "Excel માં હરોળ (Row) અને સ્તંભ (Column) ના છેદનને શું કહેવાય છે?",
-    "options": ["Box", "Block", "Cell", "Unit"],
-    "explanation": "રો અને કોલમ જ્યાં મળે છે તે ખાનાને 'Cell' (સેલ) તરીકે ઓળખવામાં આવે છે."
-  },
-  46: {
-    "question": "મોડેમ (Modem) નું કાર્ય શું છે?",
-    "options": ["ડેટા સ્ટોર કરવો", "ડેટા પ્રિન્ટ કરવો", "એનાલોગ સિગ્નલને ડિજિટલમાં ફેરવવો", "માત્ર પાવર સપ્લાય કરવો"],
-    "explanation": "મોડેમ ટેલિફોન લાઇનના એનાલોગ સિગ્નલને કમ્પ્યુટર સમજી શકે તેવા ડિજિટલ સિગ્નલમાં ફેરવે છે."
-  },
-  47: {
-    "question": "કઈ મેમરીને 'રીડ ઓન્લી' (Read Only) મેમરી કહેવાય છે?",
-    "options": ["RAM", "ROM", "Hard Disk", "Pen Drive"],
-    "explanation": "ROM (Read Only Memory) માં રહેલી માહિતી માત્ર વાંચી શકાય છે, તેમાં સહેલાઈથી ફેરફાર કરી શકાતો નથી."
-  },
-  48: {
-    "question": "OSI મોડેલમાં કુલ કેટલા લેયર (Layers) હોય છે?",
-    "options": ["5", "6", "7", "8"],
-    "explanation": "નેટવર્કિંગના OSI મોડેલમાં કુલ 7 લેયર હોય છે."
-  },
-  49: {
-    "question": "Python માં એક લાઇનનું કોમેન્ટ લખવા માટે કયું ચિહ્ન વપરાય છે?",
-    "options": ["//", "/*", "#", "--"],
-    "explanation": "Python માં '#' ચિહ્નનો ઉપયોગ કરીને કોમેન્ટ લખવામાં આવે છે, જે પ્રોગ્રામ રન થતી વખતે વંચાતી નથી."
-  },
-  50: {
-    "question": "પાવરપોઈન્ટ પ્રેઝન્ટેશનમાં નવી સ્લાઈડ ઉમેરવા માટેની શોર્ટકટ કી કઈ છે?",
-    "options": ["Ctrl + N", "Ctrl + S", "Ctrl + M", "Ctrl + K"],
-    "explanation": "ચાલુ પ્રેઝન્ટેશનમાં નવી સ્લાઈડ ઉમેરવા માટે Ctrl + M નો ઉપયોગ થાય છે (Ctrl + N નવી ફાઇલ માટે છે)."
-  },
-  51: {
-    "question": "કીબોર્ડમાં સૌથી લાંબી કી કઈ હોય છે?",
-    "options": ["Enter", "Shift", "Spacebar", "Backspace"],
-    "explanation": "સ્પેસબાર (Spacebar) એ કીબોર્ડની સૌથી લાંબી કી છે."
-  },
-  52: {
-    "question": "USB નું પૂરું નામ શું છે?",
-    "options": ["Universal Serial Bus", "United Serial Bus", "Universal Service Bus", "Unique Serial Bus"],
-    "explanation": "USB એટલે Universal Serial Bus, જે વિવિધ ઉપકરણોને જોડવા માટે વપરાય છે."
-  },
-  53: {
-    "question": "કમ્પ્યુટર નેટવર્કમાં 'Firewall' નો મુખ્ય ઉપયોગ શું છે?",
-    "options": ["સ્પીડ વધારવી", "સુરક્ષા (Security)", "ડેટા ટ્રાન્સફર", "વિડિયો એડિટિંગ"],
-    "explanation": "ફાયરવોલ અનધિકૃત યુઝર્સ અને વાયરસથી કમ્પ્યુટર નેટવર્કનું રક્ષણ કરે છે."
-  },
-  54: {
-    "question": "કયા પ્રકારનું સોફ્ટવેર કમ્પ્યુટર હાર્ડવેરને ચલાવવા માટે જરૂરી છે?",
-    "options": ["Application Software", "System Software", "Utility Software", "Graphic Software"],
-    "explanation": "સિસ્ટમ સોફ્ટવેર (જેમ કે OS) હાર્ડવેરને કંટ્રોલ અને મેનેજ કરવાનું કામ કરે છે."
-  },
-  55: {
-    "question": "Ctrl + F નો ઉપયોગ શાના માટે થાય છે?",
-    "options": ["File save", "Find", "Font change", "Format"],
-    "explanation": "ડોક્યુમેન્ટ કે વેબ પેજમાં કોઈ ચોક્કસ શબ્દ શોધવા (Find) માટે Ctrl + F વપરાય છે."
-  },
-  56: {
-    "question": "માહિતી (Data) સંગ્રહ કરવા માટેનો સૌથી મોટો એકમ કયો છે?",
-    "options": ["MB", "GB", "TB", "KB"],
-    "explanation": "આપેલા વિકલ્પોમાં TB (Terabyte) એ સૌથી મોટો એકમ છે."
-  },
-  57: {
-    "question": "Python માં લિસ્ટ (List) બનાવવા માટે કયા કૌંસ વપરાય છે?",
-    "options": ["()", "{}", "[]", "<>"],
-    "explanation": "લિસ્ટ બનાવવા માટે હંમેશા સ્ક્વેર બ્રેકેટ [] નો ઉપયોગ થાય છે."
-  },
-  58: {
-    "question": "સૌપ્રથમ ગણતરી કરતું સાધન કયું હતું?",
-    "options": ["Calculator", "Abacus", "Laptop", "Pascaline"],
-    "explanation": "એબેકસ (Abacus) એ દુનિયાનું સૌથી પહેલું ગણતરી કરવાનું સાધન માનવામાં આવે છે."
-  },
-  59: {
-    "question": "કમ્પ્યુટરમાં 'Delete' કરેલી ફાઈલો ક્યાં જાય છે?",
-    "options": ["Inbox", "Control Panel", "Recycle Bin", "Desktop"],
-    "explanation": "ડિલીટ કરેલી ફાઈલો રિસાયકલ બિનમાં જાય છે, જ્યાંથી તેને ફરી મેળવી શકાય છે."
-  },
-  60: {
-    "question": "ઈન્ટરનેટ પર ફાઈલ મોકલવાની પ્રક્રિયાને શું કહેવાય છે?",
-    "options": ["Downloading", "Uploading", "Sending", "Storing"],
-    "explanation": "તમારા કમ્પ્યુટરથી સર્વર પર ડેટા મોકલવાની ક્રિયાને 'અપલોડિંગ' કહેવાય છે."
-  },
+  "question": "Linux માં output ને file માં redirect કરવા માટે કયો symbol ઉપયોગ થાય છે?",
+  "options": [">", ">=", "<", "<<"],
+  "explanation": "'>' દ્વારા output ને file માં મોકલવામાં આવે છે."
+},
+42: {
+  "question": "Root directory હેઠળની directories ને શું કહેવામાં આવે છે?",
+  "options": ["dir", "path", "sub directories", "tree"],
+  "explanation": "Root હેઠળની directories ને sub directories કહે છે."
+},
+43: {
+  "question": "DIR????T.TXT command માટે યોગ્ય filename કયું છે?",
+  "options": ["TIME.TXT", "TEXT.TXT", "TEMP.TXT", "TEMPT.TXT"],
+  "explanation": "Wildcard પ્રમાણે TEMPT.TXT match થાય છે."
+},
+44: {
+  "question": "Wildcard characters કયા છે?",
+  "options": ["* and /", "? and /", "* and ?", "? and @"],
+  "explanation": "* અને ? wildcard તરીકે ઉપયોગ થાય છે."
+},
+45: {
+  "question": "Linux માં range દર્શાવવા કયા symbols છે?",
+  "options": ["( )", "[ ]", "{ }", "< >"],
+  "explanation": "[ ] range દર્શાવે છે."
+},
+46: {
+  "question": "Python ભાષા કોણે વિકસાવી?",
+  "options": ["Zim Den", "Guido van Rossum", "Niene Stom", "Wick van Rossum"],
+  "explanation": "Python Guido van Rossum દ્વારા વિકસાવવામાં આવી."
+},
+47: {
+  "question": "Python માં બનાવેલ multimedia application કયું છે?",
+  "options": ["Matplotlib", "Pandas", "Tryton", "TimPlayer"],
+  "explanation": "TimPlayer એક multimedia application છે."
+},
+48: {
+  "question": "Python માં single-line comment માટે કયો symbol છે?",
+  "options": ["//", "#", "!", "/*"],
+  "explanation": "# comment માટે ઉપયોગ થાય છે."
+},
+49: {
+  "question": "print(type(0xFF)) નું data type શું છે?",
+  "options": ["number", "hexint", "hex", "int"],
+  "explanation": "0xFF integer પ્રકાર છે એટલે int આવે છે."
+},
+50: {
+  "question": "if statement માં alternative condition માટે કયો keyword છે?",
+  "options": ["else if", "elseif", "elif", "if else"],
+  "explanation": "Python માં elif alternative condition માટે છે."
+},
+51: {
+  "question": "Job માં હોવું એટલે શું?",
+  "options": ["Employ", "Skill", "Knowledge", "Aptitude"],
+  "explanation": "Employ એટલે નોકરીમાં હોવું."
+},
+52: {
+  "question": "Resume માં date of birth અને address કયા વિભાગમાં આવે છે?",
+  "options": ["Career objectives", "Personal details", "Achievements", "Qualifications"],
+  "explanation": "તે Personal details માં આવે છે."
+},
+53: {
+  "question": "Growth mindset ધરાવતો વ્યક્તિ શું કરે છે?",
+  "options": ["Relax", "Grow, change, learn", "Keep quiet", "Become rich"],
+  "explanation": "તે હંમેશા શીખવા અને બદલવા તૈયાર હોય છે."
+},
+54: {
+  "question": "છેલ્લા 5 વર્ષમાં outdated job કયું છે?",
+  "options": ["STD booth", "Ola", "Uber", "Swiggy"],
+  "explanation": "STD booth હવે ઉપયોગમાં નથી."
+},
+55: {
+  "question": "Ethics નો અર્થ શું છે?",
+  "options": ["Right and wrong conduct", "City name", "Employability skills", "Not relevant"],
+  "explanation": "Ethics એટલે સાચું અને ખોટું વર્તન નક્કી કરવું."
+},
+56: {
+  "question": "Values શું છે?",
+  "options": ["Not punctual", "Motivates attitude and action", "Costly", "Same value"],
+  "explanation": "Values વ્યક્તિના વર્તનને પ્રેરણા આપે છે."
+},
+57: {
+  "question": "Constitution નું સંક્ષિપ્ત નિવેદન શું કહેવાય?",
+  "options": ["Syllabus", "Module", "Preamble", "Unit"],
+  "explanation": "Preamble સંવિધાનનું સંક્ષિપ્ત વર્ણન છે."
+},
+58: {
+  "question": "Improper term કયું છે?",
+  "options": ["Green pollution", "Water pollution", "Air pollution", "Sound pollution"],
+  "explanation": "Green pollution માન્ય શબ્દ નથી."
+},
+59: {
+  "question": "NAPS નું સંપૂર્ણ નામ શું છે?",
+  "options": ["National Apprenticeship Promotion Scheme", "National Appointment Scheme", "Non Apprenticeship Scheme", "Advertising Scheme"],
+  "explanation": "NAPS એટલે National Apprenticeship Promotion Scheme."
+},
+60: {
+  "question": "Manufacturing માં મોટો બદલાવ શું કહેવાય?",
+  "options": ["Green revolution", "Industrial revolution", "Water revolution", "Food revolution"],
+  "explanation": "Industrial revolution મોટા બદલાવ માટે જવાબદાર છે."
+},
   61: {
-    "question": "કયા પ્રકારનું નેટવર્ક આખા શહેરને આવરી લે છે?",
-    "options": ["LAN", "MAN", "WAN", "PAN"],
-    "explanation": "MAN (Metropolitan Area Network) એક આખા શહેરના નેટવર્કને જોડવા માટે વપરાય છે."
-  },
-  62: {
-    "question": "કમ્પ્યુટરમાં હાર્ડવેર અને યુઝર વચ્ચે મધ્યસ્થી તરીકે કોણ કામ કરે છે?",
-    "options": ["Compiler", "Operating System", "Office", "Browser"],
-    "explanation": "Operating System (OS) યુઝરને કમ્પ્યુટર હાર્ડવેર સાથે વાતચીત કરવાની સુવિધા આપે છે."
-  },
-  63: {
-    "question": "કીબોર્ડમાં 'Home' કીનો ઉપયોગ શું છે?",
-    "options": ["ડોક્યુમેન્ટની શરૂઆતમાં જવા", "લાઇનની શરૂઆતમાં જવા", "ફાઇલ બંધ કરવા", "કમ્પ્યુટર બંધ કરવા"],
-    "explanation": "Home કી દબાવવાથી કર્સર તે લાઇનની શરૂઆતમાં આવી જાય છે."
-  },
-  64: {
-    "question": "CD નું પૂરું નામ શું છે?",
-    "options": ["Compact Disc", "Computer Disc", "Common Disc", "Control Disc"],
-    "explanation": "CD એટલે Compact Disc, જે ડેટા સ્ટોર કરવાનું એક ઓપ્ટિકલ માધ્યમ છે."
-  },
-  65: {
-    "question": "Python માં ઘાત (Exponentiation) માટે કયું ચિહ્ન વપરાય છે?",
-    "options": ["^", "**", "x", "//"],
-    "explanation": "Python માં x ની y ઘાત કરવા માટે '**' (ડબલ એસ્ટરિસ્ક) નો ઉપયોગ થાય છે."
-  },
-  66: {
-    "question": "ઇન્ટરનેટ પર થતી વસ્તુઓની ખરીદી અને વેચાણને શું કહેવાય?",
-    "options": ["E-mail", "E-commerce", "E-learning", "E-banking"],
-    "explanation": "ઓનલાઇન શોપિંગ અને બિઝનેસને E-commerce (ઈ-કોમર્સ) કહેવામાં આવે છે."
-  },
-  67: {
-    "question": "Excel માં કૉલમ (Column) ને કેવી રીતે ઓળખવામાં આવે છે?",
-    "options": ["1, 2, 3...", "A, B, C...", "I, II, III...", "!, @, #..."],
-    "explanation": "Excel માં આડી હરોળ (Row) ને નંબરથી અને ઉભા સ્તંભ (Column) ને અક્ષરો (A, B, C) થી ઓળખાય છે."
-  },
-  68: {
-    "question": "કમ્પ્યુટરને રિસ્ટાર્ટ કરવા માટે કઈ શોર્ટકટ કી વપરાય છે?",
-    "options": ["Ctrl + Alt + Del", "Ctrl + Shift + Esc", "Alt + F4", "Ctrl + R"],
-    "explanation": "Ctrl + Alt + Del દબાવવાથી ટાસ્ક મેનેજર અથવા રીબૂટના વિકલ્પો ખુલે છે."
-  },
-  69: {
-    "question": "નીચેનામાંથી કયું વેબ બ્રાઉઝર નથી?",
-    "options": ["Firefox", "Safari", "Linux", "Opera"],
-    "explanation": "Linux એ ઓપરેટિંગ સિસ્ટમ છે, જ્યારે બાકીના ત્રણેય વેબ બ્રાઉઝર છે."
-  },
-  70: {
-    "question": "Python માં 'while' અને 'for' શું છે?",
-    "options": ["Variables", "Loops", "Functions", "Datatypes"],
-    "explanation": "While અને For એ લૂપ્સ છે, જેનો ઉપયોગ અમુક કોડને વારંવાર ચલાવવા માટે થાય છે."
-  },
-  71: {
-    "question": "માહિતીને કાયમી ધોરણે ભૂંસી નાખવા માટે કઈ કી વપરાય છે?",
-    "options": ["Delete", "Backspace", "Shift + Delete", "Ctrl + D"],
-    "explanation": "Shift + Delete થી ફાઇલ રિસાયકલ બિનમાં ગયા વગર સીધી જ નીકળી જાય છે."
-  },
-  72: {
-    "question": "કમ્પ્યુટરની સ્મૃતિ (Memory) ને શેમાં માપવામાં આવે છે?",
-    "options": ["Kilogram", "Bytes", "Meter", "Liter"],
-    "explanation": "ડેટા સ્ટોરેજ અને મેમરીને Bytes, KB, MB, GB માં માપવામાં આવે છે."
-  },
-  73: {
-    "question": "કયું સાધન એનાલોગ માહિતીને ડિજિટલમાં રૂપાંતરિત કરે છે?",
-    "options": ["Scanner", "Printer", "Monitor", "Plotter"],
-    "explanation": "Scanner કાગળ પરની માહિતીને સ્કેન કરીને ડિજિટલ ફોર્મેટમાં ફેરવે છે."
-  },
-  74: {
-    "question": "વર્લ્ડ વાઈડ વેબ (WWW) ના શોધક કોણ છે?",
-    "options": ["Bill Gates", "Tim Berners-Lee", "Steve Jobs", "Mark Zuckerberg"],
-    "explanation": "Tim Berners-Lee એ 1989 માં WWW ની શોધ કરી હતી."
-  },
-  75: {
-    "question": "MS Word માં સ્પેલિંગ ચેક કરવા માટે કઈ કી વપરાય છે?",
-    "options": ["F1", "F5", "F7", "F10"],
-    "explanation": "F7 કી નો ઉપયોગ સ્પેલિંગ અને ગ્રામરની ભૂલો તપાસવા માટે થાય છે."
-  },
-  76: {
-    "question": "કમ્પ્યુટર બંધ કરવાની પ્રક્રિયાને શું કહેવાય?",
-    "options": ["Restart", "Shut down", "Sleep", "Hibernate"],
-    "explanation": "Shut down કરવાથી કમ્પ્યુટર સુરક્ષિત રીતે બંધ થાય છે."
-  },
-  77: {
-    "question": "IT નું પૂરું નામ શું છે?",
-    "options": ["Internal Technology", "Information Technology", "Integrated Tool", "Input Tech"],
-    "explanation": "IT એટલે Information Technology (માહિતી ટેકનોલોજી)."
-  },
-  78: {
-    "question": "કયો પ્રોટોકોલ ઈમેલ મોકલવા માટે વપરાય છે?",
-    "options": ["HTTP", "FTP", "SMTP", "TCP"],
-    "explanation": "SMTP (Simple Mail Transfer Protocol) નો ઉપયોગ ઈમેલ મોકલવા માટે થાય છે."
-  },
-  79: {
-    "question": "કમ્પ્યુટરની મુખ્ય સર્કિટ બોર્ડને શું કહેવાય?",
-    "options": ["Key board", "Hard Disk", "Motherboard", "CPU"],
-    "explanation": "મધરબોર્ડ એ કમ્પ્યુટરનું મુખ્ય સર્કિટ બોર્ડ છે જેમાં બધા ભાગો જોડાયેલા હોય છે."
-  },
-  80: {
-    "question": "Python માં બાકી વધતી કિંમત (Remainder) શોધવા કયું ચિહ્ન વપરાય છે?",
-    "options": ["/", "%", "//", "*"],
-    "explanation": "% (Modulo) ઓપરેટરનો ઉપયોગ ભાગાકાર પછી વધતી શેષ શોધવા માટે થાય છે."
-  },
+  "question": "પ્રથમ ઔદ્યોગિક ક્રાંતિ કયા સદીમાં શરૂ થઈ હતી?",
+  "options": ["18મી સદી", "19મી સદી", "20મી સદી", "21મી સદી"],
+  "explanation": "પ્રથમ ઔદ્યોગિક ક્રાંતિ 18મી સદીમાં શરૂ થઈ હતી."
+},
+62: {
+  "question": "Hard Skill શું છે?",
+  "options": ["ઝડપી શીખનાર", "સમય વ્યવસ્થાપન", "60 WPM ટાઇપિંગ સ્પીડ", "સ્પોકન અંગ્રેજી"],
+  "explanation": "Hard skill એ માપી શકાય તેવી કૌશલ્ય હોય છે જેમ કે ટાઇપિંગ સ્પીડ."
+},
+63: {
+  "question": "તમારી વૃદ્ધિ માટે શું જરૂરી છે?",
+  "options": ["તમારા ઓફિસને ઓળખો", "તમને પોતાને ઓળખો", "તમારા સંસ્થાને ઓળખો", "તમારા દેશને ઓળખો"],
+  "explanation": "પોતાને ઓળખવું વ્યક્તિગત વિકાસ માટે મહત્વપૂર્ણ છે."
+},
+64: {
+  "question": "Time management શું છે?",
+  "options": ["સમયસર કામ પૂર્ણ કરવું", "સમય મેનેજ કરવો", "Hard skill", "Problem solving"],
+  "explanation": "સમયસર કામ પૂર્ણ કરવું સમય વ્યવસ્થાપન છે."
+},
+65: {
+  "question": "Resume કેવી હોવી જોઈએ?",
+  "options": ["ટૂંકી અને સ્પષ્ટ", "ફેન્સી અને રંગીન", "લાંબી માહિતી", "અક્રોનિમ સાથે"],
+  "explanation": "Resume હંમેશા ટૂંકી અને સ્પષ્ટ હોવી જોઈએ."
+},
+66: {
+  "question": "Job description શું છે?",
+  "options": ["CV", "Job description", "Resume", "Application"],
+  "explanation": "Job description માં કામની જવાબદારીઓ દર્શાવવામાં આવે છે."
+},
+67: {
+  "question": "Interview call પછી શું કરવું જોઈએ?",
+  "options": ["Application મોકલો", "Resume તૈયાર કરો", "Interview આપો", "Resume મોકલો"],
+  "explanation": "Interview માટે હાજર થવું જોઈએ."
+},
+68: {
+  "question": "ખાલી જગ્યામાં યોગ્ય 'wh' શબ્દ પસંદ કરો: '_____ animal do you like?'",
+  "options": ["Which", "Why", "Where", "When"],
+  "explanation": "'Which' યોગ્ય વિકલ્પ છે."
+},
+69: {
+  "question": "વાક્યમાં 'Rohan' પછી કયો punctuation mark આવશે?",
+  "options": ["Comma (,)", "Full stop", "Slash", "Hyphen"],
+  "explanation": "Comma યોગ્ય punctuation છે."
+},
+70: {
+  "question": "'How have you been?' માટે યોગ્ય જવાબ કયો છે?",
+  "options": ["Very well, and you?", "Thank you", "Same to you", "On vacation"],
+  "explanation": "'Very well, and you?' યોગ્ય જવાબ છે."
+},
+71: {
+  "question": "'When did the accident happen?' નો યોગ્ય જવાબ શું છે?",
+  "options": ["in the hotel", "during travelling", "At 10:30 last night", "On the table"],
+  "explanation": "સમય દર્શાવતો જવાબ યોગ્ય છે."
+},
+72: {
+  "question": "વાક્યનું યોગ્ય tense પસંદ કરો: 'I _____ music when I was child'",
+  "options": ["learn", "am learning", "will learn", "had learnt"],
+  "explanation": "Past tense માટે 'had learnt' યોગ્ય છે."
+},
+73: {
+  "question": "Curriculum vitae ને શું કહે છે?",
+  "options": ["circular", "resume", "application", "leave letter"],
+  "explanation": "CV ને Resume કહેવામાં આવે છે."
+},
+74: {
+  "question": "Comparative adjective પસંદ કરો: 'Your pencil is _____ than mine'",
+  "options": ["sharp", "sharper", "blunt", "thick"],
+  "explanation": "'sharper' યોગ્ય છે."
+},
+75: {
+  "question": "Future tense પસંદ કરો: 'We _____ to the zoo'",
+  "options": ["went", "are going", "had gone", "will go"],
+  "explanation": "'will go' future tense છે."
+},
+76: {
+  "question": "Open source software કયું છે?",
+  "options": ["Open Office", "Windows 10", "MacOS", "MS Office"],
+  "explanation": "Open Office open source software છે."
+},
+77: {
+  "question": "Linux માં file delete કરવા કયો command છે?",
+  "options": ["delete", "rm", "dm", "erase"],
+  "explanation": "'rm' command file delete કરે છે."
+},
+78: {
+  "question": "KDE desktop માં પ્રથમ વિકલ્પ કયો છે?",
+  "options": ["Preference", "Application", "System", "System setting"],
+  "explanation": "Application પ્રથમ વિકલ્પ છે."
+},
+79: {
+  "question": "OSS નું પૂર્ણ નામ શું છે?",
+  "options": ["Open System Service", "Open Source Software", "Open System Software", "Open Sync Software"],
+  "explanation": "OSS એટલે Open Source Software."
+},
+80: {
+  "question": "Internet પર freely available coding software કયું છે?",
+  "options": ["Unlicensed", "Open source", "Free software", "Community software"],
+  "explanation": "Open source software મુક્તપણે ઉપલબ્ધ છે."
+},
   81: {
-    "question": "કમ્પ્યુટર સાક્ષરતા દિવસ (Computer Literacy Day) ક્યારે ઉજવવામાં આવે છે?",
-    "options": ["1 ઓગસ્ટ", "2 ડિસેમ્બર", "15 જાન્યુઆરી", "5 જૂન"],
-    "explanation": "વિશ્વભરમાં કમ્પ્યુટર શિક્ષણના પ્રસાર માટે 2 ડિસેમ્બરને કમ્પ્યુટર સાક્ષરતા દિવસ તરીકે ઉજવવામાં આવે છે."
-  },
-  82: {
-    "question": "કમ્પ્યુટરમાં ગાણિતિક ગણતરીઓ કોણ કરે છે?",
-    "options": ["Control Unit", "ALU", "Memory Unit", "Input Unit"],
-    "explanation": "ALU (Arithmetic Logic Unit) સરવાળા, બાદબાકી અને તાર્કિક ગણતરીઓ કરવા માટે જવાબદાર છે."
-  },
-  83: {
-    "question": "પ્રોગ્રામિંગમાં આવતી ભૂલ (Error) ને શું કહેવામાં આવે છે?",
-    "options": ["Bug", "Virus", "Spam", "Mistake"],
-    "explanation": "સોફ્ટવેર કે પ્રોગ્રામિંગમાં આવતી ટેકનિકલ ખામીને 'Bug' (બગ) કહેવામાં આવે છે."
-  },
-  84: {
-    "question": "કયું સાધન હાર્ડ કોપીને સોફ્ટ કોપીમાં ફેરવે છે?",
-    "options": ["Printer", "Scanner", "Monitor", "Plotter"],
-    "explanation": "સ્કેનર કાગળ પરની માહિતીને ડિજિટલ ફોર્મેટમાં ફેરવીને કમ્પ્યુટરમાં સેવ કરે છે."
-  },
-  85: {
-    "question": "Python માં 'Input()' ફંક્શન હંમેશા કયા પ્રકારનો ડેટા રિટર્ન કરે છે?",
-    "options": ["Integer", "Float", "String", "List"],
-    "explanation": "Python માં input() દ્વારા લેવામાં આવેલી કિંમત ડિફોલ્ટ રીતે હંમેશા સ્ટ્રિંગ (Text) સ્વરૂપે હોય છે."
-  },
-  86: {
-    "question": "ઈન્ટરનેટનો ઉપયોગ કરવા માટે કયું સોફ્ટવેર જરૂરી છે?",
-    "options": ["Operating System", "Browser", "Antivirus", "MS Office"],
-    "explanation": "વેબ પેજ જોવા અને ઇન્ટરનેટ ચલાવવા માટે Google Chrome કે Firefox જેવા બ્રાઉઝરની જરૂર પડે છે."
-  },
-  87: {
-    "question": "નીચેનામાંથી કયું સૌથી ઝડપી સ્ટોરેજ ડિવાઇસ છે?",
-    "options": ["Hard Disk", "SSD", "Pen Drive", "Floppy Disk"],
-    "explanation": "SSD (Solid State Drive) એ હાર્ડ ડિસ્ક કરતા ઘણી વધારે ઝડપથી ડેટા વાંચી અને લખી શકે છે."
-  },
-  88: {
-    "question": "કઈ કી દબાવવાથી ડોક્યુમેન્ટની છેલ્લે (End) જઈ શકાય છે?",
-    "options": ["Ctrl + End", "Ctrl + Home", "End", "Page Down"],
-    "explanation": "Ctrl + End કી દબાવવાથી તમે આખા ડોક્યુમેન્ટના છેલ્લા પેજ કે લાઇન પર પહોંચી જાઓ છો."
-  },
-  89: {
-    "question": "કમ્પ્યુટર નેટવર્કમાં 'Node' એટલે શું?",
-    "options": ["વાયર", "કનેક્ટ થયેલ ઉપકરણ", "વાયરસ", "પ્રોગ્રામ"],
-    "explanation": "નેટવર્ક સાથે જોડાયેલ કોઈપણ ઉપકરણ જેમ કે કમ્પ્યુટર, પ્રિન્ટર કે સર્વરને 'Node' કહેવાય છે."
-  },
-  90: {
-    "question": "Python માં 'if-else' વિધાનનો ઉપયોગ શાના માટે થાય છે?",
-    "options": ["ગણતરી કરવા", "નિર્ણય લેવા (Decision making)", "ડેટા સ્ટોર કરવા", "પ્રિન્ટ કરવા"],
-    "explanation": "કોઈ ચોક્કસ શરત મુજબ પ્રોગ્રામમાં અલગ અલગ કામ કરવા માટે if-else વપરાય છે."
-  },
-  91: {
-    "question": "કયું ઉપકરણ કમ્પ્યુટરને પાવર કટ વખતે પણ ચાલુ રાખે છે?",
-    "options": ["CPU", "UPS", "SMPS", "Generator"],
-    "explanation": "UPS (Uninterruptible Power Supply) માં બેટરી હોવાથી લાઈટ જાય તો પણ થોડો સમય કમ્પ્યુટર ચાલુ રહે છે."
-  },
-  92: {
-    "question": "પહેલી પેઢીના (1st Generation) કમ્પ્યુટરમાં શું વપરાતું હતું?",
-    "options": ["Transistors", "Vacuum Tubes", "IC Chips", "Microprocessors"],
-    "explanation": "શરૂઆતના કમ્પ્યુટર્સમાં વેક્યુમ ટ્યુબનો ઉપયોગ થતો હતો, જે કદમાં ખૂબ મોટા હતા."
-  },
-  93: {
-    "question": "સિલેક્ટ કરેલી ટેક્સ્ટને 'Cut' કરવા માટે કઈ કી વપરાય છે?",
-    "options": ["Ctrl + C", "Ctrl + V", "Ctrl + X", "Ctrl + Z"],
-    "explanation": "Ctrl + X થી ટેક્સ્ટ ત્યાંથી નીકળીને ક્લિપબોર્ડમાં સેવ થાય છે, જેને બીજી જગ્યાએ પેસ્ટ કરી શકાય છે."
-  },
-  94: {
-    "question": "એક નીબલ (Nibble) એટલે કેટલા બીટ?",
-    "options": ["2 Bits", "4 Bits", "8 Bits", "16 Bits"],
-    "explanation": "4 બીટના સમૂહને 1 નીબલ કહેવામાં આવે છે, અને 8 બીટ એટલે 1 બાઇટ."
-  },
-  95: {
-    "question": "ડોમેન નામમાં '.edu' કોના માટે વપરાય છે?",
-    "options": ["સરકારી સંસ્થા", "શૈક્ષણિક સંસ્થા", "વ્યાપારી સંસ્થા", "લશ્કરી સંસ્થા"],
-    "explanation": "શિક્ષણને લગતી વેબસાઇટ્સ કે યુનિવર્સિટીઓ .edu (Educational) એક્સટેન્શન વાપરે છે."
-  },
-  96: {
-    "question": "કીબોર્ડમાં Caps Lock કી કયા પ્રકારની કી છે?",
-    "options": ["Function key", "Toggle key", "Cursor key", "Numeric key"],
-    "explanation": "જે કી એકવાર દબાવવાથી ચાલુ અને બીજી વાર દબાવવાથી બંધ થાય તેને ટોગલ (Toggle) કી કહેવાય."
-  },
-  97: {
-    "question": "Python માં ડેટા ટાઈપ જાણવા માટે કયું ફંક્શન વપરાય છે?",
-    "options": ["id()", "type()", "kind()", "input()"],
-    "explanation": "કોઈપણ વેરિએબલ કયા પ્રકારનો ડેટા (int, str વગેરે) ધરાવે છે તે જાણવા type() વપરાય છે."
-  },
-  98: {
-    "question": "કયું સોફ્ટવેર ડ્રોઇંગ અને ફોટો એડિટિંગ માટે વપરાય છે?",
-    "options": ["Photoshop", "Notepad", "Excel", "Tally"],
-    "explanation": "Adobe Photoshop એ પ્રોફેશનલ ફોટો એડિટિંગ અને ગ્રાફિક ડિઝાઇન માટેનું સોફ્ટવેર છે."
-  },
-  99: {
-    "question": "ઈન્ટરનેટ પર માહિતીની આપ-લે માટેના નિયમોને શું કહેવાય?",
-    "options": ["Programs", "Protocols", "Agreements", "Links"],
-    "explanation": "નેટવર્કમાં ડેટા ટ્રાન્સફર કરવા માટેના ચોક્કસ નિયમોને પ્રોટોકોલ (Protocol) કહેવામાં આવે છે."
-  },
-  100: {
-    "question": "કમ્પ્યુટરમાં બૂટિંગ દરમિયાન કઈ ચિપ સૌથી પહેલા કામ કરે છે?",
-    "options": ["RAM", "ROM (BIOS)", "Processor", "Hard Disk"],
-    "explanation": "BIOS (Basic Input Output System) જે ROM માં હોય છે, તે કમ્પ્યુટર ચાલુ થતાં જ હાર્ડવેર ચેક કરે છે."
-  },
+  "question": "FSF નું પૂર્ણ નામ શું છે?",
+  "options": ["File Server First", "Free Software File", "Free Software Foundation", "First Software First"],
+  "explanation": "FSF એટલે Free Software Foundation."
+},
+82: {
+  "question": "Active document ને કાયમી રીતે સાચવવા માટે કયો command છે?",
+  "options": ["Save", "Send", "Prepare", "Save as"],
+  "explanation": "'Save' command document ને સાચવે છે."
+},
+83: {
+  "question": "MS Word માં cursor ની position કઈ bar બતાવે છે?",
+  "options": ["Layout", "Title bar", "Status bar", "Horizontal ruler"],
+  "explanation": "Status bar cursor ની સ્થિતિ બતાવે છે."
+},
+84: {
+  "question": "MS Word માં text styling feature કયું છે?",
+  "options": ["Word fill", "Word art", "Word colour", "Word font"],
+  "explanation": "WordArt text ને સ્ટાઇલ આપવા માટે છે."
+},
+85: {
+  "question": "કયું view web browser જેવું લાગે છે?",
+  "options": ["Draft view", "Outline view", "Web layout view", "Full screen"],
+  "explanation": "Web layout view browser જેવું દેખાય છે."
+},
+86: {
+  "question": "Quick access toolbar નો ઉપયોગ શું છે?",
+  "options": ["Advance functions", "Special functions", "Basic functions", "Repeated functions"],
+  "explanation": "વારંવાર ઉપયોગ થતા functions રાખવા માટે છે."
+},
+87: {
+  "question": "Gutter margin નો ઉપયોગ શું છે?",
+  "options": ["Left margin", "Right margin", "Binding side", "Outside page"],
+  "explanation": "Binding side માટે gutter margin હોય છે."
+},
+88: {
+  "question": "Tab setting માટે કયું option છે?",
+  "options": ["Horizontal ruler", "Status bar", "Vertical ruler", "Scroll bar"],
+  "explanation": "Horizontal ruler દ્વારા tab set થાય છે."
+},
+89: {
+  "question": "Cover page નો ઉપયોગ શું છે?",
+  "options": ["Title અને author દાખલ કરવા", "Mail list માટે", "View માટે", "Document details"],
+  "explanation": "Cover page પર title, author વગેરે હોય છે."
+},
+90: {
+  "question": "બે અથવા વધુ cells જોડવાની પ્રક્રિયા શું કહેવાય?",
+  "options": ["Combining", "Joining", "Merging", "Creating"],
+  "explanation": "Cells જોડવાની પ્રક્રિયા merging કહેવાય છે."
+},
+91: {
+  "question": "Name અને address combine કરવા કઈ પદ્ધતિ ઉપયોગી છે?",
+  "options": ["Formatting", "Mail merge", "Database", "Form letter"],
+  "explanation": "Mail merge દ્વારા data combine થાય છે."
+},
+92: {
+  "question": "MS Word માં center align માટે shortcut શું છે?",
+  "options": ["Ctrl+C", "Ctrl+D", "Ctrl+E", "Ctrl+F"],
+  "explanation": "Ctrl+E center alignment માટે છે."
+},
+93: {
+  "question": "Open Office માં Shift+Ctrl+N નો ઉપયોગ શું છે?",
+  "options": ["New document", "Open document", "Templates dialog", "Exit"],
+  "explanation": "Templates dialog ખોલવા માટે છે."
+},
+94: {
+  "question": "Word માં audio file કેવી રીતે insert કરશો?",
+  "options": ["Insert sound", "Insert file", "Insert object", "Insert blank"],
+  "explanation": "Insert → Object દ્વારા audio ઉમેરાય છે."
+},
+95: {
+  "question": "Table માં individual units ને શું કહે છે?",
+  "options": ["Cells", "Boxes", "Rows", "Columns"],
+  "explanation": "Table ના units cells કહેવાય છે."
+},
+96: {
+  "question": "Mail merge options કયા tab માં હોય છે?",
+  "options": ["Insert", "References", "Home", "Mailings"],
+  "explanation": "Mailings tab માં mail merge હોય છે."
+},
+97: {
+  "question": "Mail merge માટે default document type શું છે?",
+  "options": ["Data", "Labels", "Letters", "Set"],
+  "explanation": "Letters default type છે."
+},
+98: {
+  "question": "Document print કરવા shortcut શું છે?",
+  "options": ["Ctrl+V", "Ctrl+X", "Ctrl+P", "Ctrl+B"],
+  "explanation": "Ctrl+P print માટે છે."
+},
+99: {
+  "question": "Copy કરવા માટે કઈ key છે?",
+  "options": ["Ctrl+O", "Ctrl+C", "Ctrl+P", "Ctrl+Shift+C"],
+  "explanation": "Ctrl+C copy માટે છે."
+},
+100: {
+  "question": "Mail merge માં multiple copies બનાવવા કઈ list ઉપયોગી છે?",
+  "options": ["Main document", "Data source", "Form label", "Database"],
+  "explanation": "Data source list દ્વારા copies બને છે."
+},
   101: {
-    "question": "Python માં 'Dictionary' બનાવવા માટે કયા કૌંસ વપરાય છે?",
-    "options": ["()", "[]", "{}", "<>"],
-    "explanation": "Python માં ડિક્શનરી (Key-Value pairs) બનાવવા માટે કરલી બ્રેકેટ {} નો ઉપયોગ થાય છે."
-  },
-  102: {
-    "question": "કમ્પ્યુટરમાં 'ચિપ' (Chip) શેની બનેલી હોય છે?",
-    "options": ["કોપર", "સિલિકોન", "સ્ટીલ", "પ્લાસ્ટિક"],
-    "explanation": "કમ્પ્યુટરની IC ચિપ્સ સેમિકન્ડક્ટર પદાર્થ 'સિલિકોન' માંથી બનાવવામાં આવે છે."
-  },
-  103: {
-    "question": "MS Word માં લખાણને મધ્યમાં (Center) લાવવા માટે કઈ કી વપરાય છે?",
-    "options": ["Ctrl + C", "Ctrl + L", "Ctrl + E", "Ctrl + R"],
-    "explanation": "પસંદ કરેલા લખાણને પેજની વચ્ચે ગોઠવવા માટે Ctrl + E શોર્ટકટ વપરાય છે."
-  },
-  104: {
-    "question": "કયું ઉપકરણ હાર્ડવેર નથી?",
-    "options": ["Monitor", "Mouse", "Windows", "CPU"],
-    "explanation": "Windows એ એક સોફ્ટવેર (Operating System) છે, હાર્ડવેર નથી."
-  },
-  105: {
-    "question": "ઈન્ટરનેટ પર વિડિયો કોન્ફરન્સિંગ માટે શું જરૂરી છે?",
-    "options": ["Scanner", "Webcam", "Printer", "Plotter"],
-    "explanation": "વેબકેમ (Webcam) દ્વારા આપણે ઇન્ટરનેટ પર આપણો વિડિયો બીજાને મોકલી શકીએ છીએ."
-  },
-  106: {
-    "question": "Python માં 'len()' ફંક્શનનો ઉપયોગ શું છે?",
-    "options": ["લંબાઈ માપવા", "ડેટા ટાઈપ બદલવા", "પ્રિન્ટ કરવા", "સરવાળો કરવા"],
-    "explanation": "len() ફંક્શનનો ઉપયોગ સ્ટ્રિંગ, લિસ્ટ કે ટ્યુપલની લંબાઈ (કેટલા આઈટમ છે તે) જાણવા થાય છે."
-  },
-  107: {
-    "question": "કયું નેટવર્ક સૌથી મોટા વિસ્તારને આવરી લે છે?",
-    "options": ["LAN", "MAN", "WAN", "PAN"],
-    "explanation": "WAN (Wide Area Network) આખા દેશ કે દુનિયાને આવરી લેતું નેટવર્ક છે (દા.ત. ઇન્ટરનેટ)."
-  },
-  108: {
-    "question": "કમ્પ્યુટરમાં 'Copy' કરેલી વસ્તુ ક્યાં સંગ્રહાય છે?",
-    "options": ["Hard Disk", "Clipboard", "Recycle Bin", "Desktop"],
-    "explanation": "તમે જ્યારે કોપી કે કટ કરો છો ત્યારે તે માહિતી કામચલાઉ ધોરણે 'ક્લિપબોર્ડ' માં રહે છે."
-  },
-  109: {
-    "question": "બ્રાઉઝરમાં નવું ટેબ (New Tab) ખોલવા માટેની શોર્ટકટ કી કઈ છે?",
-    "options": ["Ctrl + N", "Ctrl + T", "Ctrl + W", "Ctrl + J"],
-    "explanation": "ચાલુ બ્રાઉઝર વિન્ડોમાં નવું પેજ કે ટેબ ખોલવા માટે Ctrl + T વપરાય છે."
-  },
-  110: {
-    "question": "Python માં લિસ્ટની છેલ્લે આઈટમ ઉમેરવા માટે કયું ફંક્શન વપરાય છે?",
-    "options": ["add()", "insert()", "append()", "extend()"],
-    "explanation": "append() ફંક્શન લિસ્ટના અંતમાં નવી કિંમત ઉમેરવાનું કામ કરે છે."
-  },
-  111: {
-    "question": "કમ્પ્યુટરની સ્પીડ કયા એકમમાં માપવામાં આવે છે?",
-    "options": ["MIPS", "Baud", "Bits", "Bytes"],
-    "explanation": "MIPS (Millions of Instructions Per Second) પ્રોસેસરની ઝડપ માપવાનો એક એકમ છે."
-  },
-  112: {
-    "question": "Excel માં કુલ કેટલી હરોળ (Rows) હોય છે (વર્ઝન 2007+)?",
-    "options": ["65536", "1048576", "100000", "256"],
-    "explanation": "આધુનિક એક્સેલ શીટમાં કુલ 10,48,576 રો હોય છે."
-  },
-  113: {
-    "question": "HTML નું પૂરું નામ શું છે?",
-    "options": ["High Text Markup Language", "Hyper Text Markup Language", "Hyper Text Media Language", "Hyper Tool Markup Language"],
-    "explanation": "HTML એટલે Hyper Text Markup Language, જે વેબ પેજની ડિઝાઈન કરવા વપરાય છે."
-  },
-  114: {
-    "question": "કયું ઉપકરણ કમ્પ્યુટરને ટેલિફોન લાઇન સાથે જોડે છે?",
-    "options": ["Switch", "Router", "Modem", "Hub"],
-    "explanation": "મોડેમ (Modem) એ ટેલિફોન અને કમ્પ્યુટર વચ્ચે ડેટા ટ્રાન્સફર કરવાનું કામ કરે છે."
-  },
-  115: {
-    "question": "Python માં 'range(5)' શું રિટર્ન કરશે?",
-    "options": ["1,2,3,4,5", "0,1,2,3,4", "0,1,2,3,4,5", "1,2,3,4"],
-    "explanation": "range(n) હંમેશા 0 થી શરૂ થઈને n-1 સુધીની સંખ્યાઓ આપે છે, એટલે 0 થી 4 આવશે."
-  },
-  116: {
-    "question": "કીબોર્ડમાં 'Escape' (Esc) કીનો ઉપયોગ શું છે?",
-    "options": ["પ્રોગ્રામ બંધ કરવા", "ચાલુ પ્રક્રિયા રદ કરવા", "સેવ કરવા", "રિસ્ટાર્ટ કરવા"],
-    "explanation": "Esc કી નો ઉપયોગ કોઈ ડાયલોગ બોક્સ બંધ કરવા કે ચાલુ કમાન્ડને રદ કરવા થાય છે."
-  },
-  117: {
-    "question": "કમ્પ્યુટરમાં 'Virus' નું પૂરું નામ શું છે?",
-    "options": ["Vital Information Resources Under Siege", "Very Important Resource Unit", "Virtual Information Real User", "Verified Interlinked Resource Under System"],
-    "explanation": "VIRUS એટલે Vital Information Resources Under Siege."
-  },
-  118: {
-    "question": "પાવરપોઈન્ટ સ્લાઈડ શો શરૂ કરવા માટે કઈ કી વપરાય છે?",
-    "options": ["F2", "F5", "F7", "F11"],
-    "explanation": "F5 કી દબાવવાથી પ્રથમ સ્લાઈડથી પ્રેઝન્ટેશન શરૂ થાય છે."
-  },
-  119: {
-    "question": "Python માં બે સ્ટ્રિંગને જોડવા (Concatenate) કયું ચિહ્ન વપરાય છે?",
-    "options": ["&", "+", "*", ","],
-    "explanation": "બે શબ્દો કે વાક્યોને જોડવા માટે '+' (પ્લસ) ચિહ્નનો ઉપયોગ થાય છે."
-  },
-  120: {
-    "question": "કયું સોફ્ટવેર ડેટાબેઝ મેનેજમેન્ટ (DBMS) માટે વપરાય છે?",
-    "options": ["MS Word", "MS Access", "MS Excel", "Notepad"],
-    "explanation": "MS Access એ માઈક્રોસોફ્ટનું ડેટાબેઝ મેનેજમેન્ટ સોફ્ટવેર છે."
-  },
+  "question": "Mail merge પ્રક્રિયામાં કયો step આવે છે?",
+  "options": ["Preview the merge results", "Set margin", "Format data", "Remove data"],
+  "explanation": "Merge પહેલાં preview કરવું મહત્વપૂર્ણ step છે."
+},
+102: {
+  "question": "MS Excel માં cells ને કેવી રીતે નામ આપવામાં આવે છે?",
+  "options": ["Alphabetically", "Numerically", "Alphanumerically", "Special characters"],
+  "explanation": "Cells ને column letter અને row number દ્વારા નામ આપવામાં આવે છે."
+},
+103: {
+  "question": "MS Excel 2010 માં rows ની મહત્તમ સંખ્યા કેટલી છે?",
+  "options": ["1084567", "1048567", "1048576", "1084576"],
+  "explanation": "Excel 2010 માં 1048576 rows હોય છે."
+},
+104: {
+  "question": "Pivot table અને chart ઉમેરવા માટે કયું tab છે?",
+  "options": ["Insert", "Page Layout", "Data", "Review"],
+  "explanation": "Insert tab માં chart અને pivot table ઉમેરાય છે."
+},
+105: {
+  "question": "Data import અને subtotal માટે કયું tab છે?",
+  "options": ["Formula", "Data", "Review", "Insert"],
+  "explanation": "Data tab માં import અને subtotal હોય છે."
+},
+106: {
+  "question": "Macro key બનાવવા Ctrl સાથે કયો key ઉપયોગ થાય છે?",
+  "options": ["Numeric", "Alphabetic", "Alphanumeric", "Special"],
+  "explanation": "Alphabetic keys macro માટે ઉપયોગ થાય છે."
+},
+107: {
+  "question": "Save As dialog box ખોલવા માટે કયો function key છે?",
+  "options": ["F2", "F5", "F7", "F12"],
+  "explanation": "F12 Save As માટે છે."
+},
+108: {
+  "question": "Excel માં '=' થી શું શરૂ થાય છે?",
+  "options": ["Data", "Text", "Numbers", "Formulas"],
+  "explanation": "Formulas '=' થી શરૂ થાય છે."
+},
+109: {
+  "question": "Range માં number ધરાવતા cells ગણવા કયો function છે?",
+  "options": ["COUNT()", "COUNTIF()", "SUM()", "SUMIF()"],
+  "explanation": "COUNT() number ધરાવતા cells ગણે છે."
+},
+110: {
+  "question": "Date અને Time function કયું છે?",
+  "options": ["FIND()", "MOD()", "NOW()", "MID()"],
+  "explanation": "NOW() current date અને time આપે છે."
+},
+111: {
+  "question": "Excel માં condition પ્રમાણે rows બતાવવા શું ઉપયોગ થાય છે?",
+  "options": ["Find", "Filter", "Format", "Sort"],
+  "explanation": "Filter દ્વારા condition પ્રમાણે data દેખાય છે."
+},
+112: {
+  "question": "Text ને uppercase માં બદલવા કયો function છે?",
+  "options": ["=UPPER()", "=LOWER()", "=LEN()", "=TRIM()"],
+  "explanation": "UPPER() text ને capital માં બદલે છે."
+},
+113: {
+  "question": "Excel માં chart કેવી રીતે insert કરશો?",
+  "options": ["Home tab", "Insert tab", "Data tab", "Formula tab"],
+  "explanation": "Insert tab દ્વારા chart ઉમેરાય છે."
+},
+114: {
+  "question": "Page setup commands કયા ribbon માં છે?",
+  "options": ["Insert", "Layout", "Review", "Home"],
+  "explanation": "Layout tab માં page setup હોય છે."
+},
+115: {
+  "question": "Data validation કયા software માં ઉપયોગ થાય છે?",
+  "options": ["MS Excel", "MS Word", "PowerPoint", "Paint"],
+  "explanation": "Excel માં data validation થાય છે."
+},
+116: {
+  "question": "Excel માં કયો chart પ્રકાર છે?",
+  "options": ["Bubble", "Cone", "Circle", "Square"],
+  "explanation": "Bubble chart Excel માં હોય છે."
+},
+117: {
+  "question": "Bar diagram બનાવવા માટે કયો option છે?",
+  "options": ["Format", "Tools", "Insert", "Edit"],
+  "explanation": "Insert → Chart દ્વારા બનાવાય છે."
+},
+118: {
+  "question": "Pivot table ઉમેરવા માટે કયો વિકલ્પ છે?",
+  "options": ["Formula tab", "Insert tab", "Data group", "Tables group"],
+  "explanation": "Insert tab → Tables group માં pivot table છે."
+},
+119: {
+  "question": "What-if analysis માટે કયું tab છે?",
+  "options": ["Home", "Insert", "Page Layout", "Data"],
+  "explanation": "Data tab માં What-if analysis છે."
+},
+120: {
+  "question": "Portrait અને Landscape કઈ categoryમાં આવે છે?",
+  "options": ["Margins", "Arrangement", "Orientation", "Breaks"],
+  "explanation": "તે Page Orientation હેઠળ આવે છે."
+},
   121: {
-    "question": "Python માં 'Tuple' અને 'List' વચ્ચે મુખ્ય તફાવત શું છે?",
-    "options": ["ટ્યુપલ બદલી શકાય છે", "લિસ્ટ બદલી શકાતું નથી", "ટ્યુપલ બદલી શકાતું નથી (Immutable)", "બન્ને સરખા જ છે"],
-    "explanation": "ટ્યુપલ (Tuple) એકવાર બનાવ્યા પછી તેમાં ફેરફાર કરી શકાતો નથી, જ્યારે લિસ્ટમાં ફેરફાર થઈ શકે છે."
-  },
-  122: {
-    "question": "કમ્પ્યુટરમાં 'Cache' મેમરી ક્યાં આવેલી હોય છે?",
-    "options": ["Hard Disk માં", "RAM માં", "CPU ની અંદર", "Pen Drive માં"],
-    "explanation": "કેશ મેમરી પ્રોસેસરની ખૂબ જ નજીક અથવા તેની અંદર હોય છે જેથી ડેટા ઝડપથી એક્સેસ થઈ શકે."
-  },
-  123: {
-    "question": "ઈન્ટરનેટ પર ડેટા પેકેટ્સના માર્ગદર્શન માટે કયું ઉપકરણ વપરાય છે?",
-    "options": ["Hub", "Switch", "Router", "Modem"],
-    "explanation": "રાઉટર (Router) નક્કી કરે છે કે ડેટા પેકેટ કયા રસ્તેથી તેના ગંતવ્ય સ્થાન સુધી પહોંચશે."
-  },
-  124: {
-    "question": "Excel માં ચાર્ટ (Chart) ઉમેરવા માટે કયા ટેબનો ઉપયોગ થાય છે?",
-    "options": ["Home", "Insert", "Page Layout", "Data"],
-    "explanation": "કોઈપણ ગ્રાફ કે ચાર્ટ ઉમેરવા માટે 'Insert' ટેબમાં જવું પડે છે."
-  },
-  125: {
-    "question": "Python માં 'for i in range(1, 10, 2)' માં છેલ્લી કઈ સંખ્યા આવશે?",
-    "options": ["10", "9", "8", "7"],
-    "explanation": "range(1, 10, 2) એટલે 1 થી શરૂ કરીને 2 ના કુદકે 10 સુધી (પરંતુ 10 નહીં), એટલે છેલ્લી સંખ્યા 9 આવશે."
-  },
-  126: {
-    "question": "સોફ્ટવેર પાયરસી (Software Piracy) એટલે શું?",
-    "options": ["સોફ્ટવેર ખરીદવું", "સોફ્ટવેરની ગેરકાયદે નકલ કરવી", "સોફ્ટવેર અપડેટ કરવું", "સોફ્ટવેર વેચવું"],
-    "explanation": "પરવાનગી વગર કોઈના સોફ્ટવેરની નકલ કરવી કે વાપરવી તે કાયદેસર ગુનો છે."
-  },
-  127: {
-    "question": "નીચેનામાંથી કયું એક્સટેન્શન ઇમેજ ફાઇલ (Image File) માટે વપરાય છે?",
-    "options": [".mp3", ".avi", ".jpg", ".txt"],
-    "explanation": ".jpg અથવા .jpeg એ ફોટા કે ચિત્રો માટેનું સૌથી સામાન્ય ફાઇલ ફોર્મેટ છે."
-  },
-  128: {
-    "question": "કમ્પ્યુટર નેટવર્કમાં 'VPN' નું પૂરું નામ શું છે?",
-    "options": ["Virtual Private Network", "Visual Private Network", "Virtual Public Network", "Verified Private Network"],
-    "explanation": "VPN એટલે Virtual Private Network, જે ઇન્ટરનેટ પર સુરક્ષિત અને ખાનગી કનેક્શન પૂરું પાડે છે."
-  },
-  129: {
-    "question": "Python માં 'Def' કીવર્ડનો ઉપયોગ શાના માટે થાય છે?",
-    "options": ["વેરિયેબલ બનાવવા", "ફંક્શન વ્યાખ્યાયિત કરવા", "લૂપ ચલાવવા", "કલાસ બનાવવા"],
-    "explanation": "નવું ફંક્શન (Function) બનાવવા માટે Python માં 'def' કીવર્ડથી શરૂઆત કરવામાં આવે છે."
-  },
-  130: {
-    "question": "OSI મોડેલમાં 'Physical Layer' કયા નંબરનું લેયર છે?",
-    "options": ["લેયર 1", "લેયર 4", "લેયર 7", "લેયર 2"],
-    "explanation": "ફિઝિકલ લેયર એ OSI મોડેલનું સૌથી પહેલું અને પાયાનું લેયર છે."
-  },
-  131: {
-    "question": "કીબોર્ડમાં 'Print Screen' કીનો ઉપયોગ શું છે?",
-    "options": ["પેજ પ્રિન્ટ કરવા", "સ્ક્રીનનો ફોટો (Screenshot) લેવા", "મોનિટર બંધ કરવા", "માઉસ કંટ્રોલ કરવા"],
-    "explanation": "આ કી દબાવવાથી હાલની સ્ક્રીનનો ફોટો ક્લિપબોર્ડમાં કોપી થઈ જાય છે."
-  },
-  132: {
-    "question": "JavaScript અને Python માં '==' ચિહ્નનો અર્થ શું થાય?",
-    "options": ["કિંમત સોંપવી", "કિંમત સરખાવવી (Comparison)", "સરવાળો કરવો", "ભાગાકાર કરવો"],
-    "explanation": "સિંગલ '=' કિંમત આપવા માટે વપરાય છે, જ્યારે ડબલ '==' બે કિંમતો સરખી છે કે નહીં તે ચકાસવા વપરાય છે."
-  },
-  133: {
-    "question": "કયું ઉપકરણ સોફ્ટ કોપીને હાર્ડ કોપીમાં ફેરવે છે?",
-    "options": ["Scanner", "Monitor", "Printer", "Keyboard"],
-    "explanation": "પ્રિન્ટર કમ્પ્યુટરની ડિજિટલ માહિતીને કાગળ પર છાપીને આપે છે."
-  },
-  134: {
-    "question": "Python માં 'None' શું દર્શાવે છે?",
-    "options": ["શૂન્ય (0)", "ખાલી સ્ટ્રિંગ", "કિંમતનો અભાવ (Null value)", "ખોટું (False)"],
-    "explanation": "જ્યારે કોઈ વેરિયેબલમાં કોઈ જ કિંમત ન હોય ત્યારે તેને 'None' તરીકે ઓળખવામાં આવે છે."
-  },
-  135: {
-    "question": "ઈન્ટરનેટ બ્રાઉઝરમાં 'Bookmark' નો ઉપયોગ શું છે?",
-    "options": ["ફાઇલ ડાઉનલોડ કરવા", "વેબસાઇટને સેવ કરવા", "હિસ્ટ્રી ડિલીટ કરવા", "પાસવર્ડ બદલવા"],
-    "explanation": "મનપસંદ વેબસાઇટનું સરનામું સેવ કરવા માટે બુકમાર્ક સુવિધા વપરાય છે જેથી તેને ફરી ઝડપથી શોધી શકાય."
-  },
-  136: {
-    "question": "કમ્પ્યુટર લેંગ્વેજ 'Java' કોણે વિકસાવી હતી?",
-    "options": ["Microsoft", "Sun Microsystems", "Apple", "Google"],
-    "explanation": "Java ની શોધ જેમ્સ ગોસ્લિંગ દ્વારા સન માઈક્રોસિસ્ટમ્સમાં કરવામાં આવી હતી."
-  },
-  137: {
-    "question": "કયા પ્રકારના હુમલામાં યુઝરને નકલી ઈમેલ મોકલી પાસવર્ડ માંગવામાં આવે છે?",
-    "options": ["Phishing", "Hacking", "Spamming", "Cracking"],
-    "explanation": "ફિશિંગ (Phishing) એ છેતરપિંડી કરવાની રીત છે જેમાં નકલી વેબસાઇટ કે ઈમેલ દ્વારા ખાનગી માહિતી ચોરવામાં આવે છે."
-  },
-  138: {
-    "question": "Python માં 'Index' હંમેશા કઈ સંખ્યાથી શરૂ થાય છે?",
-    "options": ["1", "0", "-1", "કોઈપણ"],
-    "explanation": "પ્રોગ્રામિંગમાં લિસ્ટ કે સ્ટ્રિંગનો પ્રથમ અક્ષર હંમેશા 0 (ઝીરો) ઇન્ડેક્સ પર હોય છે."
-  },
-  139: {
-    "question": "Excel માં 'F2' કીનો ઉપયોગ શું છે?",
-    "options": ["સેવ કરવા", "સેલ એડિટ કરવા", "કૉલમ ડિલીટ કરવા", "પ્રિન્ટ પ્રિવ્યુ જોવા"],
-    "explanation": "પસંદ કરેલા સેલમાં લખાણ બદલવા અથવા એડિટ કરવા માટે F2 કી વપરાય છે."
-  },
-  140: {
-    "question": "નીચેનામાંથી કઈ પ્રોગ્રામિંગ લેંગ્વેજ નથી?",
-    "options": ["C++", "Java", "HTML", "C#"],
-    "explanation": "HTML એ માર્કઅપ લેંગ્વેજ છે, તે લોજિકલ પ્રોગ્રામિંગ લેંગ્વેજ નથી."
-  },
+  "question": "જો x = 1 હોય તો આપેલ Python code નો output શું હશે?",
+  "options": ["4", "2", "1", "8"],
+  "explanation": "આ કોડનું output 4 આવે છે."
+},
+122: {
+  "question": "Python માં array કેવી રીતે declare કરશો?",
+  "options": ["[ ]", "( )", "{ }", "| |"],
+  "explanation": "Python માં list (array) માટે square brackets [ ] નો ઉપયોગ થાય છે."
+},
+123: {
+  "question": "આપેલ module નો ઉપયોગ કરતું program code કયું છે?",
+  "options": ["Client", "Interface", "Docstring", "Modularity"],
+  "explanation": "Client program module નો ઉપયોગ કરે છે."
+},
+124: {
+  "question": "સ્ક્રીન પર number અને text દર્શાવવા કયો command છે?",
+  "options": ["print()", "input()", "output()", "command()"],
+  "explanation": "print() output બતાવવા માટે ઉપયોગ થાય છે."
+},
+125: {
+  "question": "Python માં core data type કયું છે?",
+  "options": ["Package", "List", "Class", "Object"],
+  "explanation": "List Python નું મુખ્ય data type છે."
+},
+126: {
+  "question": "ખાલી જગ્યા ભરો: 'They _____ good friends'",
+  "options": ["is", "am", "are", "was"],
+  "explanation": "'They' સાથે 'are' ઉપયોગ થાય છે."
+},
+127: {
+  "question": "Present progressive tense પસંદ કરો: 'The train _____ through the tunnel'",
+  "options": ["passed", "is passing", "had passed", "was passing"],
+  "explanation": "'is passing' present progressive tense છે."
+},
+128: {
+  "question": "યોગ્ય interrogative adjective પસંદ કરો: '_____ are you going?'",
+  "options": ["Who", "Where", "Which", "What"],
+  "explanation": "'Where' સ્થળ માટે યોગ્ય છે."
+},
+129: {
+  "question": "યોગ્ય pronoun પસંદ કરો: 'I made this cake _____'",
+  "options": ["myself", "yourself", "himself", "itself"],
+  "explanation": "'myself' યોગ્ય છે."
+},
+130: {
+  "question": "યોગ્ય pronoun પસંદ કરો: 'She made this cake _____'",
+  "options": ["itself", "myself", "herself", "himself"],
+  "explanation": "'herself' યોગ્ય છે."
+},
+131: {
+  "question": "યોગ્ય reflexive pronoun પસંદ કરો: 'She has hurt _____'",
+  "options": ["myself", "herself", "himself", "itself"],
+  "explanation": "'herself' યોગ્ય છે."
+},
+132: {
+  "question": "યોગ્ય adjective પસંદ કરો: 'The little girl’s _____ eyes revealed her mischief'",
+  "options": ["chubby", "weak", "short sighted", "twinkling"],
+  "explanation": "'twinkling' યોગ્ય adjective છે."
+},
+133: {
+  "question": "યોગ્ય preposition પસંદ કરો: 'My house is _____ the third floor'",
+  "options": ["at", "in", "on", "under"],
+  "explanation": "Floor માટે 'on' યોગ્ય છે."
+},
+134: {
+  "question": "યોગ્ય question word પસંદ કરો: '_____ is the speaker?'",
+  "options": ["What", "When", "Why", "Who"],
+  "explanation": "'Who' વ્યક્તિ માટે ઉપયોગ થાય છે."
+},
+135: {
+  "question": "Low level language ને શું કહે છે?",
+  "options": ["source code", "middleware", "machine language", "assembly language"],
+  "explanation": "Machine language low level language છે."
+},
+136: {
+  "question": "Pronunciation નો અર્થ શું છે?",
+  "options": ["diphthong", "consonant", "punctuation", "sound production"],
+  "explanation": "Pronunciation એટલે અવાજ ઉત્પન્ન કરવાની રીત."
+},
+137: {
+  "question": "શબ્દોને યોગ્ય ક્રમમાં ગોઠવો: 'teacher / school / worked / she / a / as'",
+  "options": [
+    "School worked as a she teacher",
+    "She worked as a school teacher",
+    "She teacher worked as a school",
+    "Worked she as a school teacher"
+  ],
+  "explanation": "યોગ્ય વાક્ય: She worked as a school teacher."
+},
+138: {
+  "question": "Voice ના pitch ના rise અને fall ને શું કહે છે?",
+  "options": ["vowel", "intonation", "consonant", "pronunciation"],
+  "explanation": "Intonation અવાજના ઊંચા-નીચા ફેરફારને કહે છે."
+},
+139: {
+  "question": "Sudden feeling દર્શાવતો શબ્દ શું કહેવાય?",
+  "options": ["punctuation", "interjection", "conjunction", "apostrophe"],
+  "explanation": "Interjection અચાનક લાગણી દર્શાવે છે."
+},
+140: {
+  "question": "Teacher અથવા supervisor ને greet કરવા શું કહેવું જોઈએ?",
+  "options": ["Good morning", "Hello", "Hey", "Hi"],
+  "explanation": "'Good morning' સન્માનપૂર્ણ અભિવાદન છે."
+},
   141: {
-    "question": "કમ્પ્યુટરમાં 'OS' નું મુખ્ય કાર્ય શું છે?",
-    "options": ["હાર્ડવેર રિસોર્સ મેનેજ કરવા", "કોડ કમ્પાઈલ કરવા", "ગ્રાફિક્સ એડિટ કરવા", "વિડિયો પ્લે કરવા"],
-    "explanation": "ઓપરેટિંગ સિસ્ટમ યુઝર અને હાર્ડવેર વચ્ચે મધ્યસ્થી તરીકે કામ કરે છે અને મેમરી, પ્રોસેસર વગેરેનું સંચાલન કરે છે."
-  },
-  142: {
-    "question": "Python માં 'Dictionary' માંથી બધી 'Keys' મેળવવા કઈ મેથડ વપરાય છે?",
-    "options": ["all_keys()", "keys()", "get_keys()", "list_keys()"],
-    "explanation": "keys() મેથડનો ઉપયોગ ડિક્શનરીમાં રહેલી તમામ કી (Keys) ની યાદી મેળવવા માટે થાય છે."
-  },
-  143: {
-    "question": "ઈન્ટરનેટ પર વેબસાઈટ શોધવા માટે વપરાતા સોફ્ટવેરને શું કહેવાય?",
-    "options": ["Search Engine", "Web Server", "Browser", "Protocol"],
-    "explanation": "Google કે Bing જેવા સર્ચ એન્જિનનો ઉપયોગ ઇન્ટરનેટ પર માહિતી કે વેબસાઇટ શોધવા માટે થાય છે."
-  },
-  144: {
-    "question": "Excel માં બે સેલને ભેગા કરવાની પ્રક્રિયાને શું કહેવાય?",
-    "options": ["Join", "Merge", "Connect", "Mix"],
-    "explanation": "Merge Cells સુવિધા દ્વારા બે કે તેથી વધુ સેલને જોડીને એક મોટો સેલ બનાવી શકાય છે."
-  },
-  145: {
-    "question": "Python માં 'while loop' ક્યાં સુધી ચાલે છે?",
-    "options": ["જ્યાં સુધી શરત સાચી (True) હોય", "જ્યાં સુધી શરત ખોટી (False) હોય", "ફક્ત 10 વાર", "જ્યાં સુધી યુઝર સ્ટોપ ન કરે"],
-    "explanation": "While લૂપ ત્યાં સુધી પુનરાવર્તન કરે છે જ્યાં સુધી તેની શરત સાચી (True) રહે, જેવી શરત ખોટી પડે કે લૂપ અટકી જાય."
-  },
-  146: {
-    "question": "કઈ મેમરી પાવર બંધ થતા ડેટા ગુમાવતી નથી (Non-volatile)?",
-    "options": ["RAM", "Cache", "ROM", "Register"],
-    "explanation": "ROM એ કાયમી મેમરી છે, તેમાં રહેલી માહિતી પાવર વગર પણ સુરક્ષિત રહે છે."
-  },
-  147: {
-    "question": "નેટવર્કમાં 'Switch' અને 'Hub' માં શું તફાવત છે?",
-    "options": ["સ્વિચ વધુ સ્માર્ટ છે", "હબ વધુ સ્પીડ આપે છે", "બન્ને સરખા જ છે", "હબ મોંઘા હોય છે"],
-    "explanation": "Switch દરેક ડેટાને ચોક્કસ ટાર્ગેટ ડિવાઇસ પર જ મોકલે છે, જ્યારે Hub બધા ડિવાઇસને મોકલે છે, તેથી સ્વિચ વધુ કાર્યક્ષમ છે."
-  },
-  148: {
-    "question": "Python માં 'is' ઓપરેટરનો ઉપયોગ શું છે?",
-    "options": ["કિંમત સરખાવવા", "ઓબ્જેક્ટની ઓળખ (Identity) સરખાવવા", "સરવાળો કરવા", "ડેટા ટાઈપ ચેક કરવા"],
-    "explanation": "'is' ઓપરેટર ચકાસે છે કે બે વેરિયેબલ એક જ મેમરી લોકેશન (Object) ને રિફર કરે છે કે નહીં."
-  },
-  149: {
-    "question": "MS Word માં લખાણ નીચે લાઇન (Underline) કરવા કઈ કી વપરાય છે?",
-    "options": ["Ctrl + B", "Ctrl + I", "Ctrl + U", "Ctrl + L"],
-    "explanation": "Ctrl + U શોર્ટકટ પસંદ કરેલા શબ્દો કે વાક્યોની નીચે આડી લાઇન ઉમેરે છે."
-  },
-  150: {
-    "question": "કમ્પ્યુટર સુરક્ષામાં 'Worm' એટલે શું?",
-    "options": ["એક પ્રકારનું હાર્ડવેર", "સ્વ-નકલ કરતો પ્રોગ્રામ (Self-replicating)", "એન્ટિવાયરસ", "ઈમેલ પ્રોટોકોલ"],
-    "explanation": "Worm એ એક એવો વાયરસ છે જે પોતાની મેળે નકલ બનાવીને આખા નેટવર્કમાં ફેલાઈ શકે છે."
-  },
-  151: {
-    "question": "Python માં 'global' કીવર્ડનો હેતુ શું છે?",
-    "options": ["વેરિયેબલ ડિલીટ કરવા", "ફંક્શનની બહારના વેરિયેબલને વાપરવા", "પ્રોગ્રામ બંધ કરવા", "નવી ફાઇલ બનાવવા"],
-    "explanation": "ફંક્શનની અંદર રહીને ગ્લોબલ વેરિયેબલની કિંમતમાં ફેરફાર કરવા માટે 'global' કીવર્ડ વાપરવો પડે છે."
-  },
-  152: {
-    "question": "કયું ઉપકરણ ઇનપુટ અને આઉટપુટ બંને તરીકે કામ કરી શકે છે?",
-    "options": ["Printer", "Monitor", "Touch Screen", "Keyboard"],
-    "explanation": "ટચ સ્ક્રીન દ્વારા આપણે ડેટા ઇનપુટ પણ આપી શકીએ છીએ અને તેના પર આઉટપુટ પણ જોઈ શકીએ છીએ."
-  },
-  153: {
-    "question": "ઈન્ટરનેટ પર 'Cookies' નો મુખ્ય ઉપયોગ શું છે?",
-    "options": ["વાયરસ ફેલાવવા", "યુઝરની પસંદગી સેવ કરવા", "સ્પીડ વધારવા", "ડેટા ડિલીટ કરવા"],
-    "explanation": "Cookies નાની ફાઈલો છે જે વેબસાઇટ પર તમારી પ્રવૃત્તિ અને લોગિન વિગતો યાદ રાખવામાં મદદ કરે છે."
-  },
-  154: {
-    "question": "Python માં 'try-except' બ્લોક શાના માટે વપરાય છે?",
-    "options": ["લૂપ ચલાવવા", "ભૂલો (Errors) હેન્ડલ કરવા", "ગણતરી કરવા", "ફંક્શન કોલ કરવા"],
-    "explanation": "પ્રોગ્રામમાં રન-ટાઇમ દરમિયાન આવતી ભૂલોને પકડવા અને પ્રોગ્રામને ક્રેશ થતો બચાવવા try-except વપરાય છે."
-  },
-  155: {
-    "question": "BIOS નું પૂરું નામ શું છે?",
-    "options": ["Basic Input Output System", "Binary Input Output System", "Basic Internal Output System", "Basic Integrated Operating System"],
-    "explanation": "BIOS એ કમ્પ્યુટરના મધરબોર્ડ પર રહેલો સોફ્ટવેર છે જે સ્ટાર્ટ-અપ પ્રક્રિયા સંભાળે છે."
-  },
-  156: {
-    "question": "Excel માં 'VLOOKUP' ફંક્શનનો ઉપયોગ શું છે?",
-    "options": ["ડેટા સોર્ટ કરવા", "વર્ટિકલી ડેટા શોધવા", "સરવાળો કરવા", "ગ્રાફ બનાવવા"],
-    "explanation": "VLOOKUP નો ઉપયોગ ટેબલના કોઈ ચોક્કસ કોલમમાંથી ડેટા શોધીને લાવવા માટે થાય છે."
-  },
-  157: {
-    "question": "નેટવર્કમાં 'MAC Address' કેટલા બીટનું હોય છે?",
-    "options": ["32 bits", "48 bits", "64 bits", "128 bits"],
-    "explanation": "દરેક નેટવર્ક કાર્ડનું ફિઝિકલ સરનામું (MAC Address) 48 બીટનું હોય છે."
-  },
-  158: {
-    "question": "Python માં 'strip()' મેથડનો ઉપયોગ શું છે?",
-    "options": ["અક્ષરો કાપવા", "આજુબાજુની સ્પેસ દૂર કરવા", "કેપિટલ કરવા", "ઉંધું કરવા"],
-    "explanation": "strip() મેથડ સ્ટ્રિંગની શરૂઆત અને અંતમાં રહેલી બિનજરૂરી ખાલી જગ્યા (Spaces) દૂર કરે છે."
-  },
-  159: {
-    "question": "કઈ ટોપોલોજીમાં બધા કમ્પ્યુટર એક કેન્દ્રીય હબ સાથે જોડાયેલા હોય છે?",
-    "options": ["Bus Topology", "Ring Topology", "Star Topology", "Mesh Topology"],
-    "explanation": "સ્ટાર ટોપોલોજીમાં વચ્ચે એક હબ કે સ્વિચ હોય છે અને બાકીના બધા ઉપકરણો તેની સાથે જોડાય છે."
-  },
-  160: {
-    "question": "Python માં વેરિયેબલનું નામ કયા અક્ષરથી શરૂ ન થઈ શકે?",
-    "options": ["અક્ષર (A-Z)", "અન્ડરસ્કોર (_)", "અંક (0-9)", "નાના અક્ષર (a-z)"],
-    "explanation": "Python માં વેરિયેબલનું નામ ક્યારેય પણ આંકડા (Number) થી શરૂ થઈ શકતું નથી."
-  },
+  "question": "'ANSWER' શબ્દમાં કયું silent letter છે?",
+  "options": ["R", "E", "S", "W"],
+  "explanation": "'ANSWER' માં 'W' ઉચ્ચારાતું નથી."
+},
+142: {
+  "question": "Discussion etiquette માં કયું યોગ્ય વર્તન છે?",
+  "options": ["ગુસ્સે થવું", "બીજાની વાત સાંભળવી", "અપ્રસંગિક વાત કરવી", "અસભ્ય ભાષા વાપરવી"],
+  "explanation": "બીજાની વાત સાંભળવી યોગ્ય etiquette છે."
+},
+143: {
+  "question": "Discussion etiquette માં કયું ખોટું વર્તન છે?",
+  "options": ["ખુલ્લા મનથી વિચારવું", "મર્યાદિત અવાજ રાખવો", "બીજાને સાંભળવું", "અનાવશ્યક વાદ કરવો"],
+  "explanation": "અનાવશ્યક વાદ કરવો ખોટું વર્તન છે."
+},
+144: {
+  "question": "કમ્પ્યુટરનું મગજ કયું છે?",
+  "options": ["Keyboard", "CPU", "Monitor", "Hard disk"],
+  "explanation": "CPU કમ્પ્યુટરનું મગજ કહેવાય છે."
+},
+145: {
+  "question": "Exclamatory sentence કયું છે?",
+  "options": [
+    "What a beautiful house it is!",
+    "It is a beautiful house.",
+    "Is it a beautiful house?",
+    "Your house is beautiful."
+  ],
+  "explanation": "Exclamation (!) વાળું વાક્ય exclamatory હોય છે."
+},
+146: {
+  "question": "Active voice વાક્ય કયું છે?",
+  "options": [
+    "Ram has passed the exam.",
+    "The ball was caught by him.",
+    "The book was being read by her.",
+    "We were driven home by dad."
+  ],
+  "explanation": "Active voice માં subject કાર્ય કરે છે."
+},
+147: {
+  "question": "Passive voice વાક્ય કયું છે?",
+  "options": [
+    "Mohan is painting a house.",
+    "She was reading a book.",
+    "Her birthday was celebrated by us.",
+    "I have seen that movie."
+  ],
+  "explanation": "Passive voice માં કાર્ય subject પર થાય છે."
+},
+148: {
+  "question": "Conjunction ન હોય તે કયું છે?",
+  "options": ["And", "Or", "But", "On"],
+  "explanation": "'On' preposition છે, conjunction નથી."
+},
+149: {
+  "question": "Role playing નો ફાયદો કયો નથી?",
+  "options": [
+    "આત્મવિશ્વાસ વધે",
+    "સાંભળવાની કુશળતા વિકસે",
+    "Creative skill વધે",
+    "Boredom વિકસે"
+  ],
+  "explanation": "Boredom role playing નો ફાયદો નથી."
+},
+150: {
+  "question": "કયું vowel નથી?",
+  "options": ["a", "e", "f", "i"],
+  "explanation": "'f' vowel નથી."
+},
+151: {
+  "question": "Worksheet ને letterhead પર print કરવા કયું setting બદલાય છે?",
+  "options": ["Paper", "Margin", "Layout", "Orientation"],
+  "explanation": "Margin બદલવાથી યોગ્ય પ્રિન્ટિંગ થાય છે."
+},
+152: {
+  "question": "MS Excel 2007-2016 file extension શું છે?",
+  "options": [".XLX", ".XLSX", ".XLS", ".TXT"],
+  "explanation": ".xlsx default extension છે."
+},
+153: {
+  "question": "Ascending અને Descending order માટે શું ઉપયોગ થાય છે?",
+  "options": ["Filtering", "Sorting", "Custom filter", "Clear rules"],
+  "explanation": "Sorting data ને ગોઠવે છે."
+},
+154: {
+  "question": "Proportion બતાવવા કયો chart ઉપયોગ થાય છે?",
+  "options": ["XY chart", "Pie chart", "Line chart", "Column chart"],
+  "explanation": "Pie chart proportions બતાવે છે."
+},
+155: {
+  "question": "CSV નું પૂર્ણ સ્વરૂપ શું છે?",
+  "options": [
+    "Compact Serial Value",
+    "Control Space Value",
+    "Comma Separated Values",
+    "Comma Standard Values"
+  ],
+  "explanation": "CSV એટલે Comma Separated Values."
+},
+156: {
+  "question": "આપેલ file type શું છે?",
+  "options": ["Dataframe", "MySQL", "CSV", "Excel"],
+  "explanation": "તે CSV file છે."
+},
+157: {
+  "question": "Pivot Table માં કયો box હોય છે?",
+  "options": ["Column Labels", "View", "Layout", "Formulas"],
+  "explanation": "Column Labels pivot table નો ભાગ છે."
+},
+158: {
+  "question": "એક variable માટે સમસ્યા ઉકેલવા કયું tool છે?",
+  "options": ["Goal Seek", "Scenario", "Trendline", "Solver"],
+  "explanation": "Goal Seek એક variable માટે ઉપયોગી છે."
+},
+159: {
+  "question": "Printing વખતે જેવું દેખાય તેવું view કયું છે?",
+  "options": ["Custom view", "Full screen", "Page break", "Page layout"],
+  "explanation": "Page Layout view print preview જેવું છે."
+},
+160: {
+  "question": "PowerPoint માં text, graphics, video વગેરે શું કહેવાય?",
+  "options": ["Slides", "Folder", "Handout", "Desktop"],
+  "explanation": "Slides માં content હોય છે."
+},
   161: {
-    "question": "Python માં 'randint(1, 10)' ફંક્શન વાપરવા માટે કયો મોડ્યુલ ઈમ્પોર્ટ કરવો પડે?",
-    "options": ["math", "random", "os", "sys"],
-    "explanation": "રેન્ડમ નંબર જનરેટ કરવા માટે Python માં 'random' મોડ્યુલનો ઉપયોગ થાય છે."
-  },
-  162: {
-    "question": "કમ્પ્યુટર નેટવર્કમાં 'Gateway' નું કાર્ય શું છે?",
-    "options": ["બે સમાન નેટવર્કને જોડવા", "બે અલગ અલગ પ્રોટોકોલ ધરાવતા નેટવર્કને જોડવા", "ઇન્ટરનેટ સ્પીડ વધારવી", "ડેટા ડિલીટ કરવો"],
-    "explanation": "ગેટવે બે અલગ અલગ પ્રકારના નેટવર્ક વચ્ચે પ્રવેશદ્વાર તરીકે કામ કરે છે."
-  },
-  163: {
-    "question": "Excel માં 'Filter' વિકલ્પ કયા મેનુમાં જોવા મળે છે?",
-    "options": ["Insert", "Data", "Review", "View"],
-    "explanation": "ડેટાને ચોક્કસ શરત મુજબ અલગ તારવવા માટે 'Data' મેનુમાં ફિલ્ટરનો વિકલ્પ હોય છે."
-  },
-  164: {
-    "question": "Python માં 'set' માં ડેટા કયા ક્રમમાં સચવાય છે?",
-    "options": ["ચડતા ક્રમમાં", "ઉતરતા ક્રમમાં", "કોઈ ચોક્કસ ક્રમ હોતો નથી (Unordered)", "ઇનપુટ આપ્યા મુજબ"],
-    "explanation": "Set માં ડેટાનો કોઈ નિશ્ચિત ક્રમ હોતો નથી અને તે ડુપ્લીકેટ કિંમતો સ્વીકારતું નથી."
-  },
-  165: {
-    "question": "કયા પ્રકારના વાયરસ કમ્પ્યુટરના બૂટ સેક્ટરને અસર કરે છે?",
-    "options": ["File Virus", "Boot Sector Virus", "Trojan Horse", "Spyware"],
-    "explanation": "બૂટ સેક્ટર વાયરસ કમ્પ્યુટરની સ્ટાર્ટ-અપ ફાઇલોને નુકસાન પહોંચાડે છે."
-  },
-  166: {
-    "question": "Python માં 'break' વિધાનનો ઉપયોગ શું છે?",
-    "options": ["પ્રોગ્રામ બંધ કરવા", "લૂપમાંથી અધવચ્ચે બહાર નીકળવા", "ભૂલ સુધારવા", "નવી લાઇન ઉમેરવા"],
-    "explanation": "જ્યારે લૂપને કોઈ શરત પૂરી થતા તરત જ અટકાવવી હોય ત્યારે 'break' વપરાય છે."
-  },
-  167: {
-    "question": "ઈન્ટરનેટ પર માહિતી સુરક્ષિત રાખવા માટે કયો પ્રોટોકોલ વપરાય છે?",
-    "options": ["HTTP", "HTTPS", "FTP", "Telnet"],
-    "explanation": "HTTPS (Hypertext Transfer Protocol Secure) ડેટાને એન્ક્રિપ્ટ કરીને સુરક્ષિત રાખે છે."
-  },
-  168: {
-    "question": "કમ્પ્યુટરમાં 'Resolution' શેમાં માપવામાં આવે છે?",
-    "options": ["Inches", "Pixels", "Watts", "Hertz"],
-    "explanation": "સ્ક્રીનની સ્પષ્ટતા (Resolution) તેના પર રહેલા પિક્સલ્સ (Pixels) ની સંખ્યા પર આધાર રાખે છે."
-  },
-  169: {
-    "question": "Python માં 'Boolean' ડેટા ટાઈપની કઈ બે કિંમતો હોય છે?",
-    "options": ["Yes / No", "True / False", "0 / 1", "High / Low"],
-    "explanation": "બુલિયન ડેટા ટાઈપમાં માત્ર બે જ શક્યતાઓ હોય છે: True (સાચું) અથવા False (ખોટું)."
-  },
-  170: {
-    "question": "ઈમેલ એડ્રેસમાં '@' ચિહ્ન પછીના ભાગને શું કહેવાય?",
-    "options": ["Username", "Domain Name", "Protocol", "Password"],
-    "explanation": "દા.ત. user@gmail.com માં 'gmail.com' એ ડોમેન નામ (Domain Name) છે."
-  },
-  171: {
-    "question": "કયું સોફ્ટવેર ડેટાને રો અને કોલમમાં ગોઠવવા માટે શ્રેષ્ઠ છે?",
-    "options": ["MS Word", "MS Excel", "MS Paint", "Notepad"],
-    "explanation": "MS Excel સ્પ્રેડશીટ સોફ્ટવેર હોવાથી તે ગણતરી અને ડેટા મેનેજમેન્ટ માટે વપરાય છે."
-  },
-  172: {
-    "question": "Python માં 'tuple' બનાવવા માટે કયા કૌંસ વપરાય છે?",
-    "options": ["[]", "{}", "()", "<>"],
-    "explanation": "ટ્યુપલ બનાવવા માટે હંમેશા રાઉન્ડ બ્રેકેટ () નો ઉપયોગ કરવામાં આવે છે."
-  },
-  173: {
-    "question": "નેટવર્કમાં 'IP Address' કોણ ફાળવે છે?",
-    "options": ["CPU", "ISP", "Browser", "Monitor"],
-    "explanation": "ISP (Internet Service Provider) તમારા કમ્પ્યુટર કે રાઉટરને યુનિક IP એડ્રેસ આપે છે."
-  },
-  174: {
-    "question": "Python માં 'and', 'or', 'not' કયા પ્રકારના ઓપરેટર્સ છે?",
-    "options": ["Arithmetic", "Logical", "Relational", "Assignment"],
-    "explanation": "આ લોજિકલ ઓપરેટર્સ છે જે બે કે તેથી વધુ શરતોને ચકાસવા માટે વપરાય છે."
-  },
-  175: {
-    "question": "કમ્પ્યુટરમાં 'Format' કરવાનો અર્થ શું થાય?",
-    "options": ["ડેટા કોપી કરવો", "બધો ડેટા ભૂંસીને સ્ટોરેજ ખાલી કરવું", "સોફ્ટવેર અપડેટ કરવો", "નવી ફાઇલ બનાવવી"],
-    "explanation": "ફોર્મેટ કરવાથી ડ્રાઈવ કે ડિસ્કનો બધો ડેટા નીકળી જાય છે અને તે નવી ફાઈલો માટે તૈયાર થાય છે."
-  },
-  176: {
-    "question": "Python માં 'upper()' મેથડ શું કામ કરે છે?",
-    "options": ["અક્ષરો નાના કરે છે", "અક્ષરો કેપિટલ કરે છે", "અક્ષરો ગણે છે", "અક્ષરો ડિલીટ કરે છે"],
-    "explanation": "upper() મેથડ તમામ અંગ્રેજી અક્ષરોને કેપિટલ (Uppercase) માં ફેરવે છે."
-  },
-  177: {
-    "question": "કઈ મેમરી પ્રોસેસરની સૌથી નજીક અને સૌથી ઝડપી હોય છે?",
-    "options": ["RAM", "Register", "Hard Disk", "Cache"],
-    "explanation": "રજીસ્ટર્સ (Registers) CPU ની અંદર જ હોય છે અને તે સૌથી વધુ ઝડપે ડેટા પ્રોસેસ કરે છે."
-  },
-  178: {
-    "question": "ઇન્ટરનેટ પર લાઈવ વાતચીત કરવાની પ્રક્રિયાને શું કહેવાય?",
-    "options": ["Browsing", "Chatting", "E-mailing", "Surfing"],
-    "explanation": "નેટવર્ક પર ટેક્સ્ટ કે વિડિયો દ્વારા તરત જ સંવાદ કરવો તેને ચેટિંગ કહેવામાં આવે છે."
-  },
-  179: {
-    "question": "Python માં 'import' વિધાનનો હેતુ શું છે?",
-    "options": ["ડેટા સેવ કરવા", "બીજી ફાઇલ કે લાઈબ્રેરીનો ઉપયોગ કરવા", "પ્રોગ્રામ રન કરવા", "કોમેન્ટ લખવા"],
-    "explanation": "બહારના મોડ્યુલ્સ કે ફંક્શન્સને તમારા પ્રોગ્રામમાં લાવવા માટે 'import' વપરાય છે."
-  },
-  180: {
-    "question": "કયું ઉપકરણ કાગળ પર ગ્રાફિક્સ અને ડિઝાઈન છાપવા માટે વપરાય છે?",
-    "options": ["Scanner", "Plotter", "Monitor", "Light Pen"],
-    "explanation": "પ્લોટર (Plotter) નો ઉપયોગ મોટા નકશા, બેનર અને એન્જિનિયરિંગ ડ્રોઇંગ છાપવા માટે થાય છે."
-  },
-  161: {
-    "question": "Python માં 'randint(1, 10)' ફંક્શન વાપરવા માટે કયો મોડ્યુલ ઈમ્પોર્ટ કરવો પડે?",
-    "options": ["math", "random", "os", "sys"],
-    "explanation": "રેન્ડમ નંબર જનરેટ કરવા માટે Python માં 'random' મોડ્યુલનો ઉપયોગ થાય છે."
-  },
-  162: {
-    "question": "કમ્પ્યુટર નેટવર્કમાં 'Gateway' નું કાર્ય શું છે?",
-    "options": ["બે સમાન નેટવર્કને જોડવા", "બે અલગ અલગ પ્રોટોકોલ ધરાવતા નેટવર્કને જોડવા", "ઇન્ટરનેટ સ્પીડ વધારવી", "ડેટા ડિલીટ કરવો"],
-    "explanation": "ગેટવે બે અલગ અલગ પ્રકારના નેટવર્ક વચ્ચે પ્રવેશદ્વાર તરીકે કામ કરે છે."
-  },
-  163: {
-    "question": "Excel માં 'Filter' વિકલ્પ કયા મેનુમાં જોવા મળે છે?",
-    "options": ["Insert", "Data", "Review", "View"],
-    "explanation": "ડેટાને ચોક્કસ શરત મુજબ અલગ તારવવા માટે 'Data' મેનુમાં ફિલ્ટરનો વિકલ્પ હોય છે."
-  },
-  164: {
-    "question": "Python માં 'set' માં ડેટા કયા ક્રમમાં સચવાય છે?",
-    "options": ["ચડતા ક્રમમાં", "ઉતરતા ક્રમમાં", "કોઈ ચોક્કસ ક્રમ હોતો નથી (Unordered)", "ઇનપુટ આપ્યા મુજબ"],
-    "explanation": "Set માં ડેટાનો કોઈ નિશ્ચિત ક્રમ હોતો નથી અને તે ડુપ્લીકેટ કિંમતો સ્વીકારતું નથી."
-  },
-  165: {
-    "question": "કયા પ્રકારના વાયરસ કમ્પ્યુટરના બૂટ સેક્ટરને અસર કરે છે?",
-    "options": ["File Virus", "Boot Sector Virus", "Trojan Horse", "Spyware"],
-    "explanation": "બૂટ સેક્ટર વાયરસ કમ્પ્યુટરની સ્ટાર્ટ-અપ ફાઇલોને નુકસાન પહોંચાડે છે."
-  },
-  166: {
-    "question": "Python માં 'break' વિધાનનો ઉપયોગ શું છે?",
-    "options": ["પ્રોગ્રામ બંધ કરવા", "લૂપમાંથી અધવચ્ચે બહાર નીકળવા", "ભૂલ સુધારવા", "નવી લાઇન ઉમેરવા"],
-    "explanation": "જ્યારે લૂપને કોઈ શરત પૂરી થતા તરત જ અટકાવવી હોય ત્યારે 'break' વપરાય છે."
-  },
-  167: {
-    "question": "ઈન્ટરનેટ પર માહિતી સુરક્ષિત રાખવા માટે કયો પ્રોટોકોલ વપરાય છે?",
-    "options": ["HTTP", "HTTPS", "FTP", "Telnet"],
-    "explanation": "HTTPS (Hypertext Transfer Protocol Secure) ડેટાને એન્ક્રિપ્ટ કરીને સુરક્ષિત રાખે છે."
-  },
-  168: {
-    "question": "કમ્પ્યુટરમાં 'Resolution' શેમાં માપવામાં આવે છે?",
-    "options": ["Inches", "Pixels", "Watts", "Hertz"],
-    "explanation": "સ્ક્રીનની સ્પષ્ટતા (Resolution) તેના પર રહેલા પિક્સલ્સ (Pixels) ની સંખ્યા પર આધાર રાખે છે."
-  },
-  169: {
-    "question": "Python માં 'Boolean' ડેટા ટાઈપની કઈ બે કિંમતો હોય છે?",
-    "options": ["Yes / No", "True / False", "0 / 1", "High / Low"],
-    "explanation": "બુલિયન ડેટા ટાઈપમાં માત્ર બે જ શક્યતાઓ હોય છે: True (સાચું) અથવા False (ખોટું)."
-  },
-  170: {
-    "question": "ઈમેલ એડ્રેસમાં '@' ચિહ્ન પછીના ભાગને શું કહેવાય?",
-    "options": ["Username", "Domain Name", "Protocol", "Password"],
-    "explanation": "દા.ત. user@gmail.com માં 'gmail.com' એ ડોમેન નામ (Domain Name) છે."
-  },
-  171: {
-    "question": "કયું સોફ્ટવેર ડેટાને રો અને કોલમમાં ગોઠવવા માટે શ્રેષ્ઠ છે?",
-    "options": ["MS Word", "MS Excel", "MS Paint", "Notepad"],
-    "explanation": "MS Excel સ્પ્રેડશીટ સોફ્ટવેર હોવાથી તે ગણતરી અને ડેટા મેનેજમેન્ટ માટે વપરાય છે."
-  },
-  172: {
-    "question": "Python માં 'tuple' બનાવવા માટે કયા કૌંસ વપરાય છે?",
-    "options": ["[]", "{}", "()", "<>"],
-    "explanation": "ટ્યુપલ બનાવવા માટે હંમેશા રાઉન્ડ બ્રેકેટ () નો ઉપયોગ કરવામાં આવે છે."
-  },
-  173: {
-    "question": "નેટવર્કમાં 'IP Address' કોણ ફાળવે છે?",
-    "options": ["CPU", "ISP", "Browser", "Monitor"],
-    "explanation": "ISP (Internet Service Provider) તમારા કમ્પ્યુટર કે રાઉટરને યુનિક IP એડ્રેસ આપે છે."
-  },
-  174: {
-    "question": "Python માં 'and', 'or', 'not' કયા પ્રકારના ઓપરેટર્સ છે?",
-    "options": ["Arithmetic", "Logical", "Relational", "Assignment"],
-    "explanation": "આ લોજિકલ ઓપરેટર્સ છે જે બે કે તેથી વધુ શરતોને ચકાસવા માટે વપરાય છે."
-  },
-  175: {
-    "question": "કમ્પ્યુટરમાં 'Format' કરવાનો અર્થ શું થાય?",
-    "options": ["ડેટા કોપી કરવો", "બધો ડેટા ભૂંસીને સ્ટોરેજ ખાલી કરવું", "સોફ્ટવેર અપડેટ કરવો", "નવી ફાઇલ બનાવવી"],
-    "explanation": "ફોર્મેટ કરવાથી ડ્રાઈવ કે ડિસ્કનો બધો ડેટા નીકળી જાય છે અને તે નવી ફાઈલો માટે તૈયાર થાય છે."
-  },
-  176: {
-    "question": "Python માં 'upper()' મેથડ શું કામ કરે છે?",
-    "options": ["અક્ષરો નાના કરે છે", "અક્ષરો કેપિટલ કરે છે", "અક્ષરો ગણે છે", "અક્ષરો ડિલીટ કરે છે"],
-    "explanation": "upper() મેથડ તમામ અંગ્રેજી અક્ષરોને કેપિટલ (Uppercase) માં ફેરવે છે."
-  },
-  177: {
-    "question": "કઈ મેમરી પ્રોસેસરની સૌથી નજીક અને સૌથી ઝડપી હોય છે?",
-    "options": ["RAM", "Register", "Hard Disk", "Cache"],
-    "explanation": "રજીસ્ટર્સ (Registers) CPU ની અંદર જ હોય છે અને તે સૌથી વધુ ઝડપે ડેટા પ્રોસેસ કરે છે."
-  },
-  178: {
-    "question": "ઇન્ટરનેટ પર લાઈવ વાતચીત કરવાની પ્રક્રિયાને શું કહેવાય?",
-    "options": ["Browsing", "Chatting", "E-mailing", "Surfing"],
-    "explanation": "નેટવર્ક પર ટેક્સ્ટ કે વિડિયો દ્વારા તરત જ સંવાદ કરવો તેને ચેટિંગ કહેવામાં આવે છે."
-  },
-  179: {
-    "question": "Python માં 'import' વિધાનનો હેતુ શું છે?",
-    "options": ["ડેટા સેવ કરવા", "બીજી ફાઇલ કે લાઈબ્રેરીનો ઉપયોગ કરવા", "પ્રોગ્રામ રન કરવા", "કોમેન્ટ લખવા"],
-    "explanation": "બહારના મોડ્યુલ્સ કે ફંક્શન્સને તમારા પ્રોગ્રામમાં લાવવા માટે 'import' વપરાય છે."
-  },
-  180: {
-    "question": "કયું ઉપકરણ કાગળ પર ગ્રાફિક્સ અને ડિઝાઈન છાપવા માટે વપરાય છે?",
-    "options": ["Scanner", "Plotter", "Monitor", "Light Pen"],
-    "explanation": "પ્લોટર (Plotter) નો ઉપયોગ મોટા નકશા, બેનર અને એન્જિનિયરિંગ ડ્રોઇંગ છાપવા માટે થાય છે."
-  },
-  201: {
-    "question": "Python માં 'for' લૂપ સાથે 'else' નો ઉપયોગ ક્યારે થાય છે?",
-    "options": ["જ્યારે લૂપમાં એરર આવે", "જ્યારે લૂપ સફળતાપૂર્વક પૂર્ણ થાય", "જ્યારે લૂપ અધવચ્ચે અટકી જાય", "ક્યારેય નહીં"],
-    "explanation": "જો લૂપ 'break' થયા વગર તેના તમામ સ્ટેપ્સ પૂરા કરે, તો 'else' બ્લોક રન થાય છે."
-  },
-  202: {
-    "question": "કમ્પ્યુટરમાં 'Spam' એટલે શું?",
-    "options": ["મહત્વના ઈમેલ", "બિનજરૂરી અને જાહેરાતના ઈમેલ", "વાયરસ પ્રોગ્રામ", "નવી ફાઇલ"],
-    "explanation": "બિનજરૂરી અથવા બલ્કમાં આવતા અજાણ્યા ઈમેલ્સને સ્પામ કહેવામાં આવે છે."
-  },
-  203: {
-    "question": "Python માં 'lambda' ફંક્શનને શું કહેવાય છે?",
-    "options": ["Anonymus Function", "Named Function", "Global Function", "Recursive Function"],
-    "explanation": "લેમ્ડા ફંક્શન એ એવું ફંક્શન છે જેનું કોઈ નામ હોતું નથી, તેથી તેને અનામી (Anonymous) ફંક્શન કહેવાય છે."
-  },
-  204: {
-    "question": "Excel માં 'Page Orientation' ના બે પ્રકાર કયા છે?",
-    "options": ["Up and Down", "Left and Right", "Portrait and Landscape", "Small and Large"],
-    "explanation": "પેજ ઉભું રાખવા માટે 'Portrait' અને આડું રાખવા માટે 'Landscape' ઓરિએન્ટેશન વપરાય છે."
-  },
-  205: {
-    "question": "કમ્પ્યુટર નેટવર્કમાં 'Ping' કમાન્ડનો ઉપયોગ શું છે?",
-    "options": ["ડેટા ડિલીટ કરવા", "નેટવર્ક કનેક્ટિવિટી ચકાસવા", "પાસવર્ડ બદલવા", "કમ્પ્યુટર બંધ કરવા"],
-    "explanation": "પિંગ કમાન્ડ દ્વારા જાણી શકાય છે કે બીજું કમ્પ્યુટર કે સર્વર નેટવર્ક સાથે જોડાયેલું છે કે નહીં."
-  },
-  206: {
-    "question": "Python માં 'list.reverse()' મેથડ શું કરે છે?",
-    "options": ["લિસ્ટ ડિલીટ કરે છે", "લિસ્ટને ઉંધા ક્રમમાં ગોઠવે છે", "લિસ્ટને સોર્ટ કરે છે", "લિસ્ટ કોપી કરે છે"],
-    "explanation": "reverse() મેથડ લિસ્ટની તમામ આઈટમ્સને છેલ્લાથી પહેલા ક્રમમાં ગોઠવી દે છે."
-  },
-  207: {
-    "question": "નીચેનામાંથી કયું ક્લાઉડ સ્ટોરેજ (Cloud Storage) નું ઉદાહરણ છે?",
-    "options": ["Hard Disk", "Google Drive", "RAM", "ROM"],
-    "explanation": "Google Drive ઇન્ટરનેટ પર ડેટા સેવ કરવાની સુવિધા આપે છે, જેને ક્લાઉડ સ્ટોરેજ કહેવાય."
-  },
-  208: {
-    "question": "Python માં 'open()' ફંક્શનમાં 'w' મોડનો અર્થ શું થાય?",
-    "options": ["Read only", "Write (નવી ફાઇલ લખવી)", "Wait", "Window mode"],
-    "explanation": "'w' મોડ ફાઇલને લખવા માટે ખોલે છે, જો ફાઇલ પહેલેથી હોય તો તેનો ડેટા ભૂંસીને નવેસરથી લખે છે."
-  },
-  209: {
-    "question": "MS Word માં 'Watermark' વિકલ્પ કયા ટેબમાં હોય છે?",
-    "options": ["Home", "Insert", "Design / Page Layout", "Review"],
-    "explanation": "પેજની પાછળ ઝાંખું લખાણ કે લોગો ઉમેરવા માટે વોટરમાર્ક વિકલ્પ વપરાય છે."
-  },
-  210: {
-    "question": "કમ્પ્યુટર પ્રોગ્રામિંગમાં 'Syntax' એટલે શું?",
-    "options": ["પ્રોગ્રામની સ્પીડ", "ભાષાના લખવાના નિયમો", "પ્રોગ્રામની એરર", "આઉટપુટ"],
-    "explanation": "કોઈપણ પ્રોગ્રામિંગ લેંગ્વેજ જે નિયમો મુજબ લખાય છે તેને સિંટેક્સ કહેવામાં આવે છે."
-  },
-  211: {
-    "question": "Python માં 'set' માંથી ડુપ્લીકેટ વેલ્યુ દૂર થાય છે?",
-    "options": ["હા", "ના", "માત્ર સંખ્યાઓ", "માત્ર સ્ટ્રિંગ"],
-    "explanation": "સેટ (Set) ની ખાસિયત એ છે કે તે ક્યારેય એકની એક કિંમત બીજી વાર રાખતું નથી."
-  },
-  212: {
-    "question": "ઇન્ટરનેટ પર 'Domain Name' ને IP એડ્રેસમાં કોણ ફેરવે છે?",
-    "options": ["HTTP", "DNS", "FTP", "SMTP"],
-    "explanation": "DNS (Domain Name System) google.com જેવા નામને કમ્પ્યુટર સમજી શકે તેવા IP માં ફેરવે છે."
-  },
-  213: {
-    "question": "Python માં 'pass' વિધાનનો ઉપયોગ શું છે?",
-    "options": ["પ્રોગ્રામ સફળ કરવો", "ખાલી બ્લોક રાખવા માટે (Placeholder)", "લૂપ તોડવા", "ઇનપુટ લેવા"],
-    "explanation": "જ્યારે તમારે કોઈ ફંક્શન કે લૂપ ખાલી રાખવું હોય પણ એરર ન આવે તેમ ઈચ્છતા હોવ ત્યારે 'pass' વપરાય છે."
-  },
-  214: {
-    "question": "કમ્પ્યુટરની મેમરીમાં '1 KB' એટલે કેટલા બાઇટ્સ?",
-    "options": ["1000", "1024", "1048", "512"],
-    "explanation": "કમ્પ્યુટર વિજ્ઞાનમાં 1 કિલોબાઇટ એટલે 1024 બાઇટ્સ થાય છે."
-  },
-  215: {
-    "question": "Python માં 'float' ડેટા ટાઈપ શું સંગ્રહ કરે છે?",
-    "options": ["માત્ર પૂર્ણાંક સંખ્યા", "દશાંશ વાળી સંખ્યા (Decimal)", "માત્ર લખાણ", "સાચું કે ખોટું"],
-    "explanation": "float નો ઉપયોગ પોઈન્ટ વાળી કિંમતો (દા.ત. 10.5) સંગ્રહ કરવા માટે થાય છે."
-  },
-  216: {
-    "question": "Excel માં 'Sum' ફંક્શનનો ઉપયોગ શું છે?",
-    "options": ["બાદબાકી કરવા", "ગુણાકાર કરવા", "સરવાળો કરવા", "સરેરાશ શોધવા"],
-    "explanation": "પસંદ કરેલા સેલ્સની કિંમતોનો કુલ સરવાળો મેળવવા SUM વપરાય છે."
-  },
-  217: {
-    "question": "Python માં 'bool(None)' શું રિટર્ન કરશે?",
-    "options": ["True", "False", "None", "Error"],
-    "explanation": "Python માં 'None' ને લોજિકલ રીતે 'False' માનવામાં આવે છે."
-  },
-  218: {
-    "question": "કયું ઉપકરણ કમ્પ્યુટરમાં ગેમ રમવા માટે વધુ વપરાય છે?",
-    "options": ["Keyboard", "Joystick", "Scanner", "Printer"],
-    "explanation": "જોયસ્ટિક (Joystick) ખાસ કરીને ફ્લાઇટ સિમ્યુલેટર અને ગેમ્સ કંટ્રોલ કરવા માટે વપરાય છે."
-  },
-  219: {
-    "question": "Python માં 'all()' ફંક્શન ક્યારે True આપે છે?",
-    "options": ["જ્યારે કોઈ પણ એક કિંમત True હોય", "જ્યારે બધી જ કિંમતો True હોય", "જ્યારે બધી કિંમત False હોય", "જ્યારે લિસ્ટ ખાલી હોય"],
-    "explanation": "all() ફંક્શન ત્યારે જ True રિટર્ન કરે છે જો લિસ્ટની દરેક આઈટમ સાચી (True) હોય."
-  },
-  220: {
-    "question": "કયું નેટવર્ક સુરક્ષિત માનવામાં આવે છે?",
-    "options": ["Public Wi-Fi", "Private LAN", "Open Network", "Shared VPN"],
-    "explanation": "પ્રાઇવેટ નેટવર્ક (LAN) બહારના લોકો માટે એક્સેસ કરવું મુશ્કેલ હોવાથી વધુ સુરક્ષિત છે."
-  },
-  221: {
-    "question": "Python માં 'isinstance(x, int)' શું તપાસે છે?",
-    "options": ["x ની કિંમત", "x નો ડેટા ટાઈપ integer છે કે નહીં", "x ની લંબાઈ", "x ને integer માં ફેરવે છે"],
-    "explanation": "isinstance() ચેક કરે છે કે આપેલ વેરિયેબલ ચોક્કસ ક્લાસ કે ડેટા ટાઈપનો છે કે નહીં."
-  },
-  222: {
-    "question": "કમ્પ્યુટર કીબોર્ડમાં 'F1' કી નો સામાન્ય ઉપયોગ શું છે?",
-    "options": ["સેવ કરવા", "મદદ (Help) મેળવવા", "બંધ કરવા", "બ્રાઇટનેસ વધારવા"],
-    "explanation": "મોટાભાગના સોફ્ટવેરમાં F1 કી દબાવવાથી હેલ્પ મેનુ અથવા ગાઈડ ખુલે છે."
-  },
-  223: {
-    "question": "Python માં 'eval()' ફંક્શનનું કાર્ય શું છે?",
-    "options": ["સ્ટ્રિંગને કોડ તરીકે રન કરવી", "ડેટા ડિલીટ કરવો", "પ્રિન્ટ કરવું", "ઇનપુટ લેવું"],
-    "explanation": "eval() ફંક્શન સ્ટ્રિંગમાં લખેલા ગણિતના સમીકરણ કે કોડને ઉકેલે છે."
-  },
-  224: {
-    "question": "સોફ્ટવેરનું નાનું વર્ઝન જે ભૂલો સુધારવા બહાર પાડવામાં આવે તેને શું કહેવાય?",
-    "options": ["Update", "Patch", "Beta", "Version"],
-    "explanation": "સોફ્ટવેરમાં કોઈ ચોક્કસ બગ કે સુરક્ષાની ખામી સુધારવા માટે જે નાનું અપડેટ આવે તેને 'Patch' કહેવાય છે."
-  },
-  225: {
-    "question": "Python માં 'sys.exit()' નો ઉપયોગ શાના માટે થાય છે?",
-    "options": ["લૂપ રોકવા", "પ્રોગ્રામમાંથી બહાર નીકળવા (Terminating)", "ફાઇલ બંધ કરવા", "કમ્પ્યુટર બંધ કરવા"],
-    "explanation": "sys.exit() ફંક્શન ચાલુ પાઈથોન સ્ક્રિપ્ટ કે પ્રોગ્રામને તાત્કાલિક બંધ કરવા માટે વપરાય છે."
-  }
+  "question": "Presentation માં instant animation ઉમેરવા માટે કયો button છે?",
+  "options": ["Add button", "Start button", "Insert button", "Action button"],
+  "explanation": "Action button દ્વારા animation અથવા action ઉમેરવામાં આવે છે."
+},
+162: {
+  "question": "PowerPoint કયા પ્રકારનું software છે?",
+  "options": ["Word Processor", "Spreadsheet", "Presentation Graphics", "Database"],
+  "explanation": "PowerPoint presentation graphics software છે."
+},
+163: {
+  "question": "Slide layout પસંદ કરવા માટે કયું tool છે?",
+  "options": ["Apply design", "Bullets", "New slide", "Slide Layout"],
+  "explanation": "Slide Layout દ્વારા layout બદલાય છે."
+},
+164: {
+  "question": "PowerPoint presentation બંધ કરવા કઈ key છે?",
+  "options": ["ESC", "Tab", "Ctrl", "Enter"],
+  "explanation": "ESC key presentation બંધ કરે છે."
+},
+165: {
+  "question": "Backstage view માં કેટલા panes હોય છે?",
+  "options": ["3", "5", "7", "9"],
+  "explanation": "Backstage view માં 3 panes હોય છે."
+},
+166: {
+  "question": "Text પર effect લગાવવા કયું menu છે?",
+  "options": ["Animation", "Design", "Transitions", "Slide show"],
+  "explanation": "Animation menu text effect માટે છે."
+},
+167: {
+  "question": "Slides auto change કરવા કયો dialog box છે?",
+  "options": ["Action setting", "Slide transition", "Slide animation", "Custom animation"],
+  "explanation": "Slide transition દ્વારા auto change થાય છે."
+},
+168: {
+  "question": "Presentation automatically બનાવવા કયો વિકલ્પ છે?",
+  "options": ["Template", "Blank", "Auto content wizard", "Standard toolbar"],
+  "explanation": "Auto content wizard automatic presentation બનાવે છે."
+},
+169: {
+  "question": "Built-in design માટે કયો વિકલ્પ છે?",
+  "options": ["Auto content wizard", "Blank", "Toolbar", "Template"],
+  "explanation": "Template built-in design આપે છે."
+},
+170: {
+  "question": "Presentation run કરવા કયો function key છે?",
+  "options": ["F3", "F5", "F7", "F9"],
+  "explanation": "F5 presentation શરૂ કરે છે."
+},
+171: {
+  "question": "PowerPoint file extension શું છે?",
+  "options": [".txt", ".pptx", ".docx", ".xlsx"],
+  "explanation": ".pptx PowerPoint નું extension છે."
+},
+172: {
+  "question": "Themes કયા tab માં હોય છે?",
+  "options": ["Transition", "Design", "Insert", "Animation"],
+  "explanation": "Design tab માં themes હોય છે."
+},
+173: {
+  "question": "Default slide orientation શું છે?",
+  "options": ["Landscape", "Portrait", "Vertical", "Horizontal"],
+  "explanation": "Landscape default orientation છે."
+},
+174: {
+  "question": "Slides print કરવા shortcut શું છે?",
+  "options": ["Ctrl+O", "Ctrl+P", "Ctrl+Alt+O", "Ctrl+Alt+P"],
+  "explanation": "Ctrl+P print માટે છે."
+},
+175: {
+  "question": "એક પેજ પર ચાર slides print કરવા કયો વિકલ્પ છે?",
+  "options": ["Handouts", "Print layout", "Custom range", "Print all"],
+  "explanation": "Handouts દ્વારા multiple slides print થાય છે."
+},
+176: {
+  "question": "Empty slide માં dotted areas ને શું કહે છે?",
+  "options": ["Template", "Placard", "Placeholders", "Themes"],
+  "explanation": "તે Placeholders કહેવાય છે."
+},
+177: {
+  "question": "Database users ની જરૂરિયાતો design કરતું phase કયું છે?",
+  "options": ["Initial phase", "Execution", "Maintenance", "Closure"],
+  "explanation": "Initial phase માં design થાય છે."
+},
+178: {
+  "question": "DDL નું સંપૂર્ણ નામ શું છે?",
+  "options": [
+    "Data Describe Language",
+    "Definition Data Language",
+    "Data Definition Language",
+    "Data Distinct Language"
+  ],
+  "explanation": "DDL એટલે Data Definition Language."
+},
+179: {
+  "question": "DML નું સંપૂર્ણ નામ શું છે?",
+  "options": [
+    "Data Multiplication Language",
+    "Data Manipulation Language",
+    "Data Modify Language",
+    "Data Mapping Language"
+  ],
+  "explanation": "DML એટલે Data Manipulation Language."
+},
+180: {
+  "question": "View પર query સફળ થવા માટે શું જરૂરી છે?",
+  "options": [
+    "Table માં data હોવો જોઈએ",
+    "SELECT privilege on table",
+    "Same database હોવું જોઈએ",
+    "SELECT privilege on view"
+  ],
+  "explanation": "View પર SELECT privilege હોવું જરૂરી છે."
+},
+  181: {
+  "question": "મોટા ડેટાબેઝમાં attributes રજૂ કરવા શ્રેષ્ઠ રીત કઈ છે?",
+  "options": ["Relational", "Concatenation", "Dot representation", "Customization"],
+  "explanation": "Concatenation દ્વારા attributes રજૂ કરાય છે."
+},
+182: {
+  "question": "કયો query sum, average કરીને grouping કરે છે?",
+  "options": ["Cross-tab", "Snapshot", "Both", "Across-tabs"],
+  "explanation": "Cross-tab query grouping માટે ઉપયોગી છે."
+},
+183: {
+  "question": "Database નો પ્રકાર કયો છે?",
+  "options": ["Transition", "Relational", "Outlook", "Decentralized"],
+  "explanation": "Relational database સૌથી સામાન્ય છે."
+},
+184: {
+  "question": "DDL command વિશે સાચું શું છે?",
+  "options": [
+    "Control database",
+    "Insert, update, delete",
+    "Create, delete, alter",
+    "Retrieve data"
+  ],
+  "explanation": "DDL create, alter, delete માટે છે."
+},
+185: {
+  "question": "DROP TABLE student; શું કરે છે?",
+  "options": [
+    "Table delete કરે છે",
+    "Table બનાવે છે",
+    "Table check કરે છે",
+    "Records delete કરે છે"
+  ],
+  "explanation": "DROP TABLE આખી table delete કરે છે."
+},
+186: {
+  "question": "આ code શું કરે છે?",
+  "options": [
+    "Syntax error",
+    "Column delete કરે છે",
+    "Column ઉમેરે છે",
+    "Records ઉમેરે છે"
+  ],
+  "explanation": "તે column ઉમેરે છે."
+},
+187: {
+  "question": "TCL commands કયા છે?",
+  "options": [
+    "COMMIT, ROLLBACK",
+    "UPDATE, TRUNCATE",
+    "SELECT, INSERT",
+    "GRANT, REVOKE"
+  ],
+  "explanation": "COMMIT અને ROLLBACK TCL commands છે."
+},
+188: {
+  "question": "એક logical unit of work શું કહેવાય?",
+  "options": ["Views", "Networks", "Units", "Transactions"],
+  "explanation": "Transactions logical unit છે."
+},
+189: {
+  "question": "Database માં consistency શું કરે છે?",
+  "options": ["Atomicity", "Consistency", "Durability", "Integrity"],
+  "explanation": "Consistency data ની સાચી સ્થિતિ જાળવે છે."
+},
+190: {
+  "question": "Transactions વચ્ચે interaction કઈ scheme નિયંત્રિત કરે છે?",
+  "options": [
+    "Concurrency control",
+    "Multiprogramming",
+    "Serialization",
+    "Schedule"
+  ],
+  "explanation": "Concurrency control scheme interaction નિયંત્રિત કરે છે."
+},
+191: {
+  "question": "Database નું logical design શું કહેવાય?",
+  "options": ["Instance", "Relation", "Domain", "Schema"],
+  "explanation": "Schema logical structure દર્શાવે છે."
+},
+192: {
+  "question": "Atomic domain હોય ત્યારે unit શું કહેવાય?",
+  "options": ["Different", "Indivisible", "Constant", "Divisible"],
+  "explanation": "Atomic એટલે indivisible unit."
+},
+193: {
+  "question": "Relation માં tuples નો order શું હોય છે?",
+  "options": ["Any", "Same", "Sorted", "Constant"],
+  "explanation": "Tuple નો order કોઈપણ હોઈ શકે છે."
+},
+194: {
+  "question": "Table માં attribute શું છે?",
+  "options": ["Record", "Column", "Tuple", "Key"],
+  "explanation": "Attribute એટલે column."
+},
+195: {
+  "question": "આ statement માં error શું છે?",
+  "options": [
+    "Return type missing",
+    "Dept_name mismatch",
+    "Reference missing",
+    "Function name error"
+  ],
+  "explanation": "Return type missing છે."
+},
+196: {
+  "question": "Expression માં highest precedence કયું છે?",
+  "options": ["Division", "Subtraction", "Power", "Parentheses"],
+  "explanation": "Parentheses સૌથી વધુ precedence ધરાવે છે."
+},
+197: {
+  "question": "Power operator કયો છે?",
+  "options": ["a ^ b", "a ** b", "a ^^ b", "a ^* b"],
+  "explanation": "Python માં ** power માટે છે."
+},
+198: {
+  "question": "યોગ્ય Python if statement કયું છે?",
+  "options": [
+    "if a >= 2:",
+    "if (a >= 2)",
+    "if (a = > 22)",
+    "if a >= 22"
+  ],
+  "explanation": "Python માં colon (:) જરૂરી છે."
+},
+199: {
+  "question": "Python માં loop કયું છે?",
+  "options": ["for loop", "if else", "do-while", "loop"],
+  "explanation": "for loop iteration માટે છે."
+},
+200: {
+  "question": "User input લેવા કયો function છે?",
+  "options": ["raw_input()", "rawinput()", "input()", "string()"],
+  "explanation": "input() user પાસેથી value લે છે."
+},
+201: {
+  "question": "સારી office etiquette કઈ છે?",
+  "options": [
+    "Formal dress",
+    "પંક્તિબદ્ધ ન રહેવું",
+    "લાઉડ ringtone",
+    "કચરો ફેંકવો"
+  ],
+  "explanation": "Formal dress સારી etiquette છે."
+},
+202: {
+  "question": "એકસરખો ઉચ્ચાર પણ અલગ અર્થ ધરાવતા શબ્દને શું કહે છે?",
+  "options": ["homophone", "homograph", "diphthong", "syllable"],
+  "explanation": "Homophone એકસરખા ઉચ્ચારવાળા શબ્દો છે."
+},
+203: {
+  "question": "English શીખવા માટે શું મદદરૂપ છે?",
+  "options": ["dedication", "fear", "anger", "shyness"],
+  "explanation": "Dedication શીખવામાં મદદ કરે છે."
+},
+204: {
+  "question": "યોગ્ય punctuation કયું છે?",
+  "options": ["?", ",", ".", "!"],
+  "explanation": "Question માટે '?' ઉપયોગ થાય છે."
+},
+205: {
+  "question": "Capital letter ક્યારે વાપરાય?",
+  "options": [
+    "Sentence શરૂઆતમાં",
+    "વ્યક્તિના નામમાં",
+    "સ્થળના નામમાં",
+    "All of the above"
+  ],
+  "explanation": "બધા કિસ્સામાં capital letter વાપરાય છે."
+},
+206: {
+  "question": "Describing word કયું છે?",
+  "options": ["eat", "repair", "hot", "soup"],
+  "explanation": "'hot' adjective છે."
+},
+207: {
+  "question": "'Thank you' પછી શું કહીએ?",
+  "options": ["Thank you", "You're welcome", "Bye", "How are you"],
+  "explanation": "'You're welcome' યોગ્ય જવાબ છે."
+},
+208: {
+  "question": "Odd word કયું છે?",
+  "options": ["please", "sorry", "paper", "thanks"],
+  "explanation": "'paper' અલગ છે."
+},
+209: {
+  "question": "Welder શું સાથે કામ કરે છે?",
+  "options": ["nail polish", "robots", "welding tools", "laptops"],
+  "explanation": "Welder welding tools નો ઉપયોગ કરે છે."
+},
+210: {
+  "question": "Today's weather is ____",
+  "options": ["Hopeful", "Warm", "Blue", "Urgent"],
+  "explanation": "'Warm' યોગ્ય છે."
+},
+211: {
+  "question": "'when' શું દર્શાવે છે?",
+  "options": ["place", "thing", "person", "time"],
+  "explanation": "'when' સમય દર્શાવે છે."
+},
+212: {
+  "question": "Rahul enjoys ____ with his dog",
+  "options": ["playing", "writing", "doing", "washing"],
+  "explanation": "'playing' યોગ્ય છે."
+},
+213: {
+  "question": "Self awareness શું છે?",
+  "options": ["Belief", "Self Awareness", "Myth", "Threat"],
+  "explanation": "પોતાની સમજ Self Awareness છે."
+},
+214: {
+  "question": "વ્યક્તિના ગુણોને શું કહે છે?",
+  "options": ["Strengths", "Weakness", "Opportunities", "Threats"],
+  "explanation": "તે Personal Strengths છે."
+},
+215: {
+  "question": "નકારાત્મક ગુણોને શું કહે છે?",
+  "options": ["Strengths", "Weakness", "Opportunities", "Threats"],
+  "explanation": "તે Personal Weaknesses છે."
+},
+216: {
+  "question": "Weakness નું ઉદાહરણ કયું છે?",
+  "options": ["Confidence", "Being lazy", "Hard working", "Active"],
+  "explanation": "'Being lazy' weakness છે."
+},
+217: {
+  "question": "Goals કેટલા પ્રકારના હોય છે?",
+  "options": [
+    "Good/Bad",
+    "Long-term/Short-term",
+    "Rich/Poor",
+    "Fixed/Non-fixed"
+  ],
+  "explanation": "Goals long-term અને short-term હોય છે."
+},
+218: {
+  "question": "Stress શું છે?",
+  "options": [
+    "Joy",
+    "Surprise",
+    "Delight",
+    "Frustration"
+  ],
+  "explanation": "Stress એટલે નિરાશા અથવા તણાવ."
+},
+219: {
+  "question": "Good stress નું લક્ષણ કયું છે?",
+  "options": [
+    "Goals અટકાવે",
+    "Self doubt",
+    "Long-term tension નથી",
+    "Illness કરે"
+  ],
+  "explanation": "Good stress લાંબા સમય સુધી નુકસાન કરતું નથી."
+},
+220: {
+  "question": "Stress buster ન હોય તે કયું છે?",
+  "options": [
+    "Problem વિશે વધારે વિચારવું",
+    "સમયસર સુવું",
+    "સંગીત સાંભળવું",
+    "Gardening"
+  ],
+  "explanation": "વધારે વિચારવું stress ઘટાડતું નથી."
+},
+221: {
+  "question": "Mindfulness શું છે?",
+  "options": [
+    "કંઈ વિચારવું નહીં",
+    "Brain sharp કરવું",
+    "Present માં રહેવું",
+    "ઘણા વિચાર"
+  ],
+  "explanation": "Mindfulness એટલે વર્તમાન ક્ષણે ધ્યાન રાખવું."
+},
+222: {
+  "question": "Stress વિશે સાચું શું છે?",
+  "options": [
+    "Manage કરી શકાય",
+    "Control નથી થઈ શકતું",
+    "ઘટાડી શકાતું નથી",
+    "All"
+  ],
+  "explanation": "Stress manage કરી શકાય છે."
+},
+223: {
+  "question": "Problem solving વિશે સાચું શું છે?",
+  "options": [
+    "Experts જ solve કરે",
+    "વધારે practiceથી skill વધે",
+    "Course જરૂરી છે",
+    "જરૂરી નથી"
+  ],
+  "explanation": "Practice થી problem solving skill સુધરે છે."
+},
+224: {
+  "question": "Decision લેતી વખતે શું ધ્યાનમાં રાખવું?",
+  "options": [
+    "Mood",
+    "Friends choice",
+    "Rules",
+    "Personal priorities"
+  ],
+  "explanation": "Personal priorities મહત્વપૂર્ણ છે."
+},
+225: {
+  "question": "SWOT નું પૂર્ણ સ્વરૂપ શું છે?",
+  "options": [
+    "Special Wellness Organization Theme",
+    "Speak Work Openly Together",
+    "Strong World Olympic Team",
+    "Strength Weakness Opportunity Threat"
+  ],
+  "explanation": "SWOT એટલે Strength, Weakness, Opportunity, Threat."
+}
     }
   }
 };
