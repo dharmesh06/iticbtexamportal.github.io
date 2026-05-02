@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - CBT Exam Portal</title>
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="form-page">
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <div class="logo-icon">🎓</div>
+    <div><div class="brand-name">CBT Exam Portal</div><div class="brand-sub">NCVT Practice Tests</div></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="login.html" class="nav-btn-outline">Login</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="form-wrapper">
+  <div class="form-card" style="max-width:580px;">
+    <div class="form-logo"><span style="font-size:2.5rem;">📝</span></div>
+    <h2>Student Registration</h2>
+    <p class="form-subtitle">Create your free account to start practicing CBT exams</p>
+    <div id="alertBox"></div>
+
+    <form id="registerForm" novalidate>
+      <!-- Personal Info -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" id="fullName" placeholder="Enter your full name">
+          <div class="field-error" id="nameErr"></div>
+        </div>
+        <div class="form-group">
+          <label>Mobile Number <span class="req">*</span></label>
+          <input type="tel" id="mobile" placeholder="10-digit mobile number" maxlength="10">
+          <div class="field-error" id="mobileErr"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email ID <span class="req">*</span></label>
+          <input type="email" id="email" placeholder="your@email.com">
+          <div class="field-error" id="emailErr"></div>
+        </div>
+        <div class="form-group">
+          <label>Gender <span class="req">*</span></label>
+          <div class="radio-group" style="margin-top:0.5rem;">
+            <label class="radio-item"><input type="radio" name="gender" value="Male"> Male</label>
+            <label class="radio-item"><input type="radio" name="gender" value="Female"> Female</label>
+            <label class="radio-item"><input type="radio" name="gender" value="Other"> Other</label>
+          </div>
+          <div class="field-error" id="genderErr"></div>
+        </div>
+      </div>
+
+      <!-- Academic Details -->
+      <div class="form-group">
+        <label>Scheme <span class="req">*</span></label>
+        <div class="radio-group" style="margin-top:0.5rem;">
+          <label class="radio-item"><input type="radio" name="scheme" value="CTS" onchange="updateTrades()"> CTS (Craftsmen Training Scheme)</label>
+          <label class="radio-item"><input type="radio" name="scheme" value="CITS" onchange="updateTrades()"> CITS (Craft Instructor Training Scheme)</label>
+        </div>
+        <div class="field-error" id="schemeErr"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Choose Trade <span class="req">*</span></label>
+          <select id="trade"><option value="">-- Select Scheme First --</option></select>
+          <div class="field-error" id="tradeErr"></div>
+        </div>
+        <div class="form-group">
+          <label>Preferred Language <span class="req">*</span></label>
+          <select id="language"><option value="">-- Select Language --</option></select>
+          <div class="field-error" id="langErr"></div>
+        </div>
+      </div>
+
+      <!-- Institute Details -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>State / UT <span class="req">*</span></label>
+          <select id="state"><option value="">-- Select State --</option></select>
+          <div class="field-error" id="stateErr"></div>
+        </div>
+        <div class="form-group">
+          <label>District</label>
+          <input type="text" id="district" placeholder="Your district">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Institute Name (ITI/NSTI/IToT) <span class="req">*</span></label>
+        <input type="text" id="institute" placeholder="Enter your institute name">
+        <div class="field-error" id="instituteErr"></div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>New Password <span class="req">*</span></label>
+          <input type="password" id="password" placeholder="Min. 6 characters">
+          <div class="field-error" id="passErr"></div>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password <span class="req">*</span></label>
+          <input type="password" id="confirmPassword" placeholder="Re-enter password">
+          <div class="field-error" id="cpassErr"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="radio-item"><input type="checkbox" id="terms"> I agree to the <a href="#" style="color:var(--primary-light)">Terms of Use</a> and <a href="#" style="color:var(--primary-light)">Privacy Policy</a></label>
+        <div class="field-error" id="termsErr"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full" style="margin-top:0.5rem;">📝 Register Now</button>
+    </form>
+    <div class="form-footer">Already have an account? <a href="login.html">Login here</a></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script>
+// Populate selects
+function updateTrades() {
+  const scheme = document.querySelector('input[name="scheme"]:checked')?.value;
+  const sel = document.getElementById('trade');
+  sel.innerHTML = '<option value="">-- Select Trade --</option>';
+  if (scheme && TRADES[scheme]) {
+    TRADES[scheme].forEach(t => sel.innerHTML += `<option value="${t}">${t}</option>`);
+  }
+}
+const langSel = document.getElementById('language');
+LANGUAGES.forEach(l => langSel.innerHTML += `<option value="${l}">${l}</option>`);
+const stateSel = document.getElementById('state');
+STATES.forEach(s => stateSel.innerHTML += `<option value="${s}">${s}</option>`);
+
+function showErr(id, msg) { document.getElementById(id).textContent = msg; document.getElementById(id.replace('Err',''))?.classList.add('error'); }
+function clearErr(id) { document.getElementById(id).textContent = ''; document.getElementById(id.replace('Err',''))?.classList.remove('error'); }
+
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+  ['nameErr','mobileErr','emailErr','genderErr','schemeErr','tradeErr','langErr','stateErr','instituteErr','passErr','cpassErr','termsErr'].forEach(clearErr);
+
+  const name = document.getElementById('fullName').value.trim();
+  const mobile = document.getElementById('mobile').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const gender = document.querySelector('input[name="gender"]:checked')?.value;
+  const scheme = document.querySelector('input[name="scheme"]:checked')?.value;
+  const trade = document.getElementById('trade').value;
+  const lang = document.getElementById('language').value;
+  const state = document.getElementById('state').value;
+  const institute = document.getElementById('institute').value.trim();
+  const pass = document.getElementById('password').value;
+  const cpass = document.getElementById('confirmPassword').value;
+  const terms = document.getElementById('terms').checked;
+
+  if (!name) { showErr('nameErr','Name is required'); valid=false; }
+  if (!/^\d{10}$/.test(mobile)) { showErr('mobileErr','Enter valid 10-digit mobile'); valid=false; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr('emailErr','Enter valid email address'); valid=false; }
+  if (!gender) { showErr('genderErr','Please select gender'); valid=false; }
+  if (!scheme) { showErr('schemeErr','Please select a scheme'); valid=false; }
+  if (!trade) { showErr('tradeErr','Please select your trade'); valid=false; }
+  if (!lang) { showErr('langErr','Please select language'); valid=false; }
+  if (!state) { showErr('stateErr','Please select your state'); valid=false; }
+  if (!institute) { showErr('instituteErr','Institute name is required'); valid=false; }
+  if (pass.length < 6) { showErr('passErr','Password must be at least 6 characters'); valid=false; }
+  if (pass !== cpass) { showErr('cpassErr','Passwords do not match'); valid=false; }
+  if (!terms) { showErr('termsErr','Please accept terms to continue'); valid=false; }
+
+  if (valid) {
+    const userData = { name, mobile, email, gender, scheme, trade, lang, state, institute: document.getElementById('district').value ? institute+', '+document.getElementById('district').value : institute, password: btoa(pass), registered: new Date().toISOString(), testsTaken:0, totalScore:0 };
+    // Save to session
+    localStorage.setItem('cbt_user', JSON.stringify(userData));
+    localStorage.setItem('cbt_logged_in', 'true');
+    // Also save into the master users list so admin can find and assign modules
+    const allUsers = JSON.parse(localStorage.getItem('cbt_users') || '[]');
+    if (!allUsers.find(u => u.email === userData.email || u.mobile === userData.mobile)) {
+      allUsers.push(userData);
+      localStorage.setItem('cbt_users', JSON.stringify(allUsers));
+    }
+    document.getElementById('alertBox').innerHTML = '<div class="alert alert-success">✅ Registration successful! Redirecting to dashboard...</div>';
+    setTimeout(() => window.location.href='dashboard.html', 1500);
+  }
+});
+</script>
+</body>
+</html>

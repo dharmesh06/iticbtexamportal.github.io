@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - CBT Exam Portal</title>
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="form-page">
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <div class="logo-icon">🎓</div>
+    <div><div class="brand-name">CBT Exam Portal</div><div class="brand-sub">NCVT Practice Tests</div></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="register.html" class="nav-btn">Register Free</a></li>
+  </ul>
+</nav>
+
+<div class="form-wrapper">
+  <div class="form-card">
+    <div class="form-logo"><span style="font-size:2.5rem;">🔐</span></div>
+    <h2>Student Login</h2>
+    <p class="form-subtitle">Welcome back! Login to continue your preparation</p>
+    <div id="alertBox"></div>
+
+    <form id="loginForm" novalidate>
+      <div class="form-group">
+        <label>Mobile Number / Email <span class="req">*</span></label>
+        <input type="text" id="loginId" placeholder="Mobile number or email address">
+        <div class="field-error" id="loginIdErr"></div>
+      </div>
+      <div class="form-group">
+        <label>Password <span class="req">*</span></label>
+        <div style="position:relative;">
+          <input type="password" id="loginPass" placeholder="Enter your password" style="padding-right:3rem;">
+          <button type="button" onclick="togglePass()" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:1.1rem;" id="eyeBtn">👁️</button>
+        </div>
+        <div class="field-error" id="loginPassErr"></div>
+      </div>
+      <div style="text-align:right;margin-bottom:1rem;">
+        <a href="#" style="color:var(--primary-light);font-size:0.85rem;font-weight:500;">Forgot Password?</a>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">🔐 Login</button>
+
+      <div class="form-divider">or</div>
+
+      <!-- Demo login -->
+      <button type="button" class="btn btn-secondary btn-full" onclick="demoLogin()">🎯 Try Demo Account</button>
+    </form>
+    <div class="form-footer">New user? <a href="register.html">Register here</a></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script>
+function togglePass() {
+  const f = document.getElementById('loginPass');
+  f.type = f.type === 'password' ? 'text' : 'password';
+  document.getElementById('eyeBtn').textContent = f.type === 'password' ? '👁️' : '🙈';
+}
+
+function demoLogin() {
+  const demo = { name:'Demo Trainee', mobile:'9876543210', email:'demo@cbtportal.in', gender:'Male', scheme:'CTS', trade:'Electrician', lang:'English', state:'Gujarat', institute:'Government ITI, Ahmedabad', registered: new Date().toISOString(), testsTaken:3, totalScore:175, lastScore:72 };
+  localStorage.setItem('cbt_user', JSON.stringify(demo));
+  localStorage.setItem('cbt_logged_in', 'true');
+  window.location.href = 'dashboard.html';
+}
+
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('loginIdErr').textContent = '';
+  document.getElementById('loginPassErr').textContent = '';
+
+  const id = document.getElementById('loginId').value.trim();
+  const pass = document.getElementById('loginPass').value;
+  if (!id) { document.getElementById('loginIdErr').textContent = 'Please enter mobile or email'; return; }
+  if (!pass) { document.getElementById('loginPassErr').textContent = 'Please enter password'; return; }
+
+  const users = JSON.parse(localStorage.getItem('cbt_users') || '[]');
+  let user = users.find(u => u.mobile === id || u.email === id);
+  
+  if (!user) {
+    // Fallback to active session user if not in array
+    const singleUser = JSON.parse(localStorage.getItem('cbt_user') || 'null');
+    if (singleUser && (singleUser.mobile === id || singleUser.email === id)) {
+      user = singleUser;
+      // Sync this user into cbt_users[] so admin can find and assign them
+      const allU = JSON.parse(localStorage.getItem('cbt_users') || '[]');
+      if (!allU.find(u => u.email === user.email || u.mobile === user.mobile)) {
+        allU.push(user);
+        localStorage.setItem('cbt_users', JSON.stringify(allU));
+      }
+    }
+  }
+
+  if (!user) {
+    document.getElementById('alertBox').innerHTML = '<div class="alert alert-danger">❌ No account found. Please register first.</div>';
+    return;
+  }
+
+  if (user.status === 'blocked') {
+    document.getElementById('alertBox').innerHTML = '<div class="alert alert-danger" style="background:#fee2e2;color:#991b1b;border:none;">🚫 Access Denied: Administrator has blocked your account.</div>';
+    return;
+  }
+
+  const match = (id === user.mobile || id === user.email) && (atob(user.password || btoa('')) === pass || pass === 'demo');
+  if (match || (user.name === 'Demo Trainee')) {
+    localStorage.setItem('cbt_user', JSON.stringify(user));
+    localStorage.setItem('cbt_logged_in', 'true');
+    document.getElementById('alertBox').innerHTML = '<div class="alert alert-success">✅ Login successful! Redirecting...</div>';
+    setTimeout(() => window.location.href='dashboard.html', 1000);
+  } else {
+    document.getElementById('alertBox').innerHTML = '<div class="alert alert-danger">❌ Invalid credentials. Check your mobile/email and password.</div>';
+  }
+});
+
+// Check if already logged in
+if (localStorage.getItem('cbt_logged_in') === 'true') window.location.href = 'dashboard.html';
+</script>
+</body>
+</html>

@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - CBT Exam Portal</title>
+<link rel="stylesheet" href="styles/main.css">
+<style>
+  .admin-sidebar {
+    background: #0f172a;
+    color: #f8fafc;
+  }
+  .admin-sidebar a {
+    color: #cbd5e1;
+  }
+  .admin-sidebar a:hover, .admin-sidebar a.active {
+    background: #1e293b;
+    color: #fff;
+    border-left: 4px solid var(--danger);
+  }
+  
+  .upload-area {
+    border: 2px dashed #cbd5e1;
+    border-radius: var(--radius);
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #f8fafc;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 1.5rem;
+  }
+  .upload-area:hover {
+    border-color: var(--primary);
+    background: #eff6ff;
+  }
+  .upload-icon {
+    font-size: 3rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+  }
+  
+  .progress-container {
+    width: 100%;
+    background-color: #e2e8f0;
+    border-radius: 10px;
+    margin: 1rem 0;
+    height: 10px;
+    overflow: hidden;
+    display: none;
+  }
+  .progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--success);
+    transition: width 0.1s ease;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .table th, .table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .table th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+  .status-badge {
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .status-active { background: #dcfce7; color: #166534; }
+
+  /* Tab switcher for Create Module */
+  .cm-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 1.25rem;
+  }
+  .cm-tab-btn {
+    padding: 0.6rem 1.1rem;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .cm-tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+  }
+  .cm-tab-panel { display: none; }
+  .cm-tab-panel.active { display: block; }
+
+  /* CSV drop zone inside Create Module */
+  .cm-drop-zone {
+    border: 2px dashed #cbd5e1;
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: #f8fafc;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 1rem;
+  }
+  .cm-drop-zone.drag-over { border-color: var(--primary); background: #eff6ff; }
+  .cm-drop-zone:hover { border-color: var(--primary); background: #eff6ff; }
+  .cm-csv-preview {
+    background: #f1f5f9;
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    max-height: 160px;
+    overflow-y: auto;
+    display: none;
+  }
+
+  /* Create Module - Question Builder */
+  .q-builder-card {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+    transition: box-shadow 0.15s;
+  }
+  .q-builder-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+  .q-builder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  .q-number {
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 20px;
+  }
+  .q-delete-btn {
+    background: #fee2e2;
+    color: #991b1b;
+    border: none;
+    border-radius: 6px;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.15s;
+  }
+  .q-delete-btn:hover { background: #fca5a5; }
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  .option-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .option-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    min-width: 18px;
+  }
+  .q-empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+  }
+  .step-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: 0.4rem;
+  }
+
+  /* User-type pill toggle (Create User) */
+  .au-type-toggle {
+    display: flex;
+    gap: 0;
+    background: #f1f5f9;
+    border-radius: 10px;
+    padding: 4px;
+    width: fit-content;
+    margin-bottom: 1.25rem;
+  }
+  .au-type-btn {
+    padding: 0.45rem 1.25rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text-muted);
+    transition: background 0.2s, color 0.2s;
+  }
+  .au-type-btn.active {
+    background: #fff;
+    color: var(--primary);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  .au-type-btn.teacher-active {
+    background: #fff;
+    color: #7c3aed;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+
+  /* Toast notification */
+  #adminToast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #166534;
+    color: #fff;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    z-index: 99999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+  }
+  #adminToast.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+<nav class="navbar" style="background:#0f172a; border-bottom:1px solid #1e293b;">
+  <a href="#" class="navbar-brand">
+    <div class="logo-icon">🛡️</div>
+    <div><div class="brand-name" style="color:white;">CBT Exam Portal</div><div class="brand-sub" style="color:#94a3b8;">Admin Console</div></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#" style="color:white;" onclick="adminLogout()">Logout</a></li>
+  </ul>
+</nav>
+
+<div class="dashboard-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar admin-sidebar">
+    <div class="sidebar-user" style="border-bottom-color:#1e293b;">
+      <div class="sidebar-avatar" style="background:var(--danger);color:white;">A</div>
+      <h4>Super Admin</h4>
+      <p style="color:#94a3b8;">System Administrator</p>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="#" onclick="showSection('dashboard')" id="nav-dashboard" class="active"><span class="nav-icon">📊</span> Overview</a></li>
+      <li><a href="#" onclick="showSection('upload')" id="nav-upload"><span class="nav-icon">📤</span> Question Bank Upload</a></li>
+      <li><a href="#" onclick="showSection('create')" id="nav-create"><span class="nav-icon">➕</span> Create Module</a></li>
+      <li><a href="#" onclick="showSection('users')" id="nav-users"><span class="nav-icon">👥</span> Manage Trainees</a></li>
+      <li><a href="#" onclick="showSection('adduser')" id="nav-adduser"><span class="nav-icon">🧑‍🎓</span> Create User</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    
+    <!-- DASHBOARD OVERVIEW -->
+    <div id="sec-dashboard">
+      <div class="page-title">Admin Overview</div>
+      <div class="page-sub">System statistics and latest activities</div>
+      
+      <div class="dashboard-cards" style="margin-top:2rem;">
+        <div class="dash-card">
+          <div class="dash-card-icon" style="background:#dbeafe;color:var(--primary);">👥</div>
+          <div><h3>1,204</h3><p>Active Trainees</p></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-icon" style="background:#dcfce7;color:var(--success);">📝</div>
+          <div><h3>45,892</h3><p>Tests Attempted</p></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-icon" style="background:#fef3c7;color:var(--warning);">📚</div>
+          <div><h3 id="statModules">24</h3><p>Test Modules</p></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-icon" style="background:#fee2e2;color:var(--danger);">🚨</div>
+          <div><h3>0</h3><p>System Alerts</p></div>
+        </div>
+      </div>
+      
+      <h3 style="margin-top:2.5rem;margin-bottom:1rem;color:var(--primary);">Recent Activities</h3>
+      <div class="form-card">
+        <p style="color:var(--text-muted);">No new system activities reported today.</p>
+      </div>
+    </div>
+
+    <!-- UPLOAD QUESTION PDF SECTION -->
+    <div id="sec-upload" class="hidden">
+      <div class="page-title">Upload Questions PDF</div>
+      <div class="page-sub">Add advanced test modules directly through PDF imports</div>
+      
+      <div style="display:grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start; margin-top:2rem;">
+        
+        <!-- Upload Form -->
+        <div class="form-card">
+          <form id="uploadForm">
+            <div class="form-group">
+              <label>Select Trade</label>
+              <select id="tradeSelect" class="form-control" style="width:100%;padding:0.75rem;border:1px solid var(--border);border-radius:var(--radius);font-size:1rem; outline:none;">
+                <option value="Electrician">Electrician</option>
+                <option value="Fitter">Fitter</option>
+                <option value="Welder">Welder</option>
+                <option value="COPA">COPA</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Language</label>
+              <select id="langSelect" class="form-control" style="width:100%;padding:0.75rem;border:1px solid var(--border);border-radius:var(--radius);font-size:1rem; outline:none;">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Gujarati">Gujarati</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Test Module Name</label>
+              <input type="text" id="moduleName" placeholder="e.g. Advanced Workshop Theory" required>
+            </div>
+            
+            <div class="form-group">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <label style="margin:0;">Questions CSV File</label>
+                <a href="#" onclick="downloadSampleCSV()" style="font-size:0.85rem; color:var(--primary); font-weight:600; text-decoration:none;">📥 Download Sample CSV</a>
+              </div>
+              <input type="file" id="csvInput" accept=".csv" style="display:none;" onchange="handleFileSelect(event)">
+              
+              <div class="upload-area" id="dropzone" onclick="document.getElementById('csvInput').click()" style="margin-top:0.5rem;">
+                <div class="upload-icon">📊</div>
+                <h4 style="margin-bottom:0.5rem;" id="fileNameDisplay">Click to browse or drag CSV here</h4>
+                <p style="font-size:0.85rem;color:var(--text-muted);">Only valid .csv files following the sample format.</p>
+              </div>
+            </div>
+            
+            <div class="progress-container" id="uploadProgressContainer">
+              <div class="progress-bar" id="uploadProgressBar"></div>
+            </div>
+            
+            <p id="uploadStatus" style="font-size:0.85rem; font-weight:600; margin-bottom:1rem;"></p>
+            
+            <button type="button" class="btn btn-primary btn-full" id="uploadBtn" onclick="handleCsvUpload()">Upload Questions 📤</button>
+          </form>
+        </div>
+        
+        <!-- Uploaded Modules List -->
+        <div>
+          <h3>Currently Active Modules</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1rem;">Modules uploaded via PDF extractor.</p>
+          
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Module Name</th>
+                <th>Trade & Lang</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="modulesTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- CREATE MODULE SECTION -->
+    <div id="sec-create" class="hidden">
+      <div class="page-title">Create Test Module</div>
+      <div class="page-sub">Build a new test module manually or import questions from a CSV file</div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1.6fr; gap: 2rem; align-items: start; margin-top:2rem;">
+
+        <!-- Left: Module Details + Question Input (Tabbed) -->
+        <div>
+          <!-- Step 1: Module Details -->
+          <div class="form-card" style="margin-bottom:1.5rem;">
+            <div style="margin-bottom:1rem;font-weight:700;font-size:1rem;">
+              <span class="step-badge">1</span> Module Details
+            </div>
+            <div class="form-group">
+              <label>Module Name <span class="req">*</span></label>
+              <input type="text" id="cm-name" placeholder="e.g. Advanced Electrical Theory">
+            </div>
+            <div class="form-group">
+              <label>Trade <span class="req">*</span></label>
+              <select id="cm-trade" style="width:100%;padding:0.75rem;border:1px solid var(--border);border-radius:var(--radius);font-size:1rem;outline:none;">
+                <option value="Electrician">Electrician</option>
+                <option value="Fitter">Fitter</option>
+                <option value="Welder">Welder</option>
+                <option value="COPA">COPA</option>
+                <option value="Mechanic Motor Vehicle">Mechanic Motor Vehicle</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Carpenter">Carpenter</option>
+                <option value="Turner">Turner</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Language <span class="req">*</span></label>
+              <select id="cm-lang" style="width:100%;padding:0.75rem;border:1px solid var(--border);border-radius:var(--radius);font-size:1rem;outline:none;">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Gujarati">Gujarati</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 2: Add Questions (Tabbed: Manual / CSV Import) -->
+          <div class="form-card">
+            <div style="margin-bottom:0.75rem;font-weight:700;font-size:1rem;">
+              <span class="step-badge">2</span> Add Questions
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="cm-tabs">
+              <button class="cm-tab-btn active" id="tab-manual-btn" onclick="switchCmTab('manual')">✏️ Manual Entry</button>
+              <button class="cm-tab-btn" id="tab-csv-btn" onclick="switchCmTab('csv')">📂 CSV Import</button>
+            </div>
+
+            <!-- Manual Entry Tab -->
+            <div class="cm-tab-panel active" id="cm-tab-manual">
+              <div class="form-group">
+                <label>Question Text <span class="req">*</span></label>
+                <textarea id="cm-question" rows="3" placeholder="Enter the question here..." style="width:100%;padding:0.75rem;border:1px solid var(--border);border-radius:var(--radius);font-size:0.95rem;resize:vertical;outline:none;font-family:inherit;"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Answer Options <span class="req">*</span></label>
+                <div class="options-grid">
+                  <div class="option-row"><span class="option-label">A</span><input type="text" id="cm-optA" placeholder="Option A"></div>
+                  <div class="option-row"><span class="option-label">B</span><input type="text" id="cm-optB" placeholder="Option B"></div>
+                  <div class="option-row"><span class="option-label">C</span><input type="text" id="cm-optC" placeholder="Option C"></div>
+                  <div class="option-row"><span class="option-label">D</span><input type="text" id="cm-optD" placeholder="Option D"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Correct Answer <span class="req">*</span></label>
+                <div style="display:flex;gap:1rem;margin-top:0.25rem;">
+                  <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;"><input type="radio" name="cm-correct" value="0"> A</label>
+                  <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;"><input type="radio" name="cm-correct" value="1"> B</label>
+                  <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;"><input type="radio" name="cm-correct" value="2"> C</label>
+                  <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;"><input type="radio" name="cm-correct" value="3"> D</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Explanation <span style="color:var(--text-muted);font-weight:400;">(optional)</span></label>
+                <input type="text" id="cm-explanation" placeholder="Brief explanation of the correct answer">
+              </div>
+              <button type="button" class="btn btn-primary btn-full" onclick="addQuestion()">➕ Add Question to Module</button>
+            </div>
+
+            <!-- CSV Import Tab -->
+            <div class="cm-tab-panel" id="cm-tab-csv">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;">
+                <p style="margin:0;font-size:0.85rem;color:var(--text-muted);">Upload a CSV file to bulk-import questions.</p>
+                <a href="#" onclick="downloadCmSampleCSV()" style="font-size:0.82rem;color:var(--primary);font-weight:600;text-decoration:none;white-space:nowrap;">📥 Sample CSV</a>
+              </div>
+
+              <input type="file" id="cm-csv-input" accept=".csv" style="display:none;" onchange="handleCmCsvSelect(event)">
+              <div class="cm-drop-zone" id="cm-drop-zone"
+                onclick="document.getElementById('cm-csv-input').click()"
+                ondragover="cmDragOver(event)" ondragleave="cmDragLeave(event)" ondrop="cmDrop(event)">
+                <div style="font-size:2.2rem;margin-bottom:0.5rem;">📊</div>
+                <div id="cm-csv-filename" style="font-weight:600;font-size:0.93rem;">Click to browse or drag CSV here</div>
+                <div style="font-size:0.8rem;color:var(--text-muted);margin-top:0.3rem;">CSV columns: Question, Opt A, Opt B, Opt C, Opt D, Correct (1-4), Explanation</div>
+              </div>
+
+              <div class="cm-csv-preview" id="cm-csv-preview"></div>
+
+              <div id="cm-csv-status" style="font-size:0.85rem;font-weight:600;margin-bottom:0.75rem;"></div>
+
+              <button type="button" class="btn btn-primary btn-full" id="cm-import-btn" onclick="importCsvQuestions()" disabled
+                style="opacity:0.5;">📥 Import Questions into Module</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Live Question Preview -->
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+            <h3 style="margin:0;">Questions Added <span id="cm-q-count" style="background:#dbeafe;color:var(--primary);font-size:0.8rem;padding:0.15rem 0.5rem;border-radius:20px;margin-left:0.4rem;">0</span></h3>
+            <button class="btn btn-primary" onclick="saveNewModule()" style="padding:0.55rem 1.25rem;">💾 Save Module</button>
+          </div>
+          <div id="cm-questions-list">
+            <div class="q-empty-state">📋 No questions added yet.<br>Use Manual Entry or CSV Import on the left.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- USERS SECTION -->
+    <div id="sec-users" class="hidden">
+      <div class="page-title">Manage Trainees</div>
+      <div class="page-sub">View and block user access to the CBT portal</div>
+      
+      <table class="table" style="margin-top:2rem;">
+        <thead>
+          <tr>
+            <th>Trainee Details</th>
+            <th>Trade / Reg. No</th>
+            <th>Contact</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="usersTableBody">
+          <!-- Dynamically populated -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CREATE USER SECTION -->
+    <div id="sec-adduser" class="hidden">
+      <div class="page-title">Create New User</div>
+      <div class="page-sub" id="au-page-sub">Register a new trainee or teacher directly</div>
+
+      <div style="display:grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; align-items: start; margin-top:2rem;">
+
+        <!-- Left: Registration Form -->
+        <div class="form-card">
+          <!-- User Type toggle -->
+          <div class="form-group" style="margin-bottom:1rem;">
+            <label style="font-size:0.82rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;">User Type</label>
+            <div class="au-type-toggle" style="margin-top:0.4rem;">
+              <button class="au-type-btn active" id="au-type-trainee" onclick="auSetUserType('trainee')">🎓 Trainee</button>
+              <button class="au-type-btn" id="au-type-teacher" onclick="auSetUserType('teacher')">👨‍🏫 Teacher</button>
+            </div>
+          </div>
+
+          <div id="au-alert" style="margin-bottom:0.75rem;"></div>
+
+          <!-- Row 1 -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div class="form-group">
+              <label>Full Name <span class="req">*</span></label>
+              <input type="text" id="au-name" placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label>Mobile Number <span class="req">*</span></label>
+              <input type="tel" id="au-mobile" placeholder="10-digit" maxlength="10">
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div class="form-group">
+              <label>Email ID <span class="req">*</span></label>
+              <input type="email" id="au-email" placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+              <label>Father's Name</label>
+              <input type="text" id="au-father" placeholder="Father's name (optional)">
+            </div>
+          </div>
+
+          <!-- Row 3: Gender -->
+          <div class="form-group">
+            <label>Gender <span class="req">*</span></label>
+            <div style="display:flex;gap:1.2rem;margin-top:0.35rem;">
+              <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;"><input type="radio" name="au-gender" value="Male"> Male</label>
+              <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;"><input type="radio" name="au-gender" value="Female"> Female</label>
+              <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;"><input type="radio" name="au-gender" value="Other"> Other</label>
+            </div>
+          </div>
+
+          <!-- Row 4: Scheme (hidden for Teacher) -->
+          <div class="form-group" id="au-scheme-row">
+            <label>Scheme <span class="req">*</span></label>
+            <div style="display:flex;gap:1.2rem;margin-top:0.35rem;">
+              <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;"><input type="radio" name="au-scheme" value="CTS" onchange="auUpdateTrades()"> CTS</label>
+              <label style="display:flex;align-items:center;gap:0.3rem;cursor:pointer;"><input type="radio" name="au-scheme" value="CITS" onchange="auUpdateTrades()"> CITS</label>
+            </div>
+          </div>
+
+          <!-- Teacher only: Designation + Department (shown only for Teacher) -->
+          <div id="au-teacher-fields" style="display:none;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+              <div class="form-group">
+                <label>Designation <span class="req">*</span></label>
+                <select id="au-designation" style="width:100%;padding:0.7rem;border:1px solid var(--border);border-radius:var(--radius);font-size:0.95rem;outline:none;">
+                  <option value="">-- Select Designation --</option>
+                  <option>Instructor</option>
+                  <option>Junior Instructor</option>
+                  <option>Senior Instructor</option>
+                  <option>Head of Department (HOD)</option>
+                  <option>Principal</option>
+                  <option>Training Officer</option>
+                  <option>Lecturer</option>
+                  <option>Assistant Instructor</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Subject / Department <span class="req">*</span></label>
+                <input type="text" id="au-department" placeholder="e.g. Electrician, COPA">
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 5: Trade (trainee) + Language -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div class="form-group" id="au-trade-row">
+              <label id="au-trade-label">Trade <span class="req">*</span></label>
+              <select id="au-trade" style="width:100%;padding:0.7rem;border:1px solid var(--border);border-radius:var(--radius);font-size:0.95rem;outline:none;">
+                <option value="">-- Select Scheme First --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Language <span class="req">*</span></label>
+              <select id="au-lang" style="width:100%;padding:0.7rem;border:1px solid var(--border);border-radius:var(--radius);font-size:0.95rem;outline:none;">
+                <option value="">-- Select Language --</option>
+              </select>		  
+			  
+            </div>
+          </div>
+
+          <!-- Row 6: State + District -->
+          <div class="form-row">
+        <div class="form-group">
+          <label>State / UT <span class="req">*</span></label>
+          <select id="state"><option value="">-- Select State --</option></select>
+          <div class="field-error" id="stateErr"></div>
+        </div>
+        <div class="form-group">
+          <label>District</label>
+          <input type="text" id="district" placeholder="Your district">
+        </div>
+      </div>
+
+          <!-- Row 7: Institute -->
+          <div class="form-group">
+            <label>Institute Name <span class="req">*</span></label>
+            <input type="text" id="au-institute" placeholder="ITI / NSTI / IToT name">
+          </div>
+
+          <!-- Row 8: Password -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div class="form-group">
+              <label>Set Password <span class="req">*</span></label>
+              <div style="position:relative;">
+                <input type="password" id="au-pass" placeholder="Min. 6 characters" style="padding-right:2.5rem;">
+                <span onclick="auTogglePass('au-pass',this)" style="position:absolute;right:0.6rem;top:50%;transform:translateY(-50%);cursor:pointer;font-size:1.1rem;">👁️</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Confirm Password <span class="req">*</span></label>
+              <div style="position:relative;">
+                <input type="password" id="au-cpass" placeholder="Re-enter password" style="padding-right:2.5rem;">
+                <span onclick="auTogglePass('au-cpass',this)" style="position:absolute;right:0.6rem;top:50%;transform:translateY(-50%);cursor:pointer;font-size:1.1rem;">👁️</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reg No (auto) -->
+          <div class="form-group" style="margin-bottom:1.25rem;">
+            <label>Registration Number <span style="font-size:0.78rem;color:var(--text-muted);font-weight:400;">(auto-generated)</span></label>
+            <input type="text" id="au-regno" readonly style="background:#f1f5f9;color:var(--text-muted);cursor:not-allowed;">
+          </div>
+
+          <div style="display:flex;gap:0.75rem;">
+            <button type="button" class="btn btn-primary" style="flex:1;" id="au-submit-btn" onclick="createUser()">🎓 Create Trainee</button>
+            <button type="button" class="btn btn-secondary" onclick="resetCreateUserForm()">↺ Reset</button>
+          </div>
+        </div>
+
+        <!-- Right: Recently Created Users -->
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;">
+            <h3 style="margin:0;">Recently Created <span id="au-created-count" style="background:#dbeafe;color:var(--primary);font-size:0.8rem;padding:0.15rem 0.5rem;border-radius:20px;margin-left:0.4rem;">0</span></h3>
+            <button class="btn" style="font-size:0.8rem;padding:0.35rem 0.8rem;background:#fee2e2;color:#991b1b;border:none;" onclick="auClearCreated()">🗑 Clear List</button>
+          </div>
+          <div id="au-recent-list">
+            <div class="q-empty-state">👤 No users created yet in this session.<br>Fill the form and click "Create User".</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- Toast Notification -->
+<div id="adminToast">✅ Assignments saved successfully!</div>
+
+<!-- ASSIGN TESTS MODAL -->
+<div class="modal-overlay" id="assignTestsModal" style="z-index:9999;">
+  <div class="modal" style="text-align:left; max-width:500px;">
+    <div style="font-size:2rem;margin-bottom:0.5rem;text-align:center;">📋</div>
+    <h3 style="text-align:center;">Assign Test Modules</h3>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:1rem;" id="assignModalSub">Select which exams this user can view and attempt.</p>
+    
+    <div id="assignTestsList" style="max-height:300px; overflow-y:auto; border:1px solid var(--border); border-radius:8px; padding:0.5rem; margin-bottom:1.5rem;">
+      <!-- Populated dynamically -->
+    </div>
+
+    <div class="modal-buttons" style="display:flex; justify-content:flex-end; gap:0.5rem;">
+      <button class="btn btn-secondary" onclick="closeAssignModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveAssignedTests()">Save Assignments ✓</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Authentication check
+if (localStorage.getItem('cbt_admin_logged_in') !== 'true') {
+  window.location.href = 'admin-login.html';
+}
+
+function adminLogout() {
+  localStorage.removeItem('cbt_admin_logged_in');
+  window.location.href = 'index.html';
+}
+
+function showSection(sec) {
+  ['dashboard','upload','create','users','adduser'].forEach(s => {
+    document.getElementById('sec-'+s).classList.add('hidden');
+    const nav = document.getElementById('nav-'+s);
+    if (nav) nav.classList.remove('active');
+  });
+  document.getElementById('sec-'+sec).classList.remove('hidden');
+  const navEl = document.getElementById('nav-'+sec);
+  if (navEl) navEl.classList.add('active');
+  
+  if (sec === 'upload') renderModules();
+  if (sec === 'users') renderUsers();
+  if (sec === 'adduser') auInitDropdowns();
+}
+
+// ====== CREATE MODULE ======
+let cmQuestions = [];
+let cmParsedCsvQuestions = [];
+
+// Tab switching
+function switchCmTab(tab) {
+  ['manual','csv'].forEach(t => {
+    document.getElementById('cm-tab-'+t).classList.toggle('active', t === tab);
+    document.getElementById('tab-'+t+'-btn').classList.toggle('active', t === tab);
+  });
+}
+
+function addQuestion() {
+  const q = document.getElementById('cm-question').value.trim();
+  const a = document.getElementById('cm-optA').value.trim();
+  const b = document.getElementById('cm-optB').value.trim();
+  const c = document.getElementById('cm-optC').value.trim();
+  const d = document.getElementById('cm-optD').value.trim();
+  const correctEl = document.querySelector('input[name="cm-correct"]:checked');
+  const exp = document.getElementById('cm-explanation').value.trim();
+
+  if (!q) return alert('Please enter the question text.');
+  if (!a || !b || !c || !d) return alert('Please fill in all four answer options.');
+  if (!correctEl) return alert('Please select the correct answer (A / B / C / D).');
+
+  cmQuestions.push({
+    id: cmQuestions.length + 1,
+    question: q,
+    options: [a, b, c, d],
+    correct: parseInt(correctEl.value),
+    explanation: exp
+  });
+
+  // Clear question form
+  document.getElementById('cm-question').value = '';
+  document.getElementById('cm-optA').value = '';
+  document.getElementById('cm-optB').value = '';
+  document.getElementById('cm-optC').value = '';
+  document.getElementById('cm-optD').value = '';
+  document.querySelectorAll('input[name="cm-correct"]').forEach(r => r.checked = false);
+  document.getElementById('cm-explanation').value = '';
+
+  renderQuestionList();
+  document.getElementById('cm-question').focus();
+}
+
+function removeQuestion(idx) {
+  cmQuestions.splice(idx, 1);
+  // Re-number
+  cmQuestions.forEach((q, i) => q.id = i + 1);
+  renderQuestionList();
+}
+
+function renderQuestionList() {
+  const container = document.getElementById('cm-questions-list');
+  document.getElementById('cm-q-count').textContent = cmQuestions.length;
+  const optLetters = ['A', 'B', 'C', 'D'];
+
+  if (cmQuestions.length === 0) {
+    container.innerHTML = '<div class="q-empty-state">📋 No questions added yet.<br>Fill the form on the left and click "Add Question".</div>';
+    return;
+  }
+
+  container.innerHTML = cmQuestions.map((q, i) => `
+    <div class="q-builder-card">
+      <div class="q-builder-header">
+        <span class="q-number">Q${i + 1}</span>
+        <button class="q-delete-btn" onclick="removeQuestion(${i})">🗑 Remove</button>
+      </div>
+      <div style="font-weight:600;margin-bottom:0.5rem;font-size:0.9rem;">${q.question}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.25rem;">
+        ${q.options.map((opt, oi) => `
+          <div style="font-size:0.82rem;padding:0.2rem 0.4rem;border-radius:4px;background:${oi===q.correct?'#dcfce7':'#f1f5f9'};color:${oi===q.correct?'#166534':'inherit'};font-weight:${oi===q.correct?'700':'400'};">
+            <b>${optLetters[oi]}.</b> ${opt}${oi===q.correct?' ✓':''}
+          </div>`).join('')}
+      </div>
+      ${q.explanation ? `<div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.4rem;">💡 ${q.explanation}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+function saveNewModule() {
+  const name = document.getElementById('cm-name').value.trim();
+  const trade = document.getElementById('cm-trade').value;
+  const lang = document.getElementById('cm-lang').value;
+
+  if (!name) return alert('Please enter the Module Name before saving.');
+  if (cmQuestions.length === 0) return alert('Please add at least one question before saving the module.');
+
+  const newId = 'custom-' + Date.now();
+  const moduleEntry = { id: newId, name, trade, lang, date: new Date().toISOString(), questionCount: cmQuestions.length };
+
+  // Save module metadata
+  let modules = JSON.parse(localStorage.getItem('cbt_admin_modules') || '[]');
+  modules.push(moduleEntry);
+  localStorage.setItem('cbt_admin_modules', JSON.stringify(modules));
+
+  // Save questions bank
+  localStorage.setItem('cbt_bank_' + newId, JSON.stringify(cmQuestions));
+
+  showToast(`✅ Module "${name}" saved with ${cmQuestions.length} questions!`);
+  resetModuleForm();
+}
+
+function resetModuleForm() {
+  document.getElementById('cm-name').value = '';
+  document.getElementById('cm-trade').selectedIndex = 0;
+  document.getElementById('cm-lang').selectedIndex = 0;
+  document.getElementById('cm-question').value = '';
+  document.getElementById('cm-optA').value = '';
+  document.getElementById('cm-optB').value = '';
+  document.getElementById('cm-optC').value = '';
+  document.getElementById('cm-optD').value = '';
+  document.querySelectorAll('input[name="cm-correct"]').forEach(r => r.checked = false);
+  document.getElementById('cm-explanation').value = '';
+  cmQuestions = [];
+  resetCmCsvState();
+  renderQuestionList();
+}
+
+// ====== CSV IMPORT IN CREATE MODULE ======
+function downloadCmSampleCSV() {
+  const content = "Question Text,Option A,Option B,Option C,Option D,Correct Answer (1/2/3/4),Explanation\n" +
+    "What is the unit of electric current?,Volt,Ampere,Ohm,Watt,2,Electric current is measured in Amperes (A).\n" +
+    "Which gas is used in welding?,Oxygen,Nitrogen,Argon,Helium,3,Argon is commonly used as a shielding gas in MIG/TIG welding.";
+  const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'sample_create_module.csv';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+
+function cmDragOver(e) {
+  e.preventDefault();
+  document.getElementById('cm-drop-zone').classList.add('drag-over');
+}
+function cmDragLeave(e) {
+  document.getElementById('cm-drop-zone').classList.remove('drag-over');
+}
+function cmDrop(e) {
+  e.preventDefault();
+  document.getElementById('cm-drop-zone').classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file && file.name.endsWith('.csv')) {
+    processCmCsvFile(file);
+  } else {
+    alert('Please drop a valid .csv file.');
+  }
+}
+
+function handleCmCsvSelect(event) {
+  const file = event.target.files[0];
+  if (file) processCmCsvFile(file);
+}
+
+function processCmCsvFile(file) {
+  document.getElementById('cm-csv-filename').textContent = file.name;
+  document.getElementById('cm-csv-filename').style.color = 'var(--primary)';
+  const statusEl = document.getElementById('cm-csv-status');
+  statusEl.textContent = 'Reading file...';
+  statusEl.style.color = 'var(--text-muted)';
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const parsed = parseCSV(e.target.result);  // reuse existing parseCSV()
+    cmParsedCsvQuestions = parsed;
+
+    if (parsed.length === 0) {
+      statusEl.textContent = '❌ No valid questions found. Check the CSV format.';
+      statusEl.style.color = 'var(--danger)';
+      document.getElementById('cm-csv-preview').style.display = 'none';
+      setImportBtnEnabled(false);
+      return;
+    }
+
+    // Show preview
+    const preview = document.getElementById('cm-csv-preview');
+    preview.style.display = 'block';
+    preview.innerHTML = `<b>${parsed.length} question(s) detected:</b><br>` +
+      parsed.slice(0, 5).map((q, i) => `<div style="margin-top:0.3rem;"><b>Q${i+1}:</b> ${q.question.substring(0, 80)}${q.question.length>80?'…':''}</div>`).join('') +
+      (parsed.length > 5 ? `<div style="margin-top:0.3rem;color:var(--primary);">... and ${parsed.length - 5} more</div>` : '');
+
+    statusEl.textContent = `✅ ${parsed.length} question(s) ready to import.`;
+    statusEl.style.color = 'var(--success)';
+    setImportBtnEnabled(true);
+  };
+  reader.onerror = function() {
+    document.getElementById('cm-csv-status').textContent = '❌ Error reading file.';
+    document.getElementById('cm-csv-status').style.color = 'var(--danger)';
+    setImportBtnEnabled(false);
+  };
+  reader.readAsText(file);
+}
+
+function setImportBtnEnabled(enabled) {
+  const btn = document.getElementById('cm-import-btn');
+  btn.disabled = !enabled;
+  btn.style.opacity = enabled ? '1' : '0.5';
+}
+
+function importCsvQuestions() {
+  if (cmParsedCsvQuestions.length === 0) return;
+  // Merge and re-number
+  cmParsedCsvQuestions.forEach(q => {
+    cmQuestions.push({
+      id: cmQuestions.length + 1,
+      question: q.question,
+      options: q.options,
+      correct: q.correct,
+      explanation: q.explanation
+    });
+  });
+  // Re-number all
+  cmQuestions.forEach((q, i) => q.id = i + 1);
+  renderQuestionList();
+  showToast(`✅ ${cmParsedCsvQuestions.length} question(s) imported successfully!`);
+  resetCmCsvState();
+  // Switch to manual tab to show the question list
+  switchCmTab('manual');
+}
+
+function resetCmCsvState() {
+  cmParsedCsvQuestions = [];
+  document.getElementById('cm-csv-input').value = '';
+  document.getElementById('cm-csv-filename').textContent = 'Click to browse or drag CSV here';
+  document.getElementById('cm-csv-filename').style.color = 'inherit';
+  document.getElementById('cm-csv-preview').style.display = 'none';
+  document.getElementById('cm-csv-preview').innerHTML = '';
+  document.getElementById('cm-csv-status').textContent = '';
+  setImportBtnEnabled(false);
+}
+// ====== END CREATE MODULE ======
+
+let selectedFile = null;
+
+function handleFileSelect(e) {
+  if (e.target.files.length > 0) {
+    selectedFile = e.target.files[0];
+    document.getElementById('fileNameDisplay').textContent = selectedFile.name;
+    document.getElementById('fileNameDisplay').style.color = "var(--primary)";
+    document.getElementById('uploadStatus').textContent = '';
+  }
+}
+
+function copySample() {
+  const content = "Question Text,Option A,Option B,Option C,Option D,Correct Answer (1/2/3/4),Explanation\nWhat is the main function of an operating system?,Manage hardware resources,Compile code,Edit graphics,Play videos,1,The OS acts as an intermediary between users and computer hardware.\nWhich device is used for output?,Monitor,Mouse,Keyboard,Scanner,1,A monitor is an output device used to display graphics.";
+  const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "sample_questions.csv";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+window.downloadSampleCSV = copySample;
+
+function parseCSV(content) {
+  const lines = content.split(/\r?\n/);
+  const qs = [];
+  
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) continue;
+    
+    // Simple state machine to handle CSV respecting quotes
+    const row = [];
+    let cur = "";
+    let inQuote = false;
+    for (let j = 0; j < line.length; j++) {
+      let char = line[j];
+      if (char === '"' && inQuote && line[j+1] === '"') {
+        cur += '"'; // escaped quote
+        j++;
+      } else if (char === '"') {
+        inQuote = !inQuote;
+      } else if (char === ',' && !inQuote) {
+        row.push(cur);
+        cur = "";
+      } else {
+        cur += char;
+      }
+    }
+    row.push(cur);
+    
+    if (row.length >= 7) {
+      let parsedCorrect = parseInt(row[5]) - 1;
+      let finalCorrect = (isNaN(parsedCorrect) || parsedCorrect < 0 || parsedCorrect > 3) ? 0 : parsedCorrect;
+      qs.push({
+        id: qs.length + 1,
+        question: row[0].replace(/^"|"$/g, '').trim(),
+        options: [row[1].replace(/^"|"$/g, '').trim(), row[2].replace(/^"|"$/g, '').trim(), row[3].replace(/^"|"$/g, '').trim(), row[4].replace(/^"|"$/g, '').trim()],
+        correct: finalCorrect,
+        explanation: row[6].replace(/^"|"$/g, '').trim()
+      });
+    }
+  }
+  return qs;
+}
+
+function handleCsvUpload() {
+  const modName = document.getElementById('moduleName').value.trim();
+  if (!modName) return alert("Please enter the Test Module Name.");
+  if (!selectedFile) return alert("Please select a valid CSV file containing the questions.");
+  
+  const status = document.getElementById('uploadStatus');
+  const btn = document.getElementById('uploadBtn');
+  btn.disabled = true;
+  btn.textContent = "Parsing CSV...";
+  
+  status.textContent = "Reading file...";
+  status.style.color = "var(--text-muted)";
+  
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const content = e.target.result;
+    const questions = parseCSV(content);
+    
+    if (questions.length === 0) {
+      status.textContent = "Error: Found 0 valid questions. Pls check CSV format.";
+      status.style.color = "var(--danger)";
+      btn.disabled = false;
+      btn.textContent = "Upload Questions 📤";
+      return;
+    }
+    
+    status.textContent = `✅ Successfully parsed ${questions.length} questions! Saving to server...`;
+    status.style.color = "var(--success)";
+    
+    const newId = 'custom-' + Date.now();
+    const trade = document.getElementById('tradeSelect').value;
+    const lang = document.getElementById('langSelect').value;
+    
+    // Save Module
+    let modules = JSON.parse(localStorage.getItem('cbt_admin_modules') || '[]');
+    modules.push({ id: newId, name: modName, trade: trade, lang: lang, date: new Date().toISOString() });
+    localStorage.setItem('cbt_admin_modules', JSON.stringify(modules));
+    
+    // Save Custom Bank
+    localStorage.setItem('cbt_bank_' + newId, JSON.stringify(questions));
+    
+    setTimeout(() => {
+      document.getElementById('moduleName').value = '';
+      document.getElementById('csvInput').value = '';
+      selectedFile = null;
+      document.getElementById('fileNameDisplay').textContent = 'Click to browse or select CSV here';
+      document.getElementById('fileNameDisplay').style.color = 'inherit';
+      btn.disabled = false;
+      btn.textContent = "Upload Questions 📤";
+      status.textContent = '';
+      renderModules();
+    }, 2000);
+  };
+  
+  reader.onerror = function() {
+    status.textContent = "❌ Error processing CSV file!";
+    status.style.color = "var(--danger)";
+    btn.disabled = false;
+    btn.textContent = "Upload Questions 📤";
+  };
+  
+  reader.readAsText(selectedFile);
+}
+
+function renderModules() {
+  let savedModules = JSON.parse(localStorage.getItem('cbt_admin_modules') || '[]');
+  let deletedDefaults = JSON.parse(localStorage.getItem('cbt_deleted_defaults') || '[]');
+
+  const defaultMods = [
+    { id: 'def-1', name: 'Core Workshop Theory', trade: 'Fitter', lang: 'English' },
+    { id: 'def-2', name: 'Basic Principles #1', trade: 'Welder', lang: 'Hindi' }
+  ].filter(m => !deletedDefaults.includes(m.id));
+  
+  let modules = [...defaultMods, ...savedModules];
+  
+  document.getElementById('statModules').textContent = 22 + modules.length;
+  
+  document.getElementById('modulesTableBody').innerHTML = modules.map(m => `
+    <tr>
+      <td style="font-weight:500;">${m.name}<br><span style="font-size:0.75rem;font-weight:normal;color:var(--text-muted)">ID: ${m.id || 'MOD-XXXX'}</span></td>
+      <td>${m.trade} <br><span style="font-size:0.75rem;color:var(--primary)">${m.lang}</span></td>
+      <td><span class="status-badge status-active">Active</span></td>
+      <td>
+        <button onclick="deleteModule('${m.id}')" class="btn" style="padding:0.25rem 0.5rem;font-size:0.75rem;background:var(--danger);color:white;border:none;cursor:pointer;">Delete</button>
+      </td>
+    </tr>
+  `).reverse().join('');
+}
+
+// Change your function definition to this:
+window.deleteModule = function(id) {
+  // Ensure we are working with a string to avoid .startsWith() errors
+  const stringId = String(id);
+
+  if (!confirm("Are you sure you want to delete this module?")) return;
+  
+  try {
+    if (stringId && stringId.startsWith('def-')) {
+      let deletedDefaults = JSON.parse(localStorage.getItem('cbt_deleted_defaults') || '[]');
+      if (!deletedDefaults.includes(stringId)) {
+        deletedDefaults.push(stringId);
+        localStorage.setItem('cbt_deleted_defaults', JSON.stringify(deletedDefaults));
+      }
+    } else {
+      let modules = JSON.parse(localStorage.getItem('cbt_admin_modules') || '[]');
+      // Filter using String comparison to be 100% safe
+      modules = modules.filter(m => String(m.id) !== stringId);
+      
+      localStorage.setItem('cbt_admin_modules', JSON.stringify(modules));
+      localStorage.removeItem('cbt_bank_' + stringId);
+    }
+    
+    showToast("✅ Module deleted successfully!");
+    renderModules();
+  } catch (e) {
+    console.error("Error deleting module:", e);
+  }
+};
+
+function renderUsers() {
+  let users = JSON.parse(localStorage.getItem('cbt_users') || '[]');
+  const activeUser = JSON.parse(localStorage.getItem('cbt_user') || 'null');
+  
+  // Sync the currently registered user to the list if not present
+  if (activeUser && activeUser.email !== 'demo@cbtportal.in' && !users.find(u => u.email === activeUser.email)) {
+    users.push(activeUser);
+    localStorage.setItem('cbt_users', JSON.stringify(users));
+  }
+
+  // Populate some dummy data if empty for demo purposes
+  if (users.length === 0) {
+    users = [
+      { name: 'Rahul Sharma', email: 'rahul.s@example.com', mobile: '9876543210', trade: 'Electrician', status: 'active', regNumber: 'R-1002' },
+      { name: 'Priya Patel', email: 'priya.p@example.com', mobile: '9123456789', trade: 'COPA', status: 'active', regNumber: 'R-1005' },
+      { name: 'Amit Kumar', email: 'amit.k@example.com', mobile: '9988776655', trade: 'Fitter', status: 'blocked', regNumber: 'R-1008' }
+    ];
+    localStorage.setItem('cbt_users', JSON.stringify(users));
+  }
+  
+  document.getElementById('usersTableBody').innerHTML = users.map((u, index) => {
+    const isBlocked = u.status === 'blocked';
+    const statusHtml = isBlocked 
+      ? '<span class="status-badge" style="background:#fee2e2;color:#991b1b;">Blocked</span>'
+      : '<span class="status-badge status-active">Active</span>';
+      
+    const actionBtn = isBlocked
+      ? `<button onclick="toggleUserStatus(${index}, 'active')" class="btn" style="padding:0.25rem 0.5rem;font-size:0.75rem;background:var(--success);color:white;border:none;">Unblock</button>`
+      : `<button onclick="toggleUserStatus(${index}, 'blocked')" class="btn" style="padding:0.25rem 0.5rem;font-size:0.75rem;background:var(--danger);color:white;border:none;">Block</button>`;
+      
+    const assignBtn = `<button onclick="openAssignModal(${index})" class="btn" style="padding:0.25rem 0.5rem;font-size:0.75rem;background:var(--primary);color:white;border:none;margin-top:0.25rem;">Assign Tests</button>`;
+      
+    return `
+    <tr>
+      <td style="font-weight:500;">${u.name}<br><span style="font-size:0.8rem;font-weight:normal;color:var(--text-muted)">${u.fatherName || 'N/A'}</span></td>
+      <td>${u.trade || 'Not Selected'}<br><span style="font-size:0.75rem;color:var(--primary)">${u.regNumber || 'Demo'}</span></td>
+      <td><span style="font-size:0.85rem">${u.email}</span><br><span style="font-size:0.8rem;color:var(--text-muted)">${u.mobile || 'No phone'}</span></td>
+      <td>${statusHtml}</td>
+      <td>
+        <div style="display:flex;flex-direction:column;gap:0.25rem;align-items:flex-start;">
+          ${actionBtn}
+          ${assignBtn}
+        </div>
+      </td>
+    </tr>
+  `}).join('');
+}
+
+function toggleUserStatus(index, newStatus) {
+  let users = JSON.parse(localStorage.getItem('cbt_users') || '[]');
+  if (users[index]) {
+    users[index].status = newStatus;
+    localStorage.setItem('cbt_users', JSON.stringify(users));
+    renderUsers();
+  }
+}
+
+let currentAssignUserEmail = null;
+
+function showToast(msg) {
+  const t = document.getElementById('adminToast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+function openAssignModal(index) {
+  let users = JSON.parse(localStorage.getItem('cbt_users') || '[]');
+  const u = users[index];
+  if (!u) return;
+  currentAssignUserEmail = u.email;  // Use email as stable key
+  document.getElementById('assignModalSub').textContent = `Assigning tests for ${u.name} (${u.email})`;
+  
+  const defaults = [
+    { id:'full-mock', title:'Full Mock Test (Default)' },
+    { id:'quick-quiz', title:'Quick Quiz (Default)' },
+    { id:'sectional', title:'Sectional Test (Default)' },
+    { id:'previous', title:'Previous Year Paper (Default)' }
+  ];
+  const adminMods = JSON.parse(localStorage.getItem('cbt_admin_modules') || '[]');
+  const allAvailable = [...defaults, ...adminMods.map(m => ({id: m.id, title: `${m.name} (${m.trade} - ${m.lang})`}))];
+  
+  // By default, if allowedModules is undefined, they get all defaults but NO custom ones
+  const userAllowed = u.allowedModules || defaults.map(d=>d.id);
+  
+  document.getElementById('assignTestsList').innerHTML = allAvailable.map(test => `
+    <label style="display:flex; align-items:center; gap:0.5rem; padding:0.5rem; border-bottom:1px solid var(--border); cursor:pointer;">
+      <input type="checkbox" class="test-assign-cb" value="${test.id}" ${userAllowed.includes(test.id) ? 'checked' : ''}>
+      <span style="font-size:0.9rem; font-weight:500;">${test.title}</span>
+    </label>
+  `).join('');
+  
+  document.getElementById('assignTestsModal').classList.add('show');
+}
+
+function closeAssignModal() {
+  document.getElementById('assignTestsModal').classList.remove('show');
+}
+
+function saveAssignedTests() {
+  const cbs = document.querySelectorAll('.test-assign-cb:checked');
+  const allowed = Array.from(cbs).map(cb => cb.value);
+  
+  let users = JSON.parse(localStorage.getItem('cbt_users') || '[]');
+  // Find user by email (stable key — not array index which can shift)
+  const targetIdx = users.findIndex(u => u.email === currentAssignUserEmail);
+  if (targetIdx !== -1) {
+    users[targetIdx].allowedModules = allowed;
+    localStorage.setItem('cbt_users', JSON.stringify(users));
+    
+    // Also sync the live session if this student is currently logged in
+    const active = JSON.parse(localStorage.getItem('cbt_user') || 'null');
+    if (active && (active.email === currentAssignUserEmail || active.mobile === users[targetIdx].mobile)) {
+      active.allowedModules = allowed;
+      localStorage.setItem('cbt_user', JSON.stringify(active));
+    }
+    showToast(`✅ Assignments saved for ${users[targetIdx].name}!`);
+  } else {
+    showToast('⚠️ Could not find user record. Please refresh and try again.');
+  }
+  closeAssignModal();
+}
+
+// ====== CREATE USER ======
+let auSessionCreated = [];
+
+function auInitDropdowns() {
+  // Populate language
+  const langSel = document.getElementById('au-lang');
+  if (langSel.options.length <= 1) {
+    LANGUAGES.forEach(l => langSel.innerHTML += `<option value="${l}">${l}</option>`);
+  }
+  // Populate states
+  const stateSel = document.getElementById('au-state');
+  if (stateSel.options.length <= 1) {
+    STATES.forEach(s => stateSel.innerHTML += `<option value="${s}">${s}</option>`);
+  }
+  // Auto-gen reg no if empty
+  if (!document.getElementById('au-regno').value) {
+    document.getElementById('au-regno').value = 'ITI-' + Math.floor(100000 + Math.random() * 900000);
+  }
+}
+
+function auUpdateTrades() {
+  const scheme = document.querySelector('input[name="au-scheme"]:checked')?.value;
+  const sel = document.getElementById('au-trade');
+  sel.innerHTML = '<option value="">-- Select Trade --</option>';
+  if (scheme && TRADES[scheme]) {
+    TRADES[scheme].forEach(t => sel.innerHTML += `<option value="${t}">${t}</option>`);
+  }
+}
+
+function auTogglePass(id, icon) {
+  const inp = document.getElementById(id);
+  if (inp.type === 'password') { inp.type = 'text'; icon.textContent = '🙈'; }
+  else { inp.type = 'password'; icon.textContent = '👁️'; }
+}
+
+let auCurrentType = 'trainee';
+
+function auSetUserType(type) {
+  auCurrentType = type;
+  const btnTrainee = document.getElementById('au-type-trainee');
+  const btnTeacher = document.getElementById('au-type-teacher');
+  const schemeRow = document.getElementById('au-scheme-row');
+  const tradeRow = document.getElementById('au-trade-row');
+  const teacherFields = document.getElementById('au-teacher-fields');
+  const submitBtn = document.getElementById('au-submit-btn');
+
+  if (type === 'teacher') {
+    btnTrainee.classList.remove('active');
+    btnTeacher.classList.add('teacher-active');
+    schemeRow.style.display = 'none';
+    tradeRow.style.display = 'none';
+    teacherFields.style.display = 'block';
+    
+    // Change submit button text
+    submitBtn.textContent = '👨‍🏫 Create Teacher';
+    submitBtn.style.background = '#6d28d9'; // purple
+  } else {
+    btnTeacher.classList.remove('teacher-active');
+    btnTrainee.classList.add('active');
+    schemeRow.style.display = 'block';
+    tradeRow.style.display = 'block';
+    teacherFields.style.display = 'none';
+    
+    // Reset submit button text
+    submitBtn.textContent = '🎓 Create Trainee';
+    submitBtn.style.background = ''; // default primary
+  }
+}
+
+function createUser() {
+  const name    = document.getElementById('au-name').value.trim();
+  const mobile  = document.getElementById('au-mobile').value.trim();
+  const email   = document.getElementById('au-email').value.trim();
+  const father  = document.getElementById('au-father').value.trim();
+  const gender  = document.querySelector('input[name="au-gender"]:checked')?.value;
+  
+  const lang    = document.getElementById('au-lang').value;
+  const state   = document.getElementById('au-state').value;
+  const district= document.getElementById('au-district').value.trim();
+  const institute = document.getElementById('au-institute').value.trim();
+  const pass    = document.getElementById('au-pass').value;
+  const cpass   = document.getElementById('au-cpass').value;
+  const regNo   = document.getElementById('au-regno').value;
+  const alertBox = document.getElementById('au-alert');
+
+  // Trainee specific
+  const scheme  = document.querySelector('input[name="au-scheme"]:checked')?.value;
+  const trade   = document.getElementById('au-trade').value;
+
+  // Teacher specific
+  const designation = document.getElementById('au-designation').value;
+  const department  = document.getElementById('au-department').value.trim();
+
+  alertBox.innerHTML = '';
+
+  const errors = [];
+  if (!name)                                   errors.push('Full Name is required.');
+  if (!/^\d{10}$/.test(mobile))                errors.push('Enter valid 10-digit mobile.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push('Enter valid email address.');
+  if (!gender)                                 errors.push('Please select gender.');
+  if (!lang)                                   errors.push('Please select language.');
+  if (!state)                                  errors.push('Please select a state.');
+  if (!institute)                              errors.push('Institute name is required.');
+  if (pass.length < 6)                         errors.push('Password must be at least 6 characters.');
+  if (pass !== cpass)                          errors.push('Passwords do not match.');
+
+  if (auCurrentType === 'trainee') {
+    if (!scheme) errors.push('Please select a scheme.');
+    if (!trade)  errors.push('Please select a trade.');
+  } else {
+    if (!designation) errors.push('Please select a designation.');
+    if (!department)  errors.push('Please enter subject/department.');
+  }
+
+  if (errors.length > 0) {
+    alertBox.innerHTML = `<div style="background:#fee2e2;color:#991b1b;border-radius:8px;padding:0.7rem 1rem;font-size:0.875rem;margin-bottom:0.5rem;">${errors.map(e=>`• ${e}`).join('<br>')}</div>`;
+    return;
+  }
+
+  // Check for duplicates
+  let allUsers = JSON.parse(localStorage.getItem('cbt_users') || '[]');
+  if (allUsers.find(u => u.email === email || u.mobile === mobile)) {
+    alertBox.innerHTML = '<div style="background:#fee2e2;color:#991b1b;border-radius:8px;padding:0.7rem 1rem;font-size:0.875rem;">⚠️ A user with this email or mobile already exists.</div>';
+    return;
+  }
+
+  const fullInstitute = district ? `${institute}, ${district}` : institute;
+  const userData = {
+    name, mobile, email, fatherName: father, gender, 
+    lang, state, institute: fullInstitute,
+    password: btoa(pass),
+    regNumber: regNo,
+    registered: new Date().toISOString(),
+    status: 'active',
+    createdByAdmin: true,
+    role: auCurrentType
+  };
+
+  if (auCurrentType === 'trainee') {
+    userData.scheme = scheme;
+    userData.trade = trade;
+    userData.testsTaken = 0;
+    userData.totalScore = 0;
+  } else {
+    userData.designation = designation;
+    userData.department = department;
+  }
+
+  allUsers.push(userData);
+  localStorage.setItem('cbt_users', JSON.stringify(allUsers));
+
+  // Track in session list
+  auSessionCreated.unshift(userData);
+  renderAuList();
+
+  const roleText = auCurrentType === 'teacher' ? 'Teacher' : 'Trainee';
+  showToast(`✅ ${roleText} "${name}" created!`);
+  alertBox.innerHTML = `<div style="background:#dcfce7;color:#166534;border-radius:8px;padding:0.7rem 1rem;font-size:0.875rem;margin-bottom:0.5rem;">✅ <b>${roleText}</b> account for <b>${name}</b> created! Reg No: <b>${regNo}</b></div>`;
+
+  // Reset form partially — keep institute & state for batch entry
+  document.getElementById('au-name').value = '';
+  document.getElementById('au-mobile').value = '';
+  document.getElementById('au-email').value = '';
+  document.getElementById('au-father').value = '';
+  document.querySelectorAll('input[name="au-gender"]').forEach(r => r.checked = false);
+  document.getElementById('au-pass').value = '';
+  document.getElementById('au-cpass').value = '';
+  document.getElementById('au-department').value = '';
+  // Generate new reg no for next user
+  document.getElementById('au-regno').value = 'ITI-' + Math.floor(100000 + Math.random() * 900000);
+}
+
+function renderAuList() {
+  const container = document.getElementById('au-recent-list');
+  document.getElementById('au-created-count').textContent = auSessionCreated.length;
+  if (auSessionCreated.length === 0) {
+    container.innerHTML = '<div class="q-empty-state">👤 No users created yet in this session.<br>Fill the form and click "Create User".</div>';
+    return;
+  }
+  container.innerHTML = auSessionCreated.map(u => {
+    const isTeacher = u.role === 'teacher';
+    const primaryLabel = isTeacher ? u.department : u.trade;
+    const secondaryLabel = isTeacher ? u.designation : u.scheme;
+    const roleBadge = isTeacher 
+      ? `<span style="background:#ede9fe;color:#6d28d9;font-size:0.72rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:20px;">👨‍🏫 Teacher</span>`
+      : `<span style="background:#dcfce7;color:#166534;font-size:0.72rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:20px;">🎓 Trainee</span>`;
+
+    return `
+    <div class="q-builder-card" style="padding:1rem;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <div>
+          <div style="font-weight:700;font-size:0.95rem;">${u.name}</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);">${u.email} &nbsp;|&nbsp; ${u.mobile}</div>
+        </div>
+        ${roleBadge}
+      </div>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem;">
+        <span style="background:#dbeafe;color:var(--primary);font-size:0.75rem;padding:0.1rem 0.45rem;border-radius:12px;">${primaryLabel || 'N/A'}</span>
+        <span style="background:#f1f5f9;color:var(--text-muted);font-size:0.75rem;padding:0.1rem 0.45rem;border-radius:12px;">${secondaryLabel || 'N/A'}</span>
+        <span style="background:#f1f5f9;color:var(--text-muted);font-size:0.75rem;padding:0.1rem 0.45rem;border-radius:12px;">${u.regNumber}</span>
+      </div>
+    </div>
+  `}).join('');
+}
+
+function auClearCreated() {
+  auSessionCreated = [];
+  renderAuList();
+}
+
+function resetCreateUserForm() {
+  auSetUserType('trainee');
+  document.getElementById('au-name').value = '';
+  document.getElementById('au-mobile').value = '';
+  document.getElementById('au-email').value = '';
+  document.getElementById('au-father').value = '';
+  document.getElementById('au-institute').value = '';
+  document.getElementById('au-district').value = '';
+  document.getElementById('au-pass').value = '';
+  document.getElementById('au-cpass').value = '';
+  document.getElementById('au-department').value = '';
+  document.getElementById('au-designation').selectedIndex = 0;
+  document.querySelectorAll('input[name="au-gender"]').forEach(r => r.checked = false);
+  document.querySelectorAll('input[name="au-scheme"]').forEach(r => r.checked = false);
+  document.getElementById('au-trade').innerHTML = '<option value="">-- Select Scheme First --</option>';
+  document.getElementById('au-lang').selectedIndex = 0;
+  document.getElementById('au-state').selectedIndex = 0;
+  document.getElementById('au-alert').innerHTML = '';
+  document.getElementById('au-regno').value = 'ITI-' + Math.floor(100000 + Math.random() * 900000);
+}
+// ====== END CREATE USER ======
+
+// init
+renderModules();
+</script>
+</body>
+</html>

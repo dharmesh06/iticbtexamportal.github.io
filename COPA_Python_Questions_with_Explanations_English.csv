@@ -1,0 +1,226 @@
+Question Text,Option A,Option B,Option C,Option D,Correct Answer (1/2/3/4),Explanation
+In which sequence computer operates?,"Input, output, process","Input, process, output","Process, input, output","Output, process, input",2,"Computers follow the IPO (Input-Process-Output) cycle: receiving data, processing it, and producing results."
+How does parallel port transfer a byte?,Bit by bit,2 bits at a time,4 bits at a time,8 bits at a time,4,A parallel port transfers 8 bits (1 byte) simultaneously over 8 separate wires.
+Which is an internal power supply unit of CPU?,CVT,UPS,SMPS,Stabilizer,3,SMPS (Switched Mode Power Supply) converts AC power from the wall outlet to the low-voltage DC power required by computer components.
+What is the purpose of expansion slot in mother board?,To insert the RAM,To insert the mouse,To insert the keyboard,To insert the additional peripherals,4,"The Insert tab is used to add objects like tables, charts, and pictures in Excel."
+Which factor influences the severity of electrical shock?,Very low DC voltage,Duration of current passing,Level of current in micro ampere,Person receiving the shock,2,The duration of current passing through the body significantly determines the extent of tissue damage and physical harm.
+What is the full form of ABC in first aid?,"Anyway, Breathing, Circulation","Airway, Breathing, Circulation","Anyway, Blood, Circulation","Airway, Blood, Chest",2,"ABC stands for Airway, Breathing, and Circulation, the three vital steps in emergency medical response."
+What is the full form of ALU?,Allowed Logic Unit,Ascii Logic Unit,Arithmetic-Logic Unit,Arithmetic Least Unit,3,"The Arithmetic Logic Unit (ALU) is the part of the CPU that performs all arithmetic (addition, subtraction) and logic operations."
+What is current?,Flow of Neutrons,Flow of Electrons,Flow of Protons,Flow of Resistance,2,Electric current is defined as the flow of electrons through a conductor.
+Which is an arm lift back pressure method?,Mouth to mouth method,Mouth to nose method,Nielsen's method,Schafer's method,3,Nielsen's method is an arm-lift back-pressure technique for artificial respiration.
+What is a desktop and personal computer also called?,Super Computer,Quantum Computer,Mainframe Computer,Micro Computer,4,"Microcomputers are small, relatively inexpensive computers designed for individual use."
+What is the full form of SSD?,Signal State Drive,Solid State Drive,Single Signal Drive,Solid Signal Drive,2,SSD (Solid State Drive) is a high-speed storage device that uses flash memory.
+What is the first action to be taken incase of an electric shock?,Call to doctor,Take support to others,Switch OFF the electric power,Call to ambulance,3,The first action in electric shock is to break the circuit by switching off the power.
+Which is an example for OS?,Antivirus,Windows,MS Office,Macromedia,2,Option 'Windows' is the correct answer according to the COPA curriculum standards.
+Which Control Panel applet gives information about the computer?,System and security,Hardware and sound,Programs,Appearance and personalization,1,Option 'System and security' is the correct answer according to the COPA curriculum standards.
+Which shortcut key is copy paste a file folder?,Ctrl+ X and Ctrl + V,Ctrl + A and Ctrl + V,Ctrl + Z and Ctrl + V,Ctrl + C and Ctrl + V,4,Option 'Ctrl + C and Ctrl + V' is the correct answer according to the COPA curriculum standards.
+What is the other name for PDoS? 2.0 0.00,Brute force attack,Non-technical attack,Phlashing,Smurf attack,3,Option 'Phlashing' is the correct answer according to the COPA curriculum standards.
+Where do pinned application stay in Windows OS?,Desktop,Notification Area,Title bar,Task Bar,4,Option 'Task Bar' is the correct answer according to the COPA curriculum standards.
+What is the extension of Notepad file?,.fil,.dll,.doc,.txt,4,Option '.txt' is the correct answer according to the COPA curriculum standards.
+What is the name of the tool in control panel is used to adjust your computer setting with voice command?,Ease of access,System and security,Appearance and personalization,Hardware and sound,1,Option 'Ease of access' is the correct answer according to the COPA curriculum standards.
+Which shortcut key is used to open start menu?,Windows Logo,Ctrl,Shift,Alt,1,The Windows key is used to quickly toggle the Start menu open and closed.
+What type of device is a printer?,Input Device,Output Device,Processing Device,Calculating Device,2,Option 'Output Device' is the correct answer according to the COPA curriculum standards.
+What is the function of operating system?,Word processing,Calculation,Process and memory management,Drawing pictures,3,Option 'Process and memory management' is the correct answer according to the COPA curriculum standards.
+In which icon deleted files and folders are found?,My Computer,Recycle Bin,Microsoft Edge,Google Chrome,2,Deleted files are moved to the Recycle Bin for potential restoration later.
+Which control panel is used to change the system date?,User Account,System,Date and Time,Fonts,3,Option 'Date and Time' is the correct answer according to the COPA curriculum standards.
+Which shortcut key refeshes Windows desktop?,F1,F3,F5,F7,3,F5 is used to refresh the view of the current folder or desktop in Windows.
+What type of device is a scanner?,Processing Device,Internal Device,Output Device,Input Device,4,Input devices like scanners and keyboards send data into the computer system.
+What type of copy is produced by printer?,Hard Copy,Soft Copy,Scan Copy,Xerox Copy,1,A hard copy refers to information printed on physical paper from a computer.
+What is the standard file extension of scan image?,.exe,.doc,.bak,.jpg,4,Option '.jpg' is the correct answer according to the COPA curriculum standards.
+What is the capacity of a typical DVD?,40 MB,50 MB,60 MB,4.7 GB,4,"A standard single-sided, single-layer DVD has a capacity of 4.7 GB."
+What is BIOS?,Firmware,Hardware,Middleware,Software,1,BIOS is a type of firmware used to initialize hardware during the boot process.
+What is the purpose of Nero Start Smart?,Format HDD,Burn CD/DVD,Format pen drive,Format CD/DVD,2,Burning refers to the process of writing data onto a CD or DVD using a laser.
+Which system is used by Bluetooth for Broadcasting?,Satellite,Microwaves,Telephone lines,Radio waves,4,Bluetooth communicates using short-wavelength UHF radio waves in the ISM band.
+What is the process of deleting all the data on the hard drive?,Delete,Erase,Formatting,Uninstall,3,Formatting erases all data and sets up a file system on a storage drive.
+Which port is use to connect monitor to CPU?,PS2,Parallel port,LAN,VGA,4,VGA is an analog interface used primarily for connecting computer video output to monitors.
+What do statistical analysis packages have much in common with?,Presentation packages,Apreadsheet packages,Design packages,Paint packages,2,Option 'Apreadsheet packages' is the correct answer according to the COPA curriculum standards.
+Which software interfaces the major hardware components of the computer with the OS?,BIOS,DOS,POST,CMOS,1,Option 'BIOS' is the correct answer according to the COPA curriculum standards.
+Which software acts as a bridge between system software and hardware?,Management,Application,Utility,Processing,2,Option 'Application' is the correct answer according to the COPA curriculum standards.
+Which virus infects important files of the application software?,Macro Virus,Trojan Virus,Worm Virus,Anti Virus,1,Option 'Macro Virus' is the correct answer according to the COPA curriculum standards.
+Which DOS command deletes a directory?,RD,REMOVE,DEL,DELETE,1,"In DOS, the RD (Remove Directory) command deletes an empty folder."
+Which character represents parent directory in Linux?,.,..,~,*,2,Double dots (..) represent the parent of the current directory in navigation.
+Which character redirects output into an existing file in Linux?,>,>=,<,<<,1,Option '>' is the correct answer according to the COPA curriculum standards.
+What are the directories under the root directory are called?,dir,path,sub directories,tree,3,Option 'sub directories' is the correct answer according to the COPA curriculum standards.
+Which file name matches the command DIR????T.TxT in DOS?,TIME . TXT,TEXT . TXT,TEMP . TXT,TEMPT . TxT,4,Option 'TEMPT . TxT' is the correct answer according to the COPA curriculum standards.
+Which is a wildcard character?,* and /,? and /,* and ?,? and @,3,Option '* and ?' is the correct answer according to the COPA curriculum standards.
+Which character represents a range of values in Linux?,( ),[ ],{ },< >,2,Option '[ ]' is the correct answer according to the COPA curriculum standards.
+Who developed the Python language?,Zim Den,Guido van Rossum,Niene Stom,Wick van Rossum,2,Python's creator Guido van Rossum named it after Monty Python's Flying Circus.
+Which multimedia application was developed using Python?,Matplotlib,Pandas,Tryton,TimPlayer,4,Option 'TimPlayer' is the correct answer according to the COPA curriculum standards.
+Which character gives single-line comments in Python?,//,#,!,/*,2,The hash symbol is the standard way to denote a single-line comment in Python code.
+What is the data type of print (type(0xFF))?,number,hexint,hex,int,4,"In Python, whole numbers like 255 (0xFF in hex) are classified as the 'int' data type."
+Which keyword adds an alternative condition to an if statement?,else if,elseif,elif,if else,3,The 'elif' keyword allows you to check for multiple conditions after an initial 'if'.
+To be in a job or work is ______,Employ,Skill,Knowledge,Aptitude,1,To be employed means to have a job or a position in a workplace.
+"Information like date of birth, permanent address form a part of one’s ______ in the resume.",Career objectives,Personal details,Achievements,Qualifications,2,"Resume personal details include name, birth date, and contact information."
+A person with a growth mindset is always willing to ______,relax,"grow, change, learn",keep quiet,become rich,2,A growth mindset involves the belief that abilities can be developed through dedication.
+Jobs that have become outdated in the past 5 years _____,STD booth,ola,uber,swiggy,1,STD booths became outdated due to the widespread availability of mobile phones.
+Ethics means ______,decide what is right and wrong for a human conduct,name of a city,employability skills,not relevant to society,1,Ethics are principles that govern a person's behavior or the conducting of an activity.
+Values are ______,not punctual,Motivates our attitude and action,very costly,all have same value,2,Option 'Motivates our attitude and action' is the correct answer according to the COPA curriculum standards.
+________ is a brief statement about purpose and principles of the Constitution.,Syllabus,Module,The Preamble,Unit,3,The Preamble is the introductory statement of the Constitution that outlines its purpose.
+Identify the improper term ______,green pollution,water pollution,air pollution,sound pollution,1,Option 'green pollution' is the correct answer according to the COPA curriculum standards.
+NAPS Stands for _______,National Apprenticeship Promotion Scheme,National Appointment Promoting Scheme,Non Apprenticeship Promotion Scheme,National Advertising Promotion Scheme,1,Option 'National Apprenticeship Promotion Scheme' is the correct answer according to the COPA curriculum standards.
+_______ is major changes takes place in manufacturing.,Green revolution,Industry revolution,Water revolution,Food revolution,2,The Industrial Revolution marked a period of rapid growth in the use of machines in manufacturing.
+1st industrial revolution started in ______ 2.0 0.00,18th century,19th century,20th century,21st century,1,The first Industrial Revolution began in Britain during the mid-18th century.
+Hard Skill ______,quick learner,time management,60 WPM typing speed,spoken English,3,"Hard skills are specific, measurable technical abilities like typing speed."
+To grow yourself you must ______,know your office,know yourself,know your institute,know your country,2,Self-awareness is the first step toward personal growth and professional development.
+Time management ______,complete your task on time,managing time,hard skill,problem solving,1,Time management is the process of organizing and planning how to divide your time.
+A resume should be ___________. 2.0 0.00,short and precise,fancy and colourful,having long and detailed information,having acronyms and abbreviation,1,"Professional resumes should be concise, ideally 1-2 pages long."
+A written description of duties and responsibilities to be carried out in a job is called ___________.,CV,job description,resume,job application,2,"A JD outlines the tasks, duties, and responsibilities of a specific job role."
+"After receiving interview call, what is the next step?",Send application letter,Prepare the resume,Appear at interview,Send resume,3,"In Python, whole numbers like 255 (0xFF in hex) are classified as the 'int' data type."
+Choose suitable “wh” word for the given sentence. “___________ animal do you like?”,Which,Why,Where,When,1,The word 'which' is used to ask about a specific choice among a known group.
+Choose the correct punctuation mark after the word “Rohan” in the given sentence. “Rohan David and Ram are playing hide and,"Comma (,)",Period (_),Slash (/),Hyphen (-),1,Commas are used to separate items in a list or to provide a pause in a sentence.
+Choose the correct response for the given question. “How have you been”?,"Very well, And you?",Thank you_ And you?,Same to you,On vacation_ And you?,1,"Option 'Very well, And you?' is the correct answer according to the COPA curriculum standards."
+Choose the correct response of the given question. “When did the accident happen”?,in the hotel,during travelling,At 10:30 last night,On the table,3,Option 'At 10:30 last night' is the correct answer according to the COPA curriculum standards.
+Choose the correct tense of the verb. “I __________ music when I was child”,learn,am learning,will learn,had learnt,4,The past perfect tense 'had learnt' is used for an action completed in the past.
+Curriculum vitae is also known as ___________ .,circular,resume,job application form,leave application,2,Option 'resume' is the correct answer according to the COPA curriculum standards.
+Fill in the blank with comparative adjective. “Your pencil is __________ than mine”,sharp,sharper,blunt,thick,2,"The comparative form of 'sharp' is 'sharper', used to compare two objects."
+Fill in the blank with correct future tense of verb. “We ___________ to the zoo after Breakfast “,went,are going,had gone,will go,4,The future tense 'will go' indicates an action that will happen after the current moment.
+Which is open source software?,Open Office,Windows 10,MacOs,Microsoft Office 365,1,"OpenOffice is a free, open-source alternative to Microsoft Office."
+Which command remove files in Linux?,delete,rm,dm,erase,2,The 'rm' command is used to remove or delete files in a Linux environment.
+What is the first option of the KDE desktop in Linux?,Preference,Application,System,System setting,2,Option 'Application' is the correct answer according to the COPA curriculum standards.
+What is the full form of OSS?,Open System Service,Open Source Software,Open System Software,Open Synchronized Software,2,The plural subject 'They' requires the plural verb 'are'.
+Which software coding is freely available on the internet and open for users for further use?,Unlicensed software,Open source software,Free software,Community software,2,The plural subject 'They' requires the plural verb 'are'.
+What is the full form of FSF?,File Server First,Free Software File,Free Software Foundation,First Software First,3,The plural subject 'They' requires the plural verb 'are'.
+Which command stores the active document permanently?,Save,Send,Prepare,Save as,1,The Save command writes the current state of a document to persistent storage.
+Which bar contains the current position of the cursor in MS Word?,Layout,Title bar,Status bar,Horizontal ruler,3,"The status bar at the bottom of MS Word shows page counts, word counts, and cursor position."
+Which is a text styling feature of MS Word?,Word fill,Word art,Word colour,Word font,2,"In DOS, the RD (Remove Directory) command deletes an empty folder."
+Which document view resembles the appearance of a web browser?,Draft view,Outline view,Web layout view,Full screen reading,3,Web Layout view shows how a document would appear as a web page.
+What is the purpose of quick access toolbar?,To hold advance function,To hold special function,To hold basic function,To hold familiar and repeated function,4,Option 'To hold familiar and repeated function' is the correct answer according to the COPA curriculum standards.
+What is the purpose of gutter margin?,Added to left margin when printing,Added to right margin when printing,Added to binding side of page when printing,Added to the outside of page when printing,3,"In Python, whole numbers like 255 (0xFF in hex) are classified as the 'int' data type."
+Which option is used for tab setting?,Horizontal ruler,Status bar,Vertical ruler,Vertical scroll bar,1,Option 'Horizontal ruler' is the correct answer according to the COPA curriculum standards.
+What is the purpose of cover page?,"Allows to fill title, author and date",Fills list of people intent to mail,To view the mailed list,Contains details of the documents,1,"Option 'Allows to fill title, author and date' is the correct answer according to the COPA curriculum standards."
+Which term refers to the process of combining two or more cells to make one?,Combining,Joining,Merging,Creating,3,Merging cells combines multiple adjacent cells into one large cell in a table.
+What has the ability to combine name and addresses within standard document?,Document formatting,Mail merge,Database management,Form letters,2,Mail Merge automates the creation of bulk documents like letters or labels.
+Which shortcut key center aligns the selected text in MS Word?,Ctrl + C,Ctrl + D,Ctrl + E,Ctrl + F,3,Ctrl+E is the standard keyboard shortcut for center-aligning text in MS Word.
+What is the purpose of Shift+Ctrl+N in Open Office?,To create a new document,To open a document,To open templates and documents dialog,To exit an application,3,Option 'To open templates and documents dialog' is the correct answer according to the COPA curriculum standards.
+How can you insert a audio file in your word document?,Insert > sound menu option,Insert > file menu option,Insert > object menu option,Insert > blank menu,3,"The Insert tab is used to add objects like tables, charts, and pictures in Excel."
+How are individuals in a table referred to as?,cells,boxes,rows,columns,1,Option 'cells' is the correct answer according to the COPA curriculum standards.
+Which MS word tab has acess to mail merge options?,Insert tab,References tab,Home tab,Mailings tab,4,Option 'Mailings tab' is the correct answer according to the COPA curriculum standards.
+Which is a default document type for a mail merge?,Data,Labels and list,Letters,Set,3,Option 'Letters' is the correct answer according to the COPA curriculum standards.
+Which shortcut key prints a document?,Ctrl + V,Ctrl + X,Ctrl + P,Ctrl + B,3,Option 'Ctrl + P' is the correct answer according to the COPA curriculum standards.
+Which key copies the selected items in open source office?,Ctrl + O,Ctrl + C,Ctrl + P,Ctrl + Shift + C,2,Option 'Ctrl + C' is the correct answer according to the COPA curriculum standards.
+Which list is used to create multiple copies of a document in a mail merge?,Main document,Data source,Form label,Database,2,"The Data tab in Excel handles importing, sorting, filtering, and validation tasks."
+Which is a step of merge process?,Preview the merge results,Set margin of the document,Format data source,Remove data sources,1,Option 'Preview the merge results' is the correct answer according to the COPA curriculum standards.
+How Cells are named in MS Excel?,Alphabetically,Numerically,Alphanumerically,Special Character,3,"Excel cells are addressed using a column letter and row number (e.g., A1)."
+What is the maximum limit of rows in MS Excel 2010?,1084567,1048567,1048576,1084576,3,"Excel sheets (since 2007) contain 1,048,576 rows per worksheet."
+"Which tab adds pivot table, charts and hyperlinks in a spread sheet?",Insert,Page Layout,Data,Review,1,"The Insert tab is used to add objects like tables, charts, and pictures in Excel."
+"Which Excel tab is used for importing, outlining and subtotalling the data placed in a worksheet data list?",Formula,Data,Review,Insert,2,"The Data tab in Excel handles importing, sorting, filtering, and validation tasks."
+Which key combined with ctrl key creates a macro key in Excel?,Numeric,Alphabetic,Alphanumeric,Special characters,2,Option 'Alphabetic' is the correct answer according to the COPA curriculum standards.
+Which function key opens save as dialogue box in MS Excel?,F2,F5,F7,F12,4,Pressing F12 in Microsoft Excel quickly opens the 'Save As' dialog box.
+Which starts with “=” sign in Excel 2010?,Data,Text,Numbers,Formulas,4,The 'rm' command is used to remove or delete files in a Linux environment.
+Which function counts the number of cells that contains numbers in a range?,Count( ),Countif( ),Sum( ),Sumif( ),1,The COUNT function counts cells that contain numbers in a given range.
+Which is a ‘Date and Time’ function in Excel?,FIND( ),MOD( ),NOW( ),MID( ),3,The NOW() function returns the current date and time in an Excel cell.
+Which option displays the rows that meet certain conditions in MS Excel?,Find,Filter,Format,Sort,2,Filtering allows you to display only the data rows that meet specific criteria.
+Which command converts cell text to CAPS?,=UPPER( ),=LOWER( ),=LEN( ),=TRIM( ),1,UPPER() is a string function that converts text to all capital letters.
+How to insert chart in MS Excel?,Home Tab-Cells,Insert Tab-Charts,Data Tab- Data Tools,Formulas Tab-Insert Function,2,"The Insert tab is used to add objects like tables, charts, and pictures in Excel."
+Which ribbon menu displays the Page Setup grouping of commands?,Insert,Layout,Review,Home,2,Option 'Layout' is the correct answer according to the COPA curriculum standards.
+In which application data validation is used?,MS Excel,MS Word,MS Power Point,Paint,1,Option 'MS Excel' is the correct answer according to the COPA curriculum standards.
+Which type of chart is used in MS Excel?,Bubble,Cone,Circle,Square,1,A Bubble chart is a variation of a scatter chart where data points are replaced with bubbles.
+Which creates a bar diagram?,Format - > Chart,Tools - > Chart,Insert - > Chart,Edit - > Chart,3,"The Insert tab is used to add objects like tables, charts, and pictures in Excel."
+Which option inserts a Pivot Table?,Formula Tab- Data Analysis Group,Insert Tab - Tables Group,Data Group in the Pivot Table Group,Data Group In the Tables Group,2,"The Insert tab is used to add objects like tables, charts, and pictures in Excel."
+Which tab is used to access the What-if Analysis Excel tools?,Home Tab,Insert Tab,Pay Layout Tab,Data Tab,4,"The Data tab in Excel handles importing, sorting, filtering, and validation tasks."
+Which type does Portrait and Landscape belongs to?,Page Margins,Page Arrangements,Page Orientation,Page Breaks,3,Page orientation (Portrait or Landscape) determines the direction the page is printed.
+What will be the output of the following Python code snippet if x=1?,4,2,1,8,1,Option '4' is the correct answer according to the COPA curriculum standards.
+How to declare an array in python?,brackets [ ],parenthesis ( ),curly braces { },pipes | |,1,"In Python, square brackets are used to define a list or declare an array-like structure."
+Which Program code makes use of the given module?,Client,Interface,Docstring,Modularity,1,Option 'Client' is the correct answer according to the COPA curriculum standards.
+Which command displays numbers and text on the screen?,print ( ),input ( ),output ( ),command ( ),1,"In Python, whole numbers like 255 (0xFF in hex) are classified as the 'int' data type."
+Which is a core data type in Python programming?,Package,List,Class,Object,2,"A list is an ordered, mutable collection of items in Python programming."
+Fill in the blank with correct word. “They _________ good friends”,is,am,are,was,3,The plural subject 'They' requires the plural verb 'are'.
+Fill in the blank with present progressive tense of the verb. “The train __________ through the tunnel”,passed,is passing,had passed,was passing,2,Option 'is passing' is the correct answer according to the COPA curriculum standards.
+Fill in the blank with proper interrogative adjective. ___________ are you going?,Who,Where,Which,What,2,The interrogative word 'where' is used to ask about location or place.
+Fill in the blank with proper pronoun. “I made this cake ___________”,myself,yourself,himself,itself,1,A reflexive pronoun like 'myself' is used when the subject and object are the same.
+Fill in the blank with proper pronoun. “She made this cake ___________”,itself,myself,herself,himself,3,Option 'herself' is the correct answer according to the COPA curriculum standards.
+Fill in the blank with proper reflexive pronoun. “She has hurt___________”,myself,herself,himself,itself,2,Option 'herself' is the correct answer according to the COPA curriculum standards.
+Fill in the blank with suitable adjective for the given sentence “The little girl’s…… eyes revealed her mischief”,chubby,weak,short sighted,twinkling,4,Adjectives like 'twinkling' describe the appearance of light or eyes.
+Fill in the blank with suitable place preposition. “My house is ___________ the third floor”,at,in,on,under,3,Option 'on' is the correct answer according to the COPA curriculum standards.
+Fill in the correct question word. “_______________ is the speaker at the function?”,What,When,Why,Who,4,Option 'Who' is the correct answer according to the COPA curriculum standards.
+Low level language is also called ______.,source code,middle ware,machine language,assembly language,3,Option 'machine language' is the correct answer according to the COPA curriculum standards.
+Pronunciation refers to___________.,diphthong,consonant,punctuation,production of sound,4,Option 'production of sound' is the correct answer according to the COPA curriculum standards.
+Re-arrange the following set of words into meaningful sentence. “teacher / school / worked / she / a / as”.,School worked as a she teacher,She worked as a school teacher,She teacher worked as a school,Worked she as a school teacher,2,Option 'She worked as a school teacher' is the correct answer according to the COPA curriculum standards.
+Rise and fall of pitch of voice is called __________.,vowel,intonation,consonant,pronunciation,2,"In Python, whole numbers like 255 (0xFF in hex) are classified as the 'int' data type."
+The word that expresses a sudden and strong feeling is called _________.,punctuation,interjection,conjunction,apostrophe,2,"In Python, whole numbers like 255 (0xFF in hex) are classified as the 'int' data type."
+"When you greet higher official’s such as Teacher, Instructor or Supervisor, you should use ___________.",Good morning,Hello,Hey,Hi,1,Good morning is a formal greeting appropriate for supervisors or instructors.
+Which is a silent letter in the word “ANSWER”?,R,E,S,W,4,Option 'W' is the correct answer according to the COPA curriculum standards.
+Which one is a “Do’s” of discussion etiquettes?,Loose your temper,Listen to others,Talk about irrelevant details,Use impolite or rude language,2,"A list is an ordered, mutable collection of items in Python programming."
+Which one is a “Don’t” of discussion etiquette?,Be open minded,Use moderate tone,Listen to others,Argue unnecessary,4,Option 'Argue unnecessary' is the correct answer according to the COPA curriculum standards.
+Which one is a brain of computer?,Keyboard,CPU,Monitor,Hard disk,2,Option 'CPU' is the correct answer according to the COPA curriculum standards.
+Which one is an exclamatory sentence?,What a beautiful house it is!,It is a beautiful house.,Is it a beautiful house?,Your house is beautiful.,1,Option 'What a beautiful house it is!' is the correct answer according to the COPA curriculum standards.
+Which one is in active voice? 2.0 0.00,Ram has passed the exam.,The ball was caught by him.,The book was being read by her.,We were driven home by dad.,1,Option 'Ram has passed the exam.' is the correct answer according to the COPA curriculum standards.
+Which one is in passive voice?,Mohan is painting a house.,She was reading a book.,Her birthday was celebrated by us.,I have seen that movie.,3,Option 'Her birthday was celebrated by us.' is the correct answer according to the COPA curriculum standards.
+Which one is NOT a conjunction?,And,Or,But,On,4,Option 'On' is the correct answer according to the COPA curriculum standards.
+Which one is NOT a benefit of the role playing?,Builds confidence,Develops listening skill,Develops creative problem-solving skill,Develops boredom,4,Option 'Develops boredom' is the correct answer according to the COPA curriculum standards.
+Which one is NOT a vowel?,a,e,f,i,3,Option 'f' is the correct answer according to the COPA curriculum standards.
+Which setting is modified to print a worksheet in letterhead?,Paper,Margin,Layout,Orientation,2,Option 'Margin' is the correct answer according to the COPA curriculum standards.
+What is the extension of files created in MS-Excel 2007-2016?,.XLX,.XLSX,.XLS,.TXT,2,"Starting with Excel 2007, the default file format is .xlsx, based on XML."
+What arranges data in Ascending (A-Z) or Descending (Z-A) order ?,Filtering,Sorting,Custom filter,Clear rules,2,Sorting is the process of arranging data in a specific order (like A-Z or numeric).
+Which chart shows the proportions of how one or more data elements relate to another data element?,XY Chart,Pie Chart,Line Chart,Column Chart,2,A Pie chart illustrates numerical proportions as slices of a circle.
+What is the full form of CSV ?,Compact Serial Value,Control Space Value,Comma Separated Values,Comma Standard Values,3,Commas are used to separate items in a list or to provide a pause in a sentence.
+Identify the file type.,Dataframe,MySQL,CSV,Excel,3,Option 'CSV' is the correct answer according to the COPA curriculum standards.
+Which box is present in Pivot Table fields list?,Column Labels,View,Layout,Formulas,1,Option 'Column Labels' is the correct answer according to the COPA curriculum standards.
+Which excel analysis tool is best for solving problem with one variable ?,Goal Seek,Scenario,Trendline,Solver,1,Option 'Goal Seek' is the correct answer according to the COPA curriculum standards.
+Which view in excel displays the pages exactly as they appear while printing ?,Custom View,Full screen View,Page Break View,Page Layout view,4,Option 'Page Layout view' is the correct answer according to the COPA curriculum standards.
+"Which item contains text graphics, charts, sound, video, etc., in PowerPoint?",Slides,Folder,Handout,Desktop screen,1,Slides are the individual pages of a PowerPoint presentation.
+Which button is used to add instant animation to the presentation?,Add button,Start button,Insert button,Action button,4,Action buttons can be programmed to trigger animations or jump to slides.
+Which type of software is PowerPoint?,Word Processor,Spread Sheet,Presentation Graphics,Database Management,3,Option 'Presentation Graphics' is the correct answer according to the COPA curriculum standards.
+Which tool allows the user to select different layout for slide?,Apply design,Bullets,New slide,Slide Layout,4,Option 'Slide Layout' is the correct answer according to the COPA curriculum standards.
+Which key stops a PowerPoint presentation?,ESC,Tab,Ctrl,Enter,1,Option 'ESC' is the correct answer according to the COPA curriculum standards.
+How many panes are there in backstage view of PowerPoint 2010?,3,5,7,9,1,Option '3' is the correct answer according to the COPA curriculum standards.
+Which menu applies various effects to the text in a slide? 2.0 0.00,Animation,Design,Transitions,Slide show,1,Option 'Animation' is the correct answer according to the COPA curriculum standards.
+Which dialog box changes slides automatically for a particular period of time in PowerPoint?,Action setting,Slide transition,Slide animation,Custom animation,2,Option 'Slide transition' is the correct answer according to the COPA curriculum standards.
+Which option creates a presentation automatically in PowerPoint?,Template,Blank Presentation,Auto content wizard,Standard test bar,3,"In DOS, the RD (Remove Directory) command deletes an empty folder."
+Which option offers a built in design through a dialog box?,Auto content wizard,Blank Presentation,Standard tool bar,Template,4,Option 'Template' is the correct answer according to the COPA curriculum standards.
+Which function key runs a PowerPoint presentation?,F3,F5,F7,F9,2,F5 is used to refresh the view of the current folder or desktop in Windows.
+What is the file extension of Microsoft PowerPoint?,.txt,.pptx,.docx,.xslx,2,.pptx is the default file extension for Microsoft PowerPoint presentations (2007+).
+Which PowerPoint tab has themes?,Transition Tab,Design Tab,Insert Tab,Animation Tab,2,Option 'Design Tab' is the correct answer according to the COPA curriculum standards.
+Which is a default page setup orientation of the PowerPoint slides?,Landscape,Portrait,Vertical,Horizontal,1,Landscape is a page orientation where the document is wider than it is tall.
+Which shortcut key is use to print slides in MS PowerPoint?,Ctrl + O,Ctrl + P,Ctrl + Alt +O,Ctrl + Alt +P,2,Option 'Ctrl + P' is the correct answer according to the COPA curriculum standards.
+Which option prints four slides in a single page?,Handouts,Print Layout,Customer Range,Print All Slides,1,Option 'Handouts' is the correct answer according to the COPA curriculum standards.
+What are the dotted areas in an empty slide of MS PowerPoint ?,Template,Placard,Placeholders,Themes,3,Option 'Placeholders' is the correct answer according to the COPA curriculum standards.
+Which phase designs and characterize the data needs of the database users?,Initial phase,Execution phase,Maintenance phase,Closure phase,1,Option 'Initial phase' is the correct answer according to the COPA curriculum standards.
+What is full form of DDL?,Data Describe Language,Definition Data Language,Data Definition Language,Data Distinct Language,3,"The Data tab in Excel handles importing, sorting, filtering, and validation tasks."
+What is full form of DML?,Data Multiplication Language,Data Manipulation Language,Data Modify Language,Data Mapping Language,2,"The Data tab in Excel handles importing, sorting, filtering, and validation tasks."
+Why query should be executed sucessfully on a existing view?,The specified table contains data,We should have a SELECT privilege only on the specified table,The specified table must be in the same database,SELECT privilege on the view,4,Option 'SELECT privilege on the view' is the correct answer according to the COPA curriculum standards.
+Which is the best way to represent the attributes in a large database?,Relational,Concatenation,Dot representation,Customization,2,Option 'Concatenation' is the correct answer according to the COPA curriculum standards.
+"Which query calculates a sum, average and then groups the result by two sets of values?",Cross-tab,Snapshot,Both cross-tabs and Snapshot,Across-tabs,1,Option 'Cross-tab' is the correct answer according to the COPA curriculum standards.
+Which is a type of database?,Transition,Relational,Outlook,Decentralized,2,Option 'Relational' is the correct answer according to the COPA curriculum standards.
+Which of the following is TRUE about DDL command?,Controls of the database system.,"Inserting , modifying,deleting and viewing the records.","Creation, deletion, and alteration",Retrive data from the database,3,"Option 'Creation, deletion, and alteration' is the correct answer according to the COPA curriculum standards."
+What does the following statement in SQL do? DROP TABLE student;,Deletes a table called student,Creates a table called student,Check if there is a table called student,Deletes only the records in a table called student,1,Option 'Deletes a table called student' is the correct answer according to the COPA curriculum standards.
+What does the following code snippet do?,Invalid Syntax,Delete the column ADDRESS from the table,Adds a column ADDRESS in the table,Adds records in a column ADDRESS in the table,3,Option 'Adds a column ADDRESS in the table' is the correct answer according to the COPA curriculum standards.
+Which are TCL commands?,COMMIT and ROLLBACK,UPDATE and TRUNCATE,SELECT and INSERT,GRANT and REVOKE,1,Option 'COMMIT and ROLLBACK' is the correct answer according to the COPA curriculum standards.
+Which collection of operations form a single logical unit of work?,Views,Networks,Units,Transactions,4,Option 'Transactions' is the correct answer according to the COPA curriculum standards.
+Which database aspect preserves execution of translation in isolation?,Atomicity,Consistency,Durability,Integrity,2,Option 'Consistency' is the correct answer according to the COPA curriculum standards.
+Which scheme controls the interaction between executing transaction ?,Concurrency control scheme,Multiprogramming scheme,Serialization scheme,Schedule scheme,1,Option 'Concurrency control scheme' is the correct answer according to the COPA curriculum standards.
+Which is the logical design of the database?,Instance,Relation,Domain,Schema,4,A schema is the logical structure or design of a database system.
+Which unit is considered if the domain of the element is atomic?,Different units,Indivisible units,Constant units,Divisible units,2,Option 'Indivisible units' is the correct answer according to the COPA curriculum standards.
+What is the order for the tupples of the relations?,Any,Same,Sorted,Constant,1,Option 'Any' is the correct answer according to the COPA curriculum standards.
+"What does the term ""attribute"" refers to in a table?",Record,Column,Tuple,Key,2,Option 'Column' is the correct answer according to the COPA curriculum standards.
+What is the error in the below statement ?,Return type missing,Dept_name is mismatched,Reference relation is not mentioned,Error in the formation of the function name,1,Option 'Return type missing' is the correct answer according to the COPA curriculum standards.
+Which has the highest precedence in the expression?,Division,Subtraction,Power,Parentheses,4,The plural subject 'They' requires the plural verb 'are'.
+Which is the correct operator for power(ab)?,a ^ b,a ** b,a ^ ^ b,a ^ * b,2,Option 'a ** b' is the correct answer according to the COPA curriculum standards.
+Which is a valid Python if statement?,if a > = 2 :,if (a > = 2),if (a = > 22),if a > = 22,1,Option 'if a > = 2 :' is the correct answer according to the COPA curriculum standards.
+Which is used as loop in Python?,for loop,if else,do-while loop,loop,1,Option 'for loop' is the correct answer according to the COPA curriculum standards.
+Which function accepts input from the user?,raw_input( ),rawinput( ),input( ),string( ),3,Option 'input( )' is the correct answer according to the COPA curriculum standards.
+Which one of the following is a good office etiquette?,One should dress formally,One should not be punctual to work,One should have fancy mobile ring tone,One should litter one’s work place,1,The 'rm' command is used to remove or delete files in a Linux environment.
+Word that is pronounced the same as another word but differs in meaning is called __________,homophone,homograph,diphthong,syllable,1,Homophones are words that sound the same but have different meanings and spellings.
+_______ can help me learn English.,dedication,fear,anger,shyness,1,Dedication and consistent practice are key to learning a new language like English.
+Which punctuation mark should be used in the following sentence?,? (question mark),", (comma)",. (full stop),! (exclamation),1,Option '? (question mark)' is the correct answer according to the COPA curriculum standards.
+When is capital letter used?,Beginning of a sentence,Names of persons,Names of places,All the above,4,Option 'All the above' is the correct answer according to the COPA curriculum standards.
+Which one of the following is a describing word?,eat,repair,hot,soup,3,Option 'hot' is the correct answer according to the COPA curriculum standards.
+When someone says 'Thank you' we should reply and say ______.,Thank you.,You're welcome.,Bye-bye,How are you?,2,re welcome.'. re welcome.'.
+Choose the odd word.,please,sorry,paper,thanks,3,Option 'paper' is the correct answer according to the COPA curriculum standards.
+I am a welder. I work with ______,nail polish,robots,welding tools,laptops,3,Option 'welding tools' is the correct answer according to the COPA curriculum standards.
+Today's weather is going to be ____________.,Hopeful,Warm,Blue,Urgent,2,The 'rm' command is used to remove or delete files in a Linux environment.
+The word 'when' denotes __________,place,thing,person,time,4,Option 'time' is the correct answer according to the COPA curriculum standards.
+Rahul enjoys ____________ with his pet dog.,playing,writing,doing,washing,1,Option 'playing' is the correct answer according to the COPA curriculum standards.
+"Having a clear idea of our personality including strengths, weaknesses, thoughts, beliefs, motivation, values etc is called",Belief,Self Awareness,Myth,Threat,2,The plural subject 'They' requires the plural verb 'are'.
+___________ are the abilities and qualities you have as a person that helps you grow well in life and career.,Personal Strengths,Personal weaknesses,Opportunities,Threats,1,Option 'Personal Strengths' is the correct answer according to the COPA curriculum standards.
+"__________ are the qualities that are considered negative, and need to be worked on.",Personal Strengths,Personal weaknesses,Opportunities,Threats,2,Option 'Personal weaknesses' is the correct answer according to the COPA curriculum standards.
+Which of the following is an example of personal weakness?,Confidence,Being lazy,Hard working,Active,2,Option 'Being lazy' is the correct answer according to the COPA curriculum standards.
+Goals are of 2 types ______,Good and bad goals,Long-term and short-term goals,Rich and poor goals,Fixed-term and non-fixed term goals,2,The 'rm' command is used to remove or delete files in a Linux environment.
+What is stress?,Feeling of joy,Feeling of surprise,Feeling of delight,Feeling of frustration / disappointment,4,"In Python, whole numbers like 255 (0xFF in hex) are classified as the 'int' data type."
+Which of these is a sign of good stress?,It prevents you from pursuing your goals.,It makes you doubt yourself.,"Does not lead to long-term tension, loss of sleep.",Makes you physically ill or causes pain.,3,The 'rm' command is used to remove or delete files in a Linux environment.
+An activity that stops or reduces stress is called a stress buster. Which of the following according to you is not a stress buster?,Spending long hours thinking about the problem.,Going to bed on time.,Listening to music.,Gardening,1,Option 'Spending long hours thinking about the problem.' is the correct answer according to the COPA curriculum standards.
+What is mindfulness?,It is the technique of not minding anything.,It is about sharpening your brain.,It is the ability to be fully present in a moment.,It is the word used to describe people who are full of thoughts.,3,Option 'It is the ability to be fully present in a moment.' is the correct answer according to the COPA curriculum standards.
+Which of the following is true about stress?,Stress can be managed,Stress cannot be controlled,Stress can not be decreased,All of the above,1,Option 'Stress can be managed' is the correct answer according to the COPA curriculum standards.
+Which of the following statements is true?,Only experts can solve any problem,"The more problems you solve, the better you will get at problem solving!",We need to pursue a course to even solve a simple problem,It is not important to solve any problem,2,"Option 'The more problems you solve, the better you will get at problem solving!' is the correct answer according to the COPA curriculum standards."
+Which of these should be considered while making decisions?,Your mood,The choices of your friends,The rules of your community,Your personal priorities.,4,Option 'Your personal priorities.' is the correct answer according to the COPA curriculum standards.
+Which of these is the full form of SWOT?,Special Wellness Organization Theme,Speak Work Openly Together,Strong World Olympic Team,Strength Weakness Opportunity Threat,4,Option 'Strength Weakness Opportunity Threat' is the correct answer according to the COPA curriculum standards.

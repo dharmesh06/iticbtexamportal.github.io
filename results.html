@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results - CBT Exam Portal</title>
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <div class="logo-icon">🎓</div>
+    <div><div class="brand-name">CBT Exam Portal</div><div class="brand-sub">NCVT Practice Tests</div></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="dashboard.html">← Dashboard</a></li>
+  </ul>
+</nav>
+
+<div class="results-page">
+  <!-- RESULT HERO -->
+  <div class="result-hero" id="resultHero">
+    <div class="score-circle">
+      <div class="score-pct" id="scorePercent">0%</div>
+      <div class="score-label">Score</div>
+    </div>
+    <h2 id="resultTitle">Loading...</h2>
+    <p id="resultSubtitle"></p>
+    <div class="pass-indicator" id="passIndicator"></div>
+    <div class="result-meta">
+      <div class="result-meta-item"><div class="val" id="metaScore">0</div><div class="lbl">Marks Obtained</div></div>
+      <div class="result-meta-item"><div class="val" id="metaTotal">0</div><div class="lbl">Total Marks</div></div>
+      <div class="result-meta-item"><div class="val" id="metaTime">--</div><div class="lbl">Time Taken</div></div>
+      <div class="result-meta-item"><div class="val" id="metaTrade">--</div><div class="lbl">Trade</div></div>
+    </div>
+  </div>
+
+  <!-- STATS CARDS -->
+  <div class="result-cards">
+    <div class="result-card">
+      <div class="result-card-val val-correct" id="rcCorrect">0</div>
+      <div class="result-card-lbl">✅ Correct</div>
+    </div>
+    <div class="result-card">
+      <div class="result-card-val val-wrong" id="rcWrong">0</div>
+      <div class="result-card-lbl">❌ Wrong</div>
+    </div>
+    <div class="result-card">
+      <div class="result-card-val val-skip" id="rcSkipped">0</div>
+      <div class="result-card-lbl">⏭️ Skipped</div>
+    </div>
+    <div class="result-card">
+      <div class="result-card-val val-marks" id="rcAccuracy">0%</div>
+      <div class="result-card-lbl">🎯 Accuracy</div>
+    </div>
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;">
+    <a href="dashboard.html" class="btn btn-secondary">← Back to Dashboard</a>
+    <button class="btn btn-primary" onclick="retakeExam()">🔄 Retake Exam</button>
+    <button class="btn btn-outline" style="color:var(--primary);border-color:var(--primary);" onclick="window.print()">🖨️ Print Result</button>
+  </div>
+
+  <!-- ANSWER REVIEW -->
+  <div class="review-section">
+    <h3>📋 Detailed Answer Review</h3>
+    <div id="reviewList"></div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script>
+const result = JSON.parse(localStorage.getItem('cbt_last_result') || 'null');
+if (!result) window.location.href = 'dashboard.html';
+
+function formatTime(secs) {
+  const m = Math.floor(secs/60), s = secs%60;
+  return `${m}m ${s}s`;
+}
+
+// Populate
+document.getElementById('scorePercent').textContent = result.percentage.toFixed(1) + '%';
+document.getElementById('metaScore').textContent = result.score;
+document.getElementById('metaTotal').textContent = result.total;
+document.getElementById('metaTime').textContent = formatTime(result.timeTaken || 0);
+document.getElementById('metaTrade').textContent = result.trade;
+document.getElementById('rcCorrect').textContent = result.correct;
+document.getElementById('rcWrong').textContent = result.wrong;
+document.getElementById('rcSkipped').textContent = result.skipped;
+const accuracy = result.correct / (result.correct + result.wrong) * 100 || 0;
+document.getElementById('rcAccuracy').textContent = accuracy.toFixed(0) + '%';
+
+const passed = result.percentage >= 40;
+document.getElementById('resultTitle').textContent = passed ? '🎉 Congratulations! You Passed!' : '📚 Keep Practicing!';
+document.getElementById('resultSubtitle').textContent = passed
+  ? `Excellent performance! You scored ${result.percentage.toFixed(1)}% in ${result.examTitle}.`
+  : `You scored ${result.percentage.toFixed(1)}%. You need 40% to pass. Review your answers and try again.`;
+const pi = document.getElementById('passIndicator');
+pi.textContent = passed ? '✅ PASS' : '❌ FAIL';
+pi.className = 'pass-indicator ' + (passed ? 'pass' : 'fail');
+
+// Score circle color
+const sc = document.querySelector('.score-circle');
+if (passed) sc.style.borderColor = 'rgba(46,204,113,0.6)';
+else sc.style.borderColor = 'rgba(231,76,60,0.6)';
+
+// Answer Review
+const letters = ['A','B','C','D'];
+const reviewHTML = result.questions.map((q,i) => {
+  const userAns = result.answers[i];
+  let statusCls, statusTxt;
+  if (userAns === null) { statusCls='status-skipped'; statusTxt='SKIPPED'; }
+  else if (userAns === q.correct) { statusCls='status-correct'; statusTxt='CORRECT'; }
+  else { statusCls='status-wrong'; statusTxt='WRONG'; }
+  const cardCls = userAns===null?'skipped-ans':userAns===q.correct?'correct-ans':'wrong-ans';
+  return `<div class="review-item ${cardCls}">
+    <div class="review-item-header">
+      <span class="review-q-num">Q${i+1}</span>
+      <span class="review-status ${statusCls}">${statusTxt}</span>
+    </div>
+    <div class="review-question">${q.question}</div>
+    <div class="review-answers">
+      <div class="review-answer-item">
+        <span class="ans-label">Your Answer:</span>
+        <span class="ans-val ${userAns===null?'':''}${userAns===q.correct?'correct':'wrong'}">${userAns!==null ? letters[userAns]+'. '+q.options[userAns] : 'Not Answered'}</span>
+      </div>
+      <div class="review-answer-item">
+        <span class="ans-label">Correct Answer:</span>
+        <span class="ans-val correct">${letters[q.correct]}. ${q.options[q.correct]}</span>
+      </div>
+    </div>
+    ${q.explanation ? `<div class="explanation">💡 <strong>Explanation:</strong> ${q.explanation}</div>` : ''}
+  </div>`;
+}).join('');
+document.getElementById('reviewList').innerHTML = reviewHTML;
+
+function retakeExam() {
+  // reload same exam config
+  window.location.href = 'exam.html';
+}
+</script>
+</body>
+</html>

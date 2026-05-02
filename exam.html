@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam - CBT Exam Portal</title>
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="exam-page">
+
+<!-- EXAM HEADER -->
+<header class="exam-header">
+  <div>
+    <h3 id="examTitle">Loading Exam...</h3>
+    <div style="font-size:0.78rem;opacity:0.7;" id="examSubTitle"></div>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <div class="timer" id="timerDisplay">⏱️ 25:00</div>
+    <button class="btn btn-primary" onclick="confirmSubmit()" style="padding:0.5rem 1.25rem;font-size:0.85rem;">Submit</button>
+  </div>
+</header>
+
+<!-- EXAM BODY -->
+<div class="exam-body">
+  <!-- QUESTION PANEL -->
+  <div class="question-panel">
+    <div class="question-number" id="questionNumber">Question 1 of 20</div>
+    <div class="question-text" id="questionText"></div>
+    <div class="options-list" id="optionsList"></div>
+    <div class="q-nav-buttons">
+      <button class="flag-btn" id="flagBtn" onclick="toggleFlag()">🚩 Mark for Review</button>
+      <div style="display:flex;gap:0.5rem;">
+        <button class="btn btn-secondary" onclick="prevQuestion()" id="prevBtn" style="padding:0.6rem 1.2rem;font-size:0.85rem;">← Previous</button>
+        <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn" style="padding:0.6rem 1.2rem;font-size:0.85rem;">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIDEBAR PANELS -->
+  <div class="sidebar-panel">
+    <!-- Question Navigator -->
+    <div class="question-nav-panel">
+      <h4>Question Navigator</h4>
+      <div class="q-grid" id="questionGrid"></div>
+      <div class="q-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--primary);"></div>Answered</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--warning);"></div>Flagged</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f8fafc;border:1px solid var(--border);"></div>Not Answered</div>
+      </div>
+    </div>
+    <!-- Exam Info -->
+    <div class="exam-info-panel">
+      <h4>Exam Information</h4>
+      <div class="info-item"><span>Total Questions</span><span class="info-val" id="infoTotal">20</span></div>
+      <div class="info-item"><span>Answered</span><span class="info-val" id="infoAnswered" style="color:var(--success)">0</span></div>
+      <div class="info-item"><span>Flagged</span><span class="info-val" id="infoFlagged" style="color:var(--warning)">0</span></div>
+      <div class="info-item"><span>Not Visited</span><span class="info-val" id="infoNotVisited">20</span></div>
+      <div class="info-item"><span>Marks/Question</span><span class="info-val">1</span></div>
+      <div class="info-item"><span>Negative Marking</span><span class="info-val">None</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SUBMIT CONFIRM MODAL -->
+<div class="modal-overlay" id="submitModal">
+  <div class="modal">
+    <div style="font-size:2.5rem;margin-bottom:0.75rem;">📋</div>
+    <h3>Submit Exam?</h3>
+    <p id="modalMsg">Are you sure you want to submit? This action cannot be undone.</p>
+    <div class="modal-buttons">
+      <button class="btn btn-secondary" onclick="document.getElementById('submitModal').classList.remove('show')">← Continue</button>
+      <button class="btn btn-primary" onclick="submitExam()">Submit Now ✓</button>
+    </div>
+  </div>
+</div>
+
+<!-- TIME UP MODAL -->
+<div class="modal-overlay" id="timeUpModal">
+  <div class="modal">
+    <div style="font-size:2.5rem;margin-bottom:0.75rem;">⏰</div>
+    <h3>Time's Up!</h3>
+    <p>Your exam time has ended. Your answers have been submitted automatically.</p>
+    <button class="btn btn-primary" onclick="submitExam()">View Results →</button>
+  </div>
+</div>
+
+<script src="js/translations.js"></script>
+<script src="js/data.js"></script>
+<script>
+const user = JSON.parse(localStorage.getItem('cbt_user') || 'null');
+if (!user || localStorage.getItem('cbt_logged_in') !== 'true') window.location.href = 'login.html';
+
+const examConfig = JSON.parse(localStorage.getItem('cbt_current_exam') || 'null');
+if (!examConfig) window.location.href = 'dashboard.html';
+
+const trade = examConfig.trade || user?.trade || 'Electrician';
+let allQ;
+if (examConfig.isCustom) {
+  allQ = JSON.parse(localStorage.getItem('cbt_bank_' + examConfig.examId) || '[]');
+} else {
+  allQ = getQuestionsForTrade(trade);
+}
+const totalQ = Math.min(examConfig.questions || 20, allQ.length);
+const timeLimit = (examConfig.time ? parseInt(examConfig.time) : 25) * 60;
+
+// Shuffle questions and apply translations if available
+function shuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
+const baseBankName = typeof TRADE_BANK_MAP !== 'undefined' ? (TRADE_BANK_MAP[trade] || (QUESTION_BANK[trade] ? trade : 'Electrician')) : 'Electrician';
+const userLang = examConfig.lang || user?.lang || 'English';
+
+const questions = shuffle(allQ).slice(0, totalQ).map(q => {
+  if (examConfig.isCustom) {
+    if (userLang !== 'English' && q.translations && q.translations[userLang]) {
+       return { ...q, question: q.translations[userLang].question, options: q.translations[userLang].options, explanation: q.translations[userLang].explanation };
+    }
+    return q;
+  } else {
+    return typeof getLocalizedQuestion === 'function' ? getLocalizedQuestion(q, userLang, baseBankName) : q;
+  }
+});
+
+
+let currentQ = 0;
+let answers = new Array(totalQ).fill(null);
+let flagged = new Array(totalQ).fill(false);
+let visited = new Array(totalQ).fill(false);
+let timeLeft = timeLimit;
+let timerInterval;
+
+// Setup header
+document.getElementById('examTitle').textContent = examConfig.title || 'Mock Test';
+document.getElementById('examSubTitle').textContent = `Language: ${userLang} | Trade: ${trade} | Questions: ${totalQ} | Time: ${examConfig.time || '25 Min'}`;
+document.getElementById('infoTotal').textContent = totalQ;
+
+// TIMER
+function updateTimer() {
+  const m = Math.floor(timeLeft/60).toString().padStart(2,'0');
+  const s = (timeLeft%60).toString().padStart(2,'0');
+  const el = document.getElementById('timerDisplay');
+  el.textContent = `⏱️ ${m}:${s}`;
+  el.className = 'timer';
+  if (timeLeft <= 300) el.classList.add('warning');
+  if (timeLeft <= 60) el.classList.add('danger');
+  if (timeLeft <= 0) {
+    clearInterval(timerInterval);
+    document.getElementById('timeUpModal').classList.add('show');
+    return;
+  }
+  timeLeft--;
+}
+timerInterval = setInterval(updateTimer, 1000);
+updateTimer();
+
+function renderQuestion() {
+  visited[currentQ] = true;
+  const q = questions[currentQ];
+  document.getElementById('questionNumber').textContent = `Question ${currentQ+1} of ${totalQ}`;
+  document.getElementById('questionText').textContent = q.question;
+  const letters = ['A','B','C','D'];
+  document.getElementById('optionsList').innerHTML = q.options.map((opt,i) => `
+    <div class="option-item ${answers[currentQ]===i?'selected':''}" onclick="selectAnswer(${i})" id="opt-${i}">
+      <div class="option-letter">${letters[i]}</div>
+      <span>${opt}</span>
+    </div>`).join('');
+  document.getElementById('prevBtn').disabled = currentQ === 0;
+  document.getElementById('nextBtn').textContent = currentQ === totalQ-1 ? 'Submit ✓' : 'Next →';
+  const fb = document.getElementById('flagBtn');
+  fb.className = 'flag-btn' + (flagged[currentQ] ? ' flagged' : '');
+  fb.textContent = flagged[currentQ] ? '🚩 Marked' : '🚩 Mark for Review';
+  updateGrid();
+  updateInfo();
+}
+
+function selectAnswer(idx) {
+  answers[currentQ] = idx;
+  renderQuestion();
+}
+
+function toggleFlag() {
+  flagged[currentQ] = !flagged[currentQ];
+  renderQuestion();
+}
+
+function prevQuestion() { if (currentQ > 0) { currentQ--; renderQuestion(); } }
+function nextQuestion() {
+  if (currentQ < totalQ-1) { currentQ++; renderQuestion(); }
+  else confirmSubmit();
+}
+
+function updateGrid() {
+  const grid = document.getElementById('questionGrid');
+  grid.innerHTML = Array.from({length:totalQ},(_,i) => {
+    let cls = 'q-dot';
+    if (answers[i] !== null) cls += ' answered';
+    else if (visited[i]) cls += ' not-answered';
+    if (flagged[i]) cls += ' flagged';
+    if (i === currentQ) cls += ' current';
+    return `<div class="${cls}" onclick="goTo(${i})">${i+1}</div>`;
+  }).join('');
+}
+
+function updateInfo() {
+  document.getElementById('infoAnswered').textContent = answers.filter(a=>a!==null).length;
+  document.getElementById('infoFlagged').textContent = flagged.filter(Boolean).length;
+  document.getElementById('infoNotVisited').textContent = visited.filter(v=>!v).length;
+}
+
+function goTo(i) { currentQ = i; renderQuestion(); }
+
+function confirmSubmit() {
+  const answered = answers.filter(a=>a!==null).length;
+  const unanswered = totalQ - answered;
+  document.getElementById('modalMsg').textContent = `Answered: ${answered} | Unanswered: ${unanswered}. Submit your exam?`;
+  document.getElementById('submitModal').classList.add('show');
+}
+
+function submitExam() {
+  clearInterval(timerInterval);
+  let correct=0, wrong=0, skipped=0;
+  questions.forEach((q,i)=>{
+    if(answers[i]===null) skipped++;
+    else if(answers[i]===q.correct) correct++;
+    else wrong++;
+  });
+  const percentage = (correct/totalQ)*100;
+  const history = JSON.parse(localStorage.getItem('cbt_history')||'[]');
+  const result = { examId: examConfig.examId, examTitle: examConfig.title, trade, date: new Date().toISOString(), score: correct, total: totalQ, correct, wrong, skipped, percentage, timeTaken: timeLimit - timeLeft, answers: answers.map(a=>a), questions: questions.map(q=>({id:q.id,question:q.question,options:q.options,correct:q.correct,explanation:q.explanation})) };
+  history.push(result);
+  localStorage.setItem('cbt_history', JSON.stringify(history));
+  if (user) {
+    user.testsTaken = (user.testsTaken||0)+1;
+    user.lastScore = percentage;
+    localStorage.setItem('cbt_user', JSON.stringify(user));
+  }
+  localStorage.setItem('cbt_last_result', JSON.stringify(result));
+  window.location.href='results.html';
+}
+
+renderQuestion();
+</script>
+</body>
+</html>

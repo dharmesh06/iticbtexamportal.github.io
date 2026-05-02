@@ -1,0 +1,1577 @@
+[
+  {
+    "id": 1,
+    "question": "કમ્પ્યુટર કયા ક્રમમાં કાર્ય કરે છે?",
+    "options": ["ઇનપુટ, આઉટપુટ, પ્રોસેસ", "ઇનપુટ, પ્રોસેસ, આઉટપુટ", "પ્રોસેસ, ઇનપુટ, આઉટપુટ", "આઉટપુટ, પ્રોસેસ, ઇનપુટ"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'ઇનપુટ, પ્રોસેસ, આઉટપુટ' છે."
+  },
+  {
+    "id": 2,
+    "question": "પેરેલલ પોર્ટ એક બાઇટને કેવી રીતે સ્થાનાંતરિત કરે છે?",
+    "options": ["બીટ બાય બીટ", "એક સમયે 2 બીટ", "એક સમયે 4 બીટ", "એક સમયે 8 બીટ"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'એક સમયે 8 બીટ' છે."
+  },
+  {
+    "id": 3,
+    "question": "CPU નો આંતરિક પાવર સપ્લાય યુનિટ કયો છે?",
+    "options": ["CVT", "UPS", "SMPS", "Stabilizer"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'SMPS' છે."
+  },
+  {
+    "id": 4,
+    "question": "મધરબોર્ડમાં એક્સપાન્શન સ્લોટનો હેતુ શું છે?",
+    "options": ["To insert the RAM", "To insert the mouse", "To insert the keyboard", "વધારાના પેરિફેરલ્સ ઉમેરવા માટે"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'વધારાના પેરિફેરલ્સ ઉમેરવા માટે' છે."
+  },
+  {
+    "id": 5,
+    "question": "ઇલેક્ટ્રિકલ શોકની ગંભીરતાને કયું પરિબળ અસર કરે છે?",
+    "options": ["Very low DC voltage", "કરંટ પસાર થવાનો સમયગાળો", "Level of current in micro ampere", "Person receiving the shock"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'કરંટ પસાર થવાનો સમયગાળો' છે."
+  },
+  {
+    "id": 6,
+    "question": "What is the full form of ABC in first aid?",
+    "options": ["Anyway, Breathing, Circulation", "Airway, Breathing, Circulation", "Anyway, Blood, Circulation", "Airway, Blood, Chest"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Airway, Breathing, Circulation' છે."
+  },
+  {
+    "id": 7,
+    "question": "What is the full form of ALU?",
+    "options": ["Allowed Logic Unit", "Ascii Logic Unit", "Arithmetic-Logic Unit", "Arithmetic Least Unit"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Arithmetic-Logic Unit' છે."
+  },
+  {
+    "id": 8,
+    "question": "What is current?",
+    "options": ["Flow of Neutrons", "Flow of Electrons", "Flow of Protons", "Flow of Resistance"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Flow of Electrons' છે."
+  },
+  {
+    "id": 9,
+    "question": "Which is an arm lift back pressure method?",
+    "options": ["Mouth to mouth method", "Mouth to nose method", "Nielsen's method", "Schafer's method"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Nielsen's method' છે."
+  },
+  {
+    "id": 10,
+    "question": "What is a desktop and personal computer also called?",
+    "options": ["Super Computer", "Quantum Computer", "Mainframe Computer", "Micro Computer"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Micro Computer' છે."
+  },
+  {
+    "id": 11,
+    "question": "What is the full form of SSD?",
+    "options": ["Signal State Drive", "Solid State Drive", "Single Signal Drive", "Solid Signal Drive"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Solid State Drive' છે."
+  },
+  {
+    "id": 12,
+    "question": "What is the first action to be taken incase of an electric shock?",
+    "options": ["Call to doctor", "Take support to others", "Switch OFF the electric power", "Call to ambulance"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Switch OFF the electric power' છે."
+  },
+  {
+    "id": 13,
+    "question": "Which is an example for OS?",
+    "options": ["Antivirus", "Windows", "MS Office", "Macromedia"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Windows' છે."
+  },
+  {
+    "id": 14,
+    "question": "Which Control Panel applet gives information about the computer?",
+    "options": ["System and security", "Hardware and sound", "Programs", "Appearance and personalization"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'System and security' છે."
+  },
+  {
+    "id": 15,
+    "question": "Which shortcut key is copy paste a file folder?",
+    "options": ["Ctrl+ X and Ctrl + V", "Ctrl + A and Ctrl + V", "Ctrl + Z and Ctrl + V", "Ctrl + C and Ctrl + V"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Ctrl + C and Ctrl + V' છે."
+  },
+  {
+    "id": 16,
+    "question": "What is the other name for PDoS? 2.0 0.00",
+    "options": ["Brute force attack", "Non-technical attack", "Phlashing", "Smurf attack"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Phlashing' છે."
+  },
+  {
+    "id": 17,
+    "question": "Where do pinned application stay in Windows OS?",
+    "options": ["Desktop", "Notification Area", "Title bar", "Task Bar"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Task Bar' છે."
+  },
+  {
+    "id": 18,
+    "question": "What is the extension of Notepad file?",
+    "options": [".fil", ".dll", ".doc", ".txt"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ '.txt' છે."
+  },
+  {
+    "id": 19,
+    "question": "What is the name of the tool in control panel is used to adjust your computer setting with voice command?",
+    "options": ["Ease of access", "System and security", "Appearance and personalization", "Hardware and sound"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Ease of access' છે."
+  },
+  {
+    "id": 20,
+    "question": "Which shortcut key is used to open start menu?",
+    "options": ["Windows Logo", "Ctrl", "Shift", "Alt"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Windows Logo' છે."
+  },
+  {
+    "id": 21,
+    "question": "What type of device is a printer?",
+    "options": ["Input Device", "Output Device", "Processing Device", "Calculating Device"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Output Device' છે."
+  },
+  {
+    "id": 22,
+    "question": "What is the function of operating system?",
+    "options": ["Word processing", "Calculation", "Process and memory management", "Drawing pictures"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Process and memory management' છે."
+  },
+  {
+    "id": 23,
+    "question": "In which icon deleted files and folders are found?",
+    "options": ["My Computer", "Recycle Bin", "Microsoft Edge", "Google Chrome"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Recycle Bin' છે."
+  },
+  {
+    "id": 24,
+    "question": "Which control panel is used to change the system date?",
+    "options": ["User Account", "System", "Date and Time", "Fonts"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Date and Time' છે."
+  },
+  {
+    "id": 25,
+    "question": "Which shortcut key refeshes Windows desktop?",
+    "options": ["F1", "F3", "F5", "F7"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'F5' છે."
+  },
+  {
+    "id": 26,
+    "question": "What type of device is a scanner?",
+    "options": ["Processing Device", "Internal Device", "Output Device", "Input Device"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Input Device' છે."
+  },
+  {
+    "id": 27,
+    "question": "What type of copy is produced by printer?",
+    "options": ["Hard Copy", "Soft Copy", "Scan Copy", "Xerox Copy"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Hard Copy' છે."
+  },
+  {
+    "id": 28,
+    "question": "What is the standard file extension of scan image?",
+    "options": [".exe", ".doc", ".bak", ".jpg"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ '.jpg' છે."
+  },
+  {
+    "id": 29,
+    "question": "What is the capacity of a typical DVD?",
+    "options": ["40 MB", "50 MB", "60 MB", "4.7 GB"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ '4.7 GB' છે."
+  },
+  {
+    "id": 30,
+    "question": "What is BIOS?",
+    "options": ["Firmware", "Hardware", "Middleware", "Software"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Firmware' છે."
+  },
+  {
+    "id": 31,
+    "question": "What is the purpose of Nero Start Smart?",
+    "options": ["Format HDD", "Burn CD/DVD", "Format pen drive", "Format CD/DVD"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Burn CD/DVD' છે."
+  },
+  {
+    "id": 32,
+    "question": "Which system is used by Bluetooth for Broadcasting?",
+    "options": ["Satellite", "Microwaves", "Telephone lines", "Radio waves"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Radio waves' છે."
+  },
+  {
+    "id": 33,
+    "question": "What is the process of deleting all the data on the hard drive?",
+    "options": ["Delete", "Erase", "Formatting", "Uninstall"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Formatting' છે."
+  },
+  {
+    "id": 34,
+    "question": "Which port is use to connect monitor to CPU?",
+    "options": ["PS2", "Parallel port", "LAN", "VGA"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'VGA' છે."
+  },
+  {
+    "id": 35,
+    "question": "What do statistical analysis packages have much in common with?",
+    "options": ["Presentation packages", "Apreadsheet packages", "Design packages", "Paint packages"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Apreadsheet packages' છે."
+  },
+  {
+    "id": 36,
+    "question": "Which software interfaces the major hardware components of the computer with the OS?",
+    "options": ["BIOS", "DOS", "POST", "CMOS"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'BIOS' છે."
+  },
+  {
+    "id": 37,
+    "question": "Which software acts as a bridge between system software and hardware?",
+    "options": ["Management", "Application", "Utility", "Processing"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Application' છે."
+  },
+  {
+    "id": 38,
+    "question": "Which virus infects important files of the application software?",
+    "options": ["Macro Virus", "Trojan Virus", "Worm Virus", "Anti Virus"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Macro Virus' છે."
+  },
+  {
+    "id": 39,
+    "question": "Which DOS command deletes a directory?",
+    "options": ["RD", "REMOVE", "DEL", "DELETE"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'RD' છે."
+  },
+  {
+    "id": 40,
+    "question": "Which character represents parent directory in Linux?",
+    "options": [".", "..", "~", "*"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ '..' છે."
+  },
+  {
+    "id": 41,
+    "question": "Which character redirects output into an existing file in Linux?",
+    "options": [">", ">=", "<", "<<"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ '>' છે."
+  },
+  {
+    "id": 42,
+    "question": "What are the directories under the root directory are called?",
+    "options": ["dir", "path", "sub directories", "tree"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'sub directories' છે."
+  },
+  {
+    "id": 43,
+    "question": "Which file name matches the command DIR????T.TxT in DOS?",
+    "options": ["TIME . TXT", "TEXT . TXT", "TEMP . TXT", "TEMPT . TxT"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'TEMPT . TxT' છે."
+  },
+  {
+    "id": 44,
+    "question": "Which is a wildcard character?",
+    "options": ["* and /", "? and /", "* and ?", "? and @"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ '* and ?' છે."
+  },
+  {
+    "id": 45,
+    "question": "Which character represents a range of values in Linux?",
+    "options": ["( )", "[ ]", "{ }", "< >"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ '[ ]' છે."
+  },
+  {
+    "id": 46,
+    "question": "Who developed the Python language?",
+    "options": ["Zim Den", "Guido van Rossum", "Niene Stom", "Wick van Rossum"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Guido van Rossum' છે."
+  },
+  {
+    "id": 47,
+    "question": "Which multimedia application was developed using Python?",
+    "options": ["Matplotlib", "Pandas", "Tryton", "TimPlayer"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'TimPlayer' છે."
+  },
+  {
+    "id": 48,
+    "question": "Which character gives single-line comments in Python?",
+    "options": ["//", "#", "!", "/*"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ '#' છે."
+  },
+  {
+    "id": 49,
+    "question": "What is the data type of print (type(0xFF))?",
+    "options": ["number", "hexint", "hex", "int"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'int' છે."
+  },
+  {
+    "id": 50,
+    "question": "Which keyword adds an alternative condition to an if statement?",
+    "options": ["else if", "elseif", "elif", "if else"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'elif' છે."
+  },
+  {
+    "id": 51,
+    "question": "To be in a job or work is ______",
+    "options": ["Employ", "Skill", "Knowledge", "Aptitude"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Employ' છે."
+  },
+  {
+    "id": 52,
+    "question": "Information like date of birth, permanent address form a part of one’s ______ in the resume.",
+    "options": ["Career objectives", "Personal details", "Achievements", "Qualifications"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Personal details' છે."
+  },
+  {
+    "id": 53,
+    "question": "A person with a growth mindset is always willing to ______",
+    "options": ["relax", "grow, change, learn", "keep quiet", "become rich"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'grow, change, learn' છે."
+  },
+  {
+    "id": 54,
+    "question": "Jobs that have become outdated in the past 5 years _____",
+    "options": ["STD booth", "ola", "uber", "swiggy"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'STD booth' છે."
+  },
+  {
+    "id": 55,
+    "question": "Ethics means ______",
+    "options": ["decide what is right and wrong for a human conduct", "name of a city", "employability skills", "not relevant to society"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'decide what is right and wrong for a human conduct' છે."
+  },
+  {
+    "id": 56,
+    "question": "Values are ______",
+    "options": ["not punctual", "Motivates our attitude and action", "very costly", "all have same value"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Motivates our attitude and action' છે."
+  },
+  {
+    "id": 57,
+    "question": "________ is a brief statement about purpose and principles of the Constitution.",
+    "options": ["Syllabus", "Module", "The Preamble", "Unit"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'The Preamble' છે."
+  },
+  {
+    "id": 58,
+    "question": "Identify the improper term ______",
+    "options": ["green pollution", "water pollution", "air pollution", "sound pollution"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'green pollution' છે."
+  },
+  {
+    "id": 59,
+    "question": "NAPS Stands for _______",
+    "options": ["National Apprenticeship Promotion Scheme", "National Appointment Promoting Scheme", "Non Apprenticeship Promotion Scheme", "National Advertising Promotion Scheme"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'National Apprenticeship Promotion Scheme' છે."
+  },
+  {
+    "id": 60,
+    "question": "_______ is major changes takes place in manufacturing.",
+    "options": ["Green revolution", "Industry revolution", "Water revolution", "Food revolution"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Industry revolution' છે."
+  },
+  {
+    "id": 61,
+    "question": "1st industrial revolution started in ______ 2.0 0.00",
+    "options": ["18th century", "19th century", "20th century", "21st century"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ '18th century' છે."
+  },
+  {
+    "id": 62,
+    "question": "Hard Skill ______",
+    "options": ["quick learner", "time management", "60 WPM typing speed", "spoken English"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ '60 WPM typing speed' છે."
+  },
+  {
+    "id": 63,
+    "question": "To grow yourself you must ______",
+    "options": ["know your office", "know yourself", "know your institute", "know your country"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'know yourself' છે."
+  },
+  {
+    "id": 64,
+    "question": "Time management ______",
+    "options": ["complete your task on time", "managing time", "hard skill", "problem solving"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'complete your task on time' છે."
+  },
+  {
+    "id": 65,
+    "question": "A resume should be ___________. 2.0 0.00",
+    "options": ["short and precise", "fancy and colourful", "having long and detailed information", "having acronyms and abbreviation"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'short and precise' છે."
+  },
+  {
+    "id": 66,
+    "question": "A written description of duties and responsibilities to be carried out in a job is called ___________.",
+    "options": ["CV", "job description", "resume", "job application"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'job description' છે."
+  },
+  {
+    "id": 67,
+    "question": "After receiving interview call, what is the next step?",
+    "options": ["Send application letter", "Prepare the resume", "Appear at interview", "Send resume"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Appear at interview' છે."
+  },
+  {
+    "id": 68,
+    "question": "Choose suitable “wh” word for the given sentence. “___________ animal do you like?”",
+    "options": ["Which", "Why", "Where", "When"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Which' છે."
+  },
+  {
+    "id": 69,
+    "question": "Choose the correct punctuation mark after the word “Rohan” in the given sentence. “Rohan David and Ram are playing hide and",
+    "options": ["Comma (,)", "Period (_)", "Slash (/)", "Hyphen (-)"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Comma (,)' છે."
+  },
+  {
+    "id": 70,
+    "question": "Choose the correct response for the given question. “How have you been”?",
+    "options": ["Very well, And you?", "Thank you_ And you?", "Same to you", "On vacation_ And you?"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Very well, And you?' છે."
+  },
+  {
+    "id": 71,
+    "question": "Choose the correct response of the given question. “When did the accident happen”?",
+    "options": ["in the hotel", "during travelling", "At 10:30 last night", "On the table"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'At 10:30 last night' છે."
+  },
+  {
+    "id": 72,
+    "question": "Choose the correct tense of the verb. “I __________ music when I was child”",
+    "options": ["learn", "am learning", "will learn", "had learnt"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'had learnt' છે."
+  },
+  {
+    "id": 73,
+    "question": "Curriculum vitae is also known as ___________ .",
+    "options": ["circular", "resume", "job application form", "leave application"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'resume' છે."
+  },
+  {
+    "id": 74,
+    "question": "Fill in the blank with comparative adjective. “Your pencil is __________ than mine”",
+    "options": ["sharp", "sharper", "blunt", "thick"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'sharper' છે."
+  },
+  {
+    "id": 75,
+    "question": "Fill in the blank with correct future tense of verb. “We ___________ to the zoo after Breakfast “",
+    "options": ["went", "are going", "had gone", "will go"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'will go' છે."
+  },
+  {
+    "id": 76,
+    "question": "નીચેનામાંથી કયું ઓપન સોર્સ સોફ્ટવેર છે?",
+    "options": ["Open Office", "Windows 10", "MacOs", "Microsoft Office 365"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Open Office' છે."
+  },
+  {
+    "id": 77,
+    "question": "Linux માં ફાઈલો દૂર કરવા માટે કયો કમાન્ડ વપરાય છે?",
+    "options": ["delete", "rm", "dm", "erase"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'rm' છે."
+  },
+  {
+    "id": 78,
+    "question": "What is the first option of the KDE desktop in Linux?",
+    "options": ["Preference", "Application", "System", "System setting"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Application' છે."
+  },
+  {
+    "id": 79,
+    "question": "OSS નું પૂરું નામ શું છે?",
+    "options": ["Open System Service", "Open Source Software", "Open System Software", "Open Synchronized Software"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Open Source Software' છે."
+  },
+  {
+    "id": 80,
+    "question": "Which software coding is freely available on the internet and open for users for further use?",
+    "options": ["Unlicensed software", "Open source software", "Free software", "Community software"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Open source software' છે."
+  },
+  {
+    "id": 81,
+    "question": "What is the full form of FSF?",
+    "options": ["File Server First", "Free Software File", "Free Software Foundation", "First Software First"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Free Software Foundation' છે."
+  },
+  {
+    "id": 82,
+    "question": "Which command stores the active document permanently?",
+    "options": ["Save", "Send", "Prepare", "Save as"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Save' છે."
+  },
+  {
+    "id": 83,
+    "question": "Which bar contains the current position of the cursor in MS Word?",
+    "options": ["Layout", "Title bar", "Status bar", "Horizontal ruler"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Status bar' છે."
+  },
+  {
+    "id": 84,
+    "question": "Which is a text styling feature of MS Word?",
+    "options": ["Word fill", "Word art", "Word colour", "Word font"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Word art' છે."
+  },
+  {
+    "id": 85,
+    "question": "Which document view resembles the appearance of a web browser?",
+    "options": ["Draft view", "Outline view", "Web layout view", "Full screen reading"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Web layout view' છે."
+  },
+  {
+    "id": 86,
+    "question": "What is the purpose of quick access toolbar?",
+    "options": ["To hold advance function", "To hold special function", "To hold basic function", "To hold familiar and repeated function"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'To hold familiar and repeated function' છે."
+  },
+  {
+    "id": 87,
+    "question": "What is the purpose of gutter margin?",
+    "options": ["Added to left margin when printing", "Added to right margin when printing", "Added to binding side of page when printing", "Added to the outside of page when printing"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Added to binding side of page when printing' છે."
+  },
+  {
+    "id": 88,
+    "question": "Which option is used for tab setting?",
+    "options": ["Horizontal ruler", "Status bar", "Vertical ruler", "Vertical scroll bar"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Horizontal ruler' છે."
+  },
+  {
+    "id": 89,
+    "question": "What is the purpose of cover page?",
+    "options": ["Allows to fill title, author and date", "Fills list of people intent to mail", "To view the mailed list", "Contains details of the documents"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Allows to fill title, author and date' છે."
+  },
+  {
+    "id": 90,
+    "question": "Which term refers to the process of combining two or more cells to make one?",
+    "options": ["Combining", "Joining", "Merging", "Creating"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Merging' છે."
+  },
+  {
+    "id": 91,
+    "question": "What has the ability to combine name and addresses within standard document?",
+    "options": ["Document formatting", "Mail merge", "Database management", "Form letters"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Mail merge' છે."
+  },
+  {
+    "id": 92,
+    "question": "Which shortcut key center aligns the selected text in MS Word?",
+    "options": ["Ctrl + C", "Ctrl + D", "Ctrl + E", "Ctrl + F"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Ctrl + E' છે."
+  },
+  {
+    "id": 93,
+    "question": "What is the purpose of Shift+Ctrl+N in Open Office?",
+    "options": ["To create a new document", "To open a document", "To open templates and documents dialog", "To exit an application"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'To open templates and documents dialog' છે."
+  },
+  {
+    "id": 94,
+    "question": "How can you insert a audio file in your word document?",
+    "options": ["Insert > sound menu option", "Insert > file menu option", "Insert > object menu option", "Insert > blank menu"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Insert > object menu option' છે."
+  },
+  {
+    "id": 95,
+    "question": "How are individuals in a table referred to as?",
+    "options": ["cells", "boxes", "rows", "columns"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'cells' છે."
+  },
+  {
+    "id": 96,
+    "question": "Which MS word tab has acess to mail merge options?",
+    "options": ["Insert tab", "References tab", "Home tab", "Mailings tab"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Mailings tab' છે."
+  },
+  {
+    "id": 97,
+    "question": "Which is a default document type for a mail merge?",
+    "options": ["Data", "Labels and list", "Letters", "Set"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Letters' છે."
+  },
+  {
+    "id": 98,
+    "question": "Which shortcut key prints a document?",
+    "options": ["Ctrl + V", "Ctrl + X", "Ctrl + P", "Ctrl + B"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Ctrl + P' છે."
+  },
+  {
+    "id": 99,
+    "question": "Which key copies the selected items in open source office?",
+    "options": ["Ctrl + O", "Ctrl + C", "Ctrl + P", "Ctrl + Shift + C"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Ctrl + C' છે."
+  },
+  {
+    "id": 100,
+    "question": "Which list is used to create multiple copies of a document in a mail merge?",
+    "options": ["Main document", "Data source", "Form label", "Database"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Data source' છે."
+  },
+  {
+    "id": 101,
+    "question": "Which is a step of merge process?",
+    "options": ["Preview the merge results", "Set margin of the document", "Format data source", "Remove data sources"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Preview the merge results' છે."
+  },
+  {
+    "id": 102,
+    "question": "How Cells are named in MS Excel?",
+    "options": ["Alphabetically", "Numerically", "Alphanumerically", "Special Character"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Alphanumerically' છે."
+  },
+  {
+    "id": 103,
+    "question": "What is the maximum limit of rows in MS Excel 2010?",
+    "options": ["1084567", "1048567", "1048576", "1084576"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ '1048576' છે."
+  },
+  {
+    "id": 104,
+    "question": "Which tab adds pivot table, charts and hyperlinks in a spread sheet?",
+    "options": ["Insert", "Page Layout", "Data", "Review"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Insert' છે."
+  },
+  {
+    "id": 105,
+    "question": "Which Excel tab is used for importing, outlining and subtotalling the data placed in a worksheet data list?",
+    "options": ["Formula", "Data", "Review", "Insert"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Data' છે."
+  },
+  {
+    "id": 106,
+    "question": "Which key combined with ctrl key creates a macro key in Excel?",
+    "options": ["Numeric", "Alphabetic", "Alphanumeric", "Special characters"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Alphabetic' છે."
+  },
+  {
+    "id": 107,
+    "question": "Which function key opens save as dialogue box in MS Excel?",
+    "options": ["F2", "F5", "F7", "F12"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'F12' છે."
+  },
+  {
+    "id": 108,
+    "question": "Which starts with “=” sign in Excel 2010?",
+    "options": ["Data", "Text", "Numbers", "Formulas"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Formulas' છે."
+  },
+  {
+    "id": 109,
+    "question": "Which function counts the number of cells that contains numbers in a range?",
+    "options": ["Count( )", "Countif( )", "Sum( )", "Sumif( )"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Count( )' છે."
+  },
+  {
+    "id": 110,
+    "question": "Which is a ‘Date and Time’ function in Excel?",
+    "options": ["FIND( )", "MOD( )", "NOW( )", "MID( )"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'NOW( )' છે."
+  },
+  {
+    "id": 111,
+    "question": "Which option displays the rows that meet certain conditions in MS Excel?",
+    "options": ["Find", "Filter", "Format", "Sort"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Filter' છે."
+  },
+  {
+    "id": 112,
+    "question": "Which command converts cell text to CAPS?",
+    "options": ["=UPPER( )", "=LOWER( )", "=LEN( )", "=TRIM( )"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ '=UPPER( )' છે."
+  },
+  {
+    "id": 113,
+    "question": "How to insert chart in MS Excel?",
+    "options": ["Home Tab-Cells", "Insert Tab-Charts", "Data Tab- Data Tools", "Formulas Tab-Insert Function"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Insert Tab-Charts' છે."
+  },
+  {
+    "id": 114,
+    "question": "Which ribbon menu displays the Page Setup grouping of commands?",
+    "options": ["Insert", "Layout", "Review", "Home"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Layout' છે."
+  },
+  {
+    "id": 115,
+    "question": "In which application data validation is used?",
+    "options": ["MS Excel", "MS Word", "MS Power Point", "Paint"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'MS Excel' છે."
+  },
+  {
+    "id": 116,
+    "question": "Which type of chart is used in MS Excel?",
+    "options": ["Bubble", "Cone", "Circle", "Square"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Bubble' છે."
+  },
+  {
+    "id": 117,
+    "question": "Which creates a bar diagram?",
+    "options": ["Format - > Chart", "Tools - > Chart", "Insert - > Chart", "Edit - > Chart"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Insert - > Chart' છે."
+  },
+  {
+    "id": 118,
+    "question": "Which option inserts a Pivot Table?",
+    "options": ["Formula Tab- Data Analysis Group", "Insert Tab - Tables Group", "Data Group in the Pivot Table Group", "Data Group In the Tables Group"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Insert Tab - Tables Group' છે."
+  },
+  {
+    "id": 119,
+    "question": "Which tab is used to access the What-if Analysis Excel tools?",
+    "options": ["Home Tab", "Insert Tab", "Pay Layout Tab", "Data Tab"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Data Tab' છે."
+  },
+  {
+    "id": 120,
+    "question": "Which type does Portrait and Landscape belongs to?",
+    "options": ["Page Margins", "Page Arrangements", "Page Orientation", "Page Breaks"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Page Orientation' છે."
+  },
+  {
+    "id": 121,
+    "question": "What will be the output of the following Python code snippet if x=1?",
+    "options": ["4", "2", "1", "8"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ '4' છે."
+  },
+  {
+    "id": 122,
+    "question": "How to declare an array in python?",
+    "options": ["brackets [ ]", "parenthesis ( )", "curly braces { }", "pipes | |"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'brackets [ ]' છે."
+  },
+  {
+    "id": 123,
+    "question": "Which Program code makes use of the given module?",
+    "options": ["Client", "Interface", "Docstring", "Modularity"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Client' છે."
+  },
+  {
+    "id": 124,
+    "question": "Which command displays numbers and text on the screen?",
+    "options": ["print ( )", "input ( )", "output ( )", "command ( )"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'print ( )' છે."
+  },
+  {
+    "id": 125,
+    "question": "Which is a core data type in Python programming?",
+    "options": ["Package", "List", "Class", "Object"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'List' છે."
+  },
+  {
+    "id": 126,
+    "question": "Fill in the blank with correct word. “They _________ good friends”",
+    "options": ["is", "am", "are", "was"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'are' છે."
+  },
+  {
+    "id": 127,
+    "question": "Fill in the blank with present progressive tense of the verb. “The train __________ through the tunnel”",
+    "options": ["passed", "is passing", "had passed", "was passing"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'is passing' છે."
+  },
+  {
+    "id": 128,
+    "question": "Fill in the blank with proper interrogative adjective. ___________ are you going?",
+    "options": ["Who", "Where", "Which", "What"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Where' છે."
+  },
+  {
+    "id": 129,
+    "question": "Fill in the blank with proper pronoun. “I made this cake ___________”",
+    "options": ["myself", "yourself", "himself", "itself"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'myself' છે."
+  },
+  {
+    "id": 130,
+    "question": "Fill in the blank with proper pronoun. “She made this cake ___________”",
+    "options": ["itself", "myself", "herself", "himself"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'herself' છે."
+  },
+  {
+    "id": 131,
+    "question": "Fill in the blank with proper reflexive pronoun. “She has hurt___________”",
+    "options": ["myself", "herself", "himself", "itself"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'herself' છે."
+  },
+  {
+    "id": 132,
+    "question": "Fill in the blank with suitable adjective for the given sentence “The little girl’s…… eyes revealed her mischief”",
+    "options": ["chubby", "weak", "short sighted", "twinkling"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'twinkling' છે."
+  },
+  {
+    "id": 133,
+    "question": "Fill in the blank with suitable place preposition. “My house is ___________ the third floor”",
+    "options": ["at", "in", "on", "under"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'on' છે."
+  },
+  {
+    "id": 134,
+    "question": "Fill in the correct question word. “_______________ is the speaker at the function?”",
+    "options": ["What", "When", "Why", "Who"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Who' છે."
+  },
+  {
+    "id": 135,
+    "question": "Low level language is also called ______.",
+    "options": ["source code", "middle ware", "machine language", "assembly language"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'machine language' છે."
+  },
+  {
+    "id": 136,
+    "question": "Pronunciation refers to___________.",
+    "options": ["diphthong", "consonant", "punctuation", "production of sound"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'production of sound' છે."
+  },
+  {
+    "id": 137,
+    "question": "Re-arrange the following set of words into meaningful sentence. “teacher / school / worked / she / a / as”.",
+    "options": ["School worked as a she teacher", "She worked as a school teacher", "She teacher worked as a school", "Worked she as a school teacher"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'She worked as a school teacher' છે."
+  },
+  {
+    "id": 138,
+    "question": "Rise and fall of pitch of voice is called __________.",
+    "options": ["vowel", "intonation", "consonant", "pronunciation"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'intonation' છે."
+  },
+  {
+    "id": 139,
+    "question": "The word that expresses a sudden and strong feeling is called _________.",
+    "options": ["punctuation", "interjection", "conjunction", "apostrophe"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'interjection' છે."
+  },
+  {
+    "id": 140,
+    "question": "When you greet higher official’s such as Teacher, Instructor or Supervisor, you should use ___________.",
+    "options": ["Good morning", "Hello", "Hey", "Hi"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Good morning' છે."
+  },
+  {
+    "id": 141,
+    "question": "Which is a silent letter in the word “ANSWER”?",
+    "options": ["R", "E", "S", "W"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'W' છે."
+  },
+  {
+    "id": 142,
+    "question": "Which one is a “Do’s” of discussion etiquettes?",
+    "options": ["Loose your temper", "Listen to others", "Talk about irrelevant details", "Use impolite or rude language"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Listen to others' છે."
+  },
+  {
+    "id": 143,
+    "question": "Which one is a “Don’t” of discussion etiquette?",
+    "options": ["Be open minded", "Use moderate tone", "Listen to others", "Argue unnecessary"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Argue unnecessary' છે."
+  },
+  {
+    "id": 144,
+    "question": "Which one is a brain of computer?",
+    "options": ["Keyboard", "CPU", "Monitor", "Hard disk"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'CPU' છે."
+  },
+  {
+    "id": 145,
+    "question": "Which one is an exclamatory sentence?",
+    "options": ["What a beautiful house it is!", "It is a beautiful house.", "Is it a beautiful house?", "Your house is beautiful."],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'What a beautiful house it is!' છે."
+  },
+  {
+    "id": 146,
+    "question": "Which one is in active voice? 2.0 0.00",
+    "options": ["Ram has passed the exam.", "The ball was caught by him.", "The book was being read by her.", "We were driven home by dad."],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Ram has passed the exam.' છે."
+  },
+  {
+    "id": 147,
+    "question": "Which one is in passive voice?",
+    "options": ["Mohan is painting a house.", "She was reading a book.", "Her birthday was celebrated by us.", "I have seen that movie."],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Her birthday was celebrated by us.' છે."
+  },
+  {
+    "id": 148,
+    "question": "Which one is NOT a conjunction?",
+    "options": ["And", "Or", "But", "On"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'On' છે."
+  },
+  {
+    "id": 149,
+    "question": "Which one is NOT a benefit of the role playing?",
+    "options": ["Builds confidence", "Develops listening skill", "Develops creative problem-solving skill", "Develops boredom"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Develops boredom' છે."
+  },
+  {
+    "id": 150,
+    "question": "Which one is NOT a vowel?",
+    "options": ["a", "e", "f", "i"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'f' છે."
+  },
+  {
+    "id": 151,
+    "question": "Which setting is modified to print a worksheet in letterhead?",
+    "options": ["Paper", "Margin", "Layout", "Orientation"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Margin' છે."
+  },
+  {
+    "id": 152,
+    "question": "What is the extension of files created in MS-Excel 2007-2016?",
+    "options": [".XLX", ".XLSX", ".XLS", ".TXT"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ '.XLSX' છે."
+  },
+  {
+    "id": 153,
+    "question": "What arranges data in Ascending (A-Z) or Descending (Z-A) order ?",
+    "options": ["Filtering", "Sorting", "Custom filter", "Clear rules"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Sorting' છે."
+  },
+  {
+    "id": 154,
+    "question": "Which chart shows the proportions of how one or more data elements relate to another data element?",
+    "options": ["XY Chart", "Pie Chart", "Line Chart", "Column Chart"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Pie Chart' છે."
+  },
+  {
+    "id": 155,
+    "question": "What is the full form of CSV ?",
+    "options": ["Compact Serial Value", "Control Space Value", "Comma Separated Values", "Comma Standard Values"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Comma Separated Values' છે."
+  },
+  {
+    "id": 156,
+    "question": "Identify the file type.",
+    "options": ["Dataframe", "MySQL", "CSV", "Excel"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'CSV' છે."
+  },
+  {
+    "id": 157,
+    "question": "Which box is present in Pivot Table fields list?",
+    "options": ["Column Labels", "View", "Layout", "Formulas"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Column Labels' છે."
+  },
+  {
+    "id": 158,
+    "question": "Which excel analysis tool is best for solving problem with one variable ?",
+    "options": ["Goal Seek", "Scenario", "Trendline", "Solver"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Goal Seek' છે."
+  },
+  {
+    "id": 159,
+    "question": "Which view in excel displays the pages exactly as they appear while printing ?",
+    "options": ["Custom View", "Full screen View", "Page Break View", "Page Layout view"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Page Layout view' છે."
+  },
+  {
+    "id": 160,
+    "question": "Which item contains text graphics, charts, sound, video, etc., in PowerPoint?",
+    "options": ["Slides", "Folder", "Handout", "Desktop screen"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Slides' છે."
+  },
+  {
+    "id": 161,
+    "question": "Which button is used to add instant animation to the presentation?",
+    "options": ["Add button", "Start button", "Insert button", "Action button"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Action button' છે."
+  },
+  {
+    "id": 162,
+    "question": "Which type of software is PowerPoint?",
+    "options": ["Word Processor", "Spread Sheet", "Presentation Graphics", "Database Management"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Presentation Graphics' છે."
+  },
+  {
+    "id": 163,
+    "question": "Which tool allows the user to select different layout for slide?",
+    "options": ["Apply design", "Bullets", "New slide", "Slide Layout"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Slide Layout' છે."
+  },
+  {
+    "id": 164,
+    "question": "Which key stops a PowerPoint presentation?",
+    "options": ["ESC", "Tab", "Ctrl", "Enter"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'ESC' છે."
+  },
+  {
+    "id": 165,
+    "question": "How many panes are there in backstage view of PowerPoint 2010?",
+    "options": ["3", "5", "7", "9"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ '3' છે."
+  },
+  {
+    "id": 166,
+    "question": "Which menu applies various effects to the text in a slide? 2.0 0.00",
+    "options": ["Animation", "Design", "Transitions", "Slide show"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Animation' છે."
+  },
+  {
+    "id": 167,
+    "question": "Which dialog box changes slides automatically for a particular period of time in PowerPoint?",
+    "options": ["Action setting", "Slide transition", "Slide animation", "Custom animation"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Slide transition' છે."
+  },
+  {
+    "id": 168,
+    "question": "Which option creates a presentation automatically in PowerPoint?",
+    "options": ["Template", "Blank Presentation", "Auto content wizard", "Standard test bar"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Auto content wizard' છે."
+  },
+  {
+    "id": 169,
+    "question": "Which option offers a built in design through a dialog box?",
+    "options": ["Auto content wizard", "Blank Presentation", "Standard tool bar", "Template"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Template' છે."
+  },
+  {
+    "id": 170,
+    "question": "Which function key runs a PowerPoint presentation?",
+    "options": ["F3", "F5", "F7", "F9"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'F5' છે."
+  },
+  {
+    "id": 171,
+    "question": "What is the file extension of Microsoft PowerPoint?",
+    "options": [".txt", ".pptx", ".docx", ".xslx"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ '.pptx' છે."
+  },
+  {
+    "id": 172,
+    "question": "Which PowerPoint tab has themes?",
+    "options": ["Transition Tab", "Design Tab", "Insert Tab", "Animation Tab"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Design Tab' છે."
+  },
+  {
+    "id": 173,
+    "question": "Which is a default page setup orientation of the PowerPoint slides?",
+    "options": ["Landscape", "Portrait", "Vertical", "Horizontal"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Landscape' છે."
+  },
+  {
+    "id": 174,
+    "question": "Which shortcut key is use to print slides in MS PowerPoint?",
+    "options": ["Ctrl + O", "Ctrl + P", "Ctrl + Alt +O", "Ctrl + Alt +P"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Ctrl + P' છે."
+  },
+  {
+    "id": 175,
+    "question": "Which option prints four slides in a single page?",
+    "options": ["Handouts", "Print Layout", "Customer Range", "Print All Slides"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Handouts' છે."
+  },
+  {
+    "id": 176,
+    "question": "What are the dotted areas in an empty slide of MS PowerPoint ?",
+    "options": ["Template", "Placard", "Placeholders", "Themes"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Placeholders' છે."
+  },
+  {
+    "id": 177,
+    "question": "Which phase designs and characterize the data needs of the database users?",
+    "options": ["Initial phase", "Execution phase", "Maintenance phase", "Closure phase"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Initial phase' છે."
+  },
+  {
+    "id": 178,
+    "question": "What is full form of DDL?",
+    "options": ["Data Describe Language", "Definition Data Language", "Data Definition Language", "Data Distinct Language"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Data Definition Language' છે."
+  },
+  {
+    "id": 179,
+    "question": "What is full form of DML?",
+    "options": ["Data Multiplication Language", "Data Manipulation Language", "Data Modify Language", "Data Mapping Language"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Data Manipulation Language' છે."
+  },
+  {
+    "id": 180,
+    "question": "Why query should be executed sucessfully on a existing view?",
+    "options": ["The specified table contains data", "We should have a SELECT privilege only on the specified table", "The specified table must be in the same database", "SELECT privilege on the view"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'SELECT privilege on the view' છે."
+  },
+  {
+    "id": 181,
+    "question": "Which is the best way to represent the attributes in a large database?",
+    "options": ["Relational", "Concatenation", "Dot representation", "Customization"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Concatenation' છે."
+  },
+  {
+    "id": 182,
+    "question": "Which query calculates a sum, average and then groups the result by two sets of values?",
+    "options": ["Cross-tab", "Snapshot", "Both cross-tabs and Snapshot", "Across-tabs"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Cross-tab' છે."
+  },
+  {
+    "id": 183,
+    "question": "Which is a type of database?",
+    "options": ["Transition", "Relational", "Outlook", "Decentralized"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Relational' છે."
+  },
+  {
+    "id": 184,
+    "question": "Which of the following is TRUE about DDL command?",
+    "options": ["Controls of the database system.", "Inserting , modifying,deleting and viewing the records.", "Creation, deletion, and alteration", "Retrive data from the database"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Creation, deletion, and alteration' છે."
+  },
+  {
+    "id": 185,
+    "question": "What does the following statement in SQL do? DROP TABLE student;",
+    "options": ["Deletes a table called student", "Creates a table called student", "Check if there is a table called student", "Deletes only the records in a table called student"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Deletes a table called student' છે."
+  },
+  {
+    "id": 186,
+    "question": "What does the following code snippet do?",
+    "options": ["Invalid Syntax", "Delete the column ADDRESS from the table", "Adds a column ADDRESS in the table", "Adds records in a column ADDRESS in the table"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Adds a column ADDRESS in the table' છે."
+  },
+  {
+    "id": 187,
+    "question": "Which are TCL commands?",
+    "options": ["COMMIT and ROLLBACK", "UPDATE and TRUNCATE", "SELECT and INSERT", "GRANT and REVOKE"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'COMMIT and ROLLBACK' છે."
+  },
+  {
+    "id": 188,
+    "question": "Which collection of operations form a single logical unit of work?",
+    "options": ["Views", "Networks", "Units", "Transactions"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Transactions' છે."
+  },
+  {
+    "id": 189,
+    "question": "Which database aspect preserves execution of translation in isolation?",
+    "options": ["Atomicity", "Consistency", "Durability", "Integrity"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Consistency' છે."
+  },
+  {
+    "id": 190,
+    "question": "Which scheme controls the interaction between executing transaction ?",
+    "options": ["Concurrency control scheme", "Multiprogramming scheme", "Serialization scheme", "Schedule scheme"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Concurrency control scheme' છે."
+  },
+  {
+    "id": 191,
+    "question": "Which is the logical design of the database?",
+    "options": ["Instance", "Relation", "Domain", "Schema"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Schema' છે."
+  },
+  {
+    "id": 192,
+    "question": "Which unit is considered if the domain of the element is atomic?",
+    "options": ["Different units", "Indivisible units", "Constant units", "Divisible units"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Indivisible units' છે."
+  },
+  {
+    "id": 193,
+    "question": "What is the order for the tupples of the relations?",
+    "options": ["Any", "Same", "Sorted", "Constant"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Any' છે."
+  },
+  {
+    "id": 194,
+    "question": "What does the term "attribute" refers to in a table?",
+    "options": ["Record", "Column", "Tuple", "Key"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Column' છે."
+  },
+  {
+    "id": 195,
+    "question": "What is the error in the below statement ?",
+    "options": ["Return type missing", "Dept_name is mismatched", "Reference relation is not mentioned", "Error in the formation of the function name"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Return type missing' છે."
+  },
+  {
+    "id": 196,
+    "question": "Which has the highest precedence in the expression?",
+    "options": ["Division", "Subtraction", "Power", "Parentheses"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Parentheses' છે."
+  },
+  {
+    "id": 197,
+    "question": "Which is the correct operator for power(ab)?",
+    "options": ["a ^ b", "a ** b", "a ^ ^ b", "a ^ * b"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'a ** b' છે."
+  },
+  {
+    "id": 198,
+    "question": "Which is a valid Python if statement?",
+    "options": ["if a > = 2 :", "if (a > = 2)", "if (a = > 22)", "if a > = 22"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'if a > = 2 :' છે."
+  },
+  {
+    "id": 199,
+    "question": "Which is used as loop in Python?",
+    "options": ["for loop", "if else", "do-while loop", "loop"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'for loop' છે."
+  },
+  {
+    "id": 200,
+    "question": "Which function accepts input from the user?",
+    "options": ["raw_input( )", "rawinput( )", "input( )", "string( )"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'input( )' છે."
+  },
+  {
+    "id": 201,
+    "question": "Which one of the following is a good office etiquette?",
+    "options": ["One should dress formally", "One should not be punctual to work", "One should have fancy mobile ring tone", "One should litter one’s work place"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'One should dress formally' છે."
+  },
+  {
+    "id": 202,
+    "question": "Word that is pronounced the same as another word but differs in meaning is called __________",
+    "options": ["homophone", "homograph", "diphthong", "syllable"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'homophone' છે."
+  },
+  {
+    "id": 203,
+    "question": "_______ can help me learn English.",
+    "options": ["dedication", "fear", "anger", "shyness"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'dedication' છે."
+  },
+  {
+    "id": 204,
+    "question": "Which punctuation mark should be used in the following sentence?",
+    "options": ["? (question mark)", ", (comma)", ". (full stop)", "! (exclamation)"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ '? (question mark)' છે."
+  },
+  {
+    "id": 205,
+    "question": "When is capital letter used?",
+    "options": ["Beginning of a sentence", "Names of persons", "Names of places", "All the above"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'All the above' છે."
+  },
+  {
+    "id": 206,
+    "question": "Which one of the following is a describing word?",
+    "options": ["eat", "repair", "hot", "soup"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'hot' છે."
+  },
+  {
+    "id": 207,
+    "question": "When someone says 'Thank you' we should reply and say ______.",
+    "options": ["Thank you.", "You're welcome.", "Bye-bye", "How are you?"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'You're welcome.' છે."
+  },
+  {
+    "id": 208,
+    "question": "Choose the odd word.",
+    "options": ["please", "sorry", "paper", "thanks"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'paper' છે."
+  },
+  {
+    "id": 209,
+    "question": "I am a welder. I work with ______",
+    "options": ["nail polish", "robots", "welding tools", "laptops"],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'welding tools' છે."
+  },
+  {
+    "id": 210,
+    "question": "Today's weather is going to be ____________.",
+    "options": ["Hopeful", "Warm", "Blue", "Urgent"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Warm' છે."
+  },
+  {
+    "id": 211,
+    "question": "The word 'when' denotes __________",
+    "options": ["place", "thing", "person", "time"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'time' છે."
+  },
+  {
+    "id": 212,
+    "question": "Rahul enjoys ____________ with his pet dog.",
+    "options": ["playing", "writing", "doing", "washing"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'playing' છે."
+  },
+  {
+    "id": 213,
+    "question": "Having a clear idea of our personality including strengths, weaknesses, thoughts, beliefs, motivation, values etc is called",
+    "options": ["Belief", "Self Awareness", "Myth", "Threat"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Self Awareness' છે."
+  },
+  {
+    "id": 214,
+    "question": "___________ are the abilities and qualities you have as a person that helps you grow well in life and career.",
+    "options": ["Personal Strengths", "Personal weaknesses", "Opportunities", "Threats"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Personal Strengths' છે."
+  },
+  {
+    "id": 215,
+    "question": "__________ are the qualities that are considered negative, and need to be worked on.",
+    "options": ["Personal Strengths", "Personal weaknesses", "Opportunities", "Threats"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Personal weaknesses' છે."
+  },
+  {
+    "id": 216,
+    "question": "Which of the following is an example of personal weakness?",
+    "options": ["Confidence", "Being lazy", "Hard working", "Active"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Being lazy' છે."
+  },
+  {
+    "id": 217,
+    "question": "Goals are of 2 types ______",
+    "options": ["Good and bad goals", "Long-term and short-term goals", "Rich and poor goals", "Fixed-term and non-fixed term goals"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'Long-term and short-term goals' છે."
+  },
+  {
+    "id": 218,
+    "question": "What is stress?",
+    "options": ["Feeling of joy", "Feeling of surprise", "Feeling of delight", "Feeling of frustration / disappointment"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Feeling of frustration / disappointment' છે."
+  },
+  {
+    "id": 219,
+    "question": "Which of these is a sign of good stress?",
+    "options": ["It prevents you from pursuing your goals.", "It makes you doubt yourself.", "Does not lead to long-term tension, loss of sleep.", "Makes you physically ill or causes pain."],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'Does not lead to long-term tension, loss of sleep.' છે."
+  },
+  {
+    "id": 220,
+    "question": "An activity that stops or reduces stress is called a stress buster. Which of the following according to you is not a stress buster?",
+    "options": ["Spending long hours thinking about the problem.", "Going to bed on time.", "Listening to music.", "Gardening"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Spending long hours thinking about the problem.' છે."
+  },
+  {
+    "id": 221,
+    "question": "What is mindfulness?",
+    "options": ["It is the technique of not minding anything.", "It is about sharpening your brain.", "It is the ability to be fully present in a moment.", "It is the word used to describe people who are full of thoughts."],
+    "correct": 2,
+    "explanation": "સાચો જવાબ 'It is the ability to be fully present in a moment.' છે."
+  },
+  {
+    "id": 222,
+    "question": "Which of the following is true about stress?",
+    "options": ["Stress can be managed", "Stress cannot be controlled", "Stress can not be decreased", "All of the above"],
+    "correct": 0,
+    "explanation": "સાચો જવાબ 'Stress can be managed' છે."
+  },
+  {
+    "id": 223,
+    "question": "Which of the following statements is true?",
+    "options": ["Only experts can solve any problem", "The more problems you solve, the better you will get at problem solving!", "We need to pursue a course to even solve a simple problem", "It is not important to solve any problem"],
+    "correct": 1,
+    "explanation": "સાચો જવાબ 'The more problems you solve, the better you will get at problem solving!' છે."
+  },
+  {
+    "id": 224,
+    "question": "Which of these should be considered while making decisions?",
+    "options": ["Your mood", "The choices of your friends", "The rules of your community", "Your personal priorities."],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Your personal priorities.' છે."
+  },
+  {
+    "id": 225,
+    "question": "Which of these is the full form of SWOT?",
+    "options": ["Special Wellness Organization Theme", "Speak Work Openly Together", "Strong World Olympic Team", "Strength Weakness Opportunity Threat"],
+    "correct": 3,
+    "explanation": "સાચો જવાબ 'Strength Weakness Opportunity Threat' છે."
+  }
+]

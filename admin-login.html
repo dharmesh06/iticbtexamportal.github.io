@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login - CBT Exam Portal</title>
+<link rel="stylesheet" href="styles/main.css">
+<style>
+  .admin-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: var(--danger);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+<body class="form-page" style="background: linear-gradient(135deg, #1e293b, #0f172a);">
+<nav class="navbar" style="background: rgba(15, 23, 42, 0.9); border-bottom: 1px solid #334155;">
+  <a href="index.html" class="navbar-brand">
+    <div class="logo-icon">🎓</div>
+    <div><div class="brand-name" style="color:#fff;">CBT Exam Portal</div><div class="brand-sub" style="color:#94a3b8;">Admin Portal</div></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" style="color:#cbd5e1;">Return to Site</a></li>
+  </ul>
+</nav>
+
+<div class="form-wrapper">
+  <div class="form-card" style="position: relative;">
+    <div class="admin-badge">ADMIN</div>
+    <div class="form-logo"><span style="font-size:2.5rem;">🛡️</span></div>
+    <h2>Admin Portal</h2>
+    <p class="form-subtitle">Login to manage question banks and modules</p>
+    <div id="alertBox"></div>
+
+    <form id="adminLoginForm" novalidate>
+      <div class="form-group">
+        <label>Admin ID / Email <span class="req">*</span></label>
+        <input type="text" id="adminId" placeholder="Enter admin email (e.g. admin)">
+      </div>
+      <div class="form-group">
+        <label>Password <span class="req">*</span></label>
+        <div style="position:relative;">
+          <input type="password" id="adminPass" placeholder="Enter password (e.g. admin)" style="padding-right:3rem;">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full" style="background: var(--danger); border-color: var(--danger);">🛡️ Secure Login</button>
+    </form>
+  </div>
+</div>
+
+<script>
+// Check if already logged in as admin
+if (localStorage.getItem('cbt_admin_logged_in') === 'true') window.location.href = 'admin-dashboard.html';
+
+document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const id = document.getElementById('adminId').value.trim();
+  const pass = document.getElementById('adminPass').value;
+  
+  if (!id || !pass) {
+    document.getElementById('alertBox').innerHTML = '<div class="alert alert-danger" style="background:#fee2e2;color:#991b1b;border:none;">⚠️ Please enter both ID and Password</div>';
+    return;
+  }
+
+  // Hardcoded Admin Auth for Demo purposes
+  if ((id === 'admin' || id === 'admin@cbtexamportal.in') && pass === 'admin') {
+    localStorage.setItem('cbt_admin_logged_in', 'true');
+    document.getElementById('alertBox').innerHTML = '<div class="alert alert-success">✅ Login successful! Redirecting to secure portal...</div>';
+    setTimeout(() => window.location.href='admin-dashboard.html', 1000);
+  } else {
+    document.getElementById('alertBox').innerHTML = '<div class="alert alert-danger" style="background:#fee2e2;color:#991b1b;border:none;">❌ Invalid Admin credentials. Try admin/admin</div>';
+  }
+});
+</script>
+</body>
+</html>

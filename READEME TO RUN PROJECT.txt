@@ -1,0 +1,17 @@
+Step 1: Start your application or web server
+
+	Method-1: (if Node.js already Installed)
+	open Command Prompt
+	cd [path Of Your Project Folder]
+	Type this command--> http-server -p 8080
+	Now Double Click on index.html (Your Webpage live)
+	
+	Method-2:(if Python is already installed)
+	Type this command-->python -m http.server 8080
+
+	Method-3:(if Docker is already installed)
+	Type this command-->docker run -p 8080:80 my-image
+
+	
+
+	

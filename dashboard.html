@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - CBT Exam Portal</title>
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <div class="logo-icon">🎓</div>
+    <div><div class="brand-name">CBT Exam Portal</div><div class="brand-sub">NCVT Practice Tests</div></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="#" onclick="logout()">Logout</a></li>
+  </ul>
+</nav>
+
+<div class="dashboard-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-user">
+      <div class="sidebar-avatar" id="sidebarAvatar">A</div>
+      <h4 id="sidebarName">Loading...</h4>
+      <p id="sidebarTrade">Trade</p>
+    </div>
+    <ul class="sidebar-nav">
+      <li><a href="dashboard.html" class="active"><span class="nav-icon">🏠</span> Dashboard</a></li>
+      <li><a href="#" onclick="showSection('exams')"><span class="nav-icon">📝</span> Available Exams</a></li>
+      <li><a href="#" onclick="showSection('history')"><span class="nav-icon">📊</span> Test History</a></li>
+      <li><a href="#" onclick="showSection('profile')"><span class="nav-icon">👤</span> My Profile</a></li>
+      <li><a href="#" onclick="logout()"><span class="nav-icon">🚪</span> Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- DASHBOARD SECTION -->
+    <div id="sec-dashboard">
+      <div class="page-title" id="welcomeText">Welcome back!</div>
+      <div class="page-sub">Continue your exam preparation</div>
+      <div class="dashboard-cards">
+        <div class="dash-card">
+          <div class="dash-card-icon" style="background:#dbeafe;">📝</div>
+          <div><h3 id="testsTaken">0</h3><p>Tests Taken</p></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-icon" style="background:#dcfce7;">🏆</div>
+          <div><h3 id="bestScore">--</h3><p>Best Score</p></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-icon" style="background:#fef3c7;">⚡</div>
+          <div><h3 id="avgScore">--</h3><p>Avg Score</p></div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-icon" style="background:#fce7f3;">📅</div>
+          <div><h3 id="daysActive">1</h3><p>Days Active</p></div>
+        </div>
+      </div>
+
+      <h3 style="font-weight:700;color:var(--primary);margin-bottom:1.25rem;">Recommended Exams</h3>
+      <div class="exams-grid" id="examsGrid"></div>
+    </div>
+
+    <!-- EXAMS SECTION -->
+    <div id="sec-exams" class="hidden">
+      <div class="page-title">Available Exams</div>
+      <div class="page-sub">Choose an exam to start practicing</div>
+      <div class="exams-grid" id="allExamsGrid"></div>
+    </div>
+
+    <!-- HISTORY SECTION -->
+    <div id="sec-history" class="hidden">
+      <div class="page-title">Test History</div>
+      <div class="page-sub">Your previous exam attempts</div>
+      <div id="historyList"><div class="alert alert-info">No test history yet. Take your first exam!</div></div>
+    </div>
+
+    <!-- PROFILE SECTION -->
+    <div id="sec-profile" class="hidden">
+      <div class="page-title">My Profile</div>
+      <div class="page-sub">Your registered details</div>
+      <div class="form-card" style="max-width:500px;">
+        <div id="profileContent"></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- START EXAM MODAL -->
+<div class="modal-overlay" id="startExamModal">
+  <div class="modal">
+    <div style="font-size:2.5rem;margin-bottom:0.75rem;">🌐</div>
+    <h3>Select Exam Language</h3>
+    <p>Please choose your preferred language for the test:</p>
+    <div style="margin: 1.5rem 0; text-align: left;">
+      <select id="examLangSelect" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; outline: none; background: #fff;">
+        <option value="English">English</option>
+        <option value="Hindi">Hindi (हिंदी)</option>
+        <option value="Gujarati">Gujarati (ગુજરાતી)</option>
+      </select>
+    </div>
+    <div class="modal-buttons">
+      <button class="btn btn-secondary" onclick="document.getElementById('startExamModal').classList.remove('show')">Cancel</button>
+      <button class="btn btn-primary" onclick="confirmStartExam()">Start Test →</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script>
+let user = JSON.parse(localStorage.getItem('cbt_user') || 'null');
+if (!user || localStorage.getItem('cbt_logged_in') !== 'true') window.location.href = 'login.html';
+
+// Always sync the latest allowedModules from the master cbt_users[] list
+// so admin assignments take effect even if student was already logged in.
+(function syncUserFromMaster() {
+  const users = JSON.parse(localStorage.getItem('cbt_users') || '[]');
+  const master = users.find(u => u.email === user.email || u.mobile === user.mobile);
+  if (master) {
+    // Carry over any admin-updated fields (allowedModules, status) from master record
+    if (master.allowedModules !== undefined) user.allowedModules = master.allowedModules;
+    if (master.status !== undefined) user.status = master.status;
+    // If blocked, kick out
+    if (user.status === 'blocked') {
+      localStorage.removeItem('cbt_logged_in');
+      window.location.href = 'login.html';
+    }
+    // Persist the refreshed session
+    localStorage.setItem('cbt_user', JSON.stringify(user));
+  }
+})();
+
+function logout() {
+  localStorage.removeItem('cbt_logged_in');
+  window.location.href = 'index.html';
+}
+
+function showSection(sec) {
+  ['dashboard','exams','history','profile'].forEach(s => document.getElementById('sec-'+s).classList.add('hidden'));
+  document.getElementById('sec-'+sec).classList.remove('hidden');
+}
+
+// Load user info
+document.getElementById('sidebarName').textContent = user.name;
+document.getElementById('sidebarTrade').textContent = user.trade + ' | ' + user.scheme;
+document.getElementById('sidebarAvatar').textContent = user.name?.[0]?.toUpperCase() || 'U';
+document.getElementById('welcomeText').textContent = 'Welcome back, ' + user.name.split(' ')[0] + '!';
+document.getElementById('testsTaken').textContent = user.testsTaken || 0;
+
+const history = JSON.parse(localStorage.getItem('cbt_history') || '[]');
+const scores = history.map(h => h.percentage);
+if (scores.length) {
+  document.getElementById('bestScore').textContent = Math.max(...scores).toFixed(0) + '%';
+  document.getElementById('avgScore').textContent = (scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(0) + '%';
+}
+
+// Build exam cards
+const EXAM_CONFIGS_LIST = [
+  { id:'full-mock', title:'Full Mock Test', desc:'Complete 20-question timed exam simulating real CBT.', time:'25 Min', questions:20, type:'free', icon:'📝' },
+  { id:'quick-quiz', title:'Quick Quiz', desc:'10 questions, 15 minutes. Great for daily practice.', time:'15 Min', questions:10, type:'free', icon:'⚡' },
+  { id:'sectional', title:'Sectional Test', desc:'Focus on specific topics within your trade.', time:'20 Min', questions:15, type:'new', icon:'🎯' },
+  { id:'previous', title:'Previous Year Paper', desc:'Practice with actual previous year CBT questions.', time:'30 Min', questions:20, type:'paid', icon:'📚' },
+];
+
+const adminMods = JSON.parse(localStorage.getItem('cbt_admin_modules') || '[]');
+adminMods.forEach(m => {
+  if (m.id) {
+    EXAM_CONFIGS_LIST.push({
+      id: m.id,
+      title: m.name,
+      desc: `Admin uploaded module for ${m.trade} in ${m.lang}`,
+      time: '25 Min',
+      questions: 20,
+      type: 'new',
+      icon: '📄',
+      isCustom: true,
+      trade: m.trade,
+      lang: m.lang
+    });
+  }
+});
+
+let finalExamsList = EXAM_CONFIGS_LIST;
+if (user && user.allowedModules) {
+  finalExamsList = EXAM_CONFIGS_LIST.filter(exam => user.allowedModules.includes(exam.id));
+}
+
+function examCard(exam) {
+  return `<div class="exam-card" onclick="startExam('${exam.id}')">
+    <div class="exam-card-header">
+      <span style="font-size:2rem;">${exam.icon}</span>
+      <span class="exam-badge ${exam.type}">${exam.type.toUpperCase()}</span>
+    </div>
+    <h3>${exam.title}</h3>
+    <p>${exam.desc}</p>
+    <div class="exam-meta">
+      <span>⏱️ ${exam.time}</span>
+      <span>❓ ${exam.questions} Questions</span>
+      <span>📊 ${exam.id === 'full-mock' ? '20 Marks' : exam.questions + ' Marks'}</span>
+    </div>
+    <button class="btn btn-primary btn-full">Start Exam →</button>
+  </div>`;
+}
+
+if (finalExamsList.length === 0) {
+  document.getElementById('examsGrid').innerHTML = '<div class="alert alert-info" style="grid-column: 1/-1;">No test modules are assigned to your profile yet. Please contact the administrator.</div>';
+  document.getElementById('allExamsGrid').innerHTML = '<div class="alert alert-info" style="grid-column: 1/-1;">No test modules are assigned to your profile yet. Please contact the administrator.</div>';
+} else {
+  document.getElementById('examsGrid').innerHTML = finalExamsList.map(examCard).join('');
+  document.getElementById('allExamsGrid').innerHTML = finalExamsList.map(examCard).join('');
+}
+
+// History
+if (history.length){
+  document.getElementById('historyList').innerHTML = history.slice().reverse().map(h => `
+    <div class="review-item ${h.percentage >= 40 ? 'correct-ans':'wrong-ans'}" style="margin-bottom:0.75rem;">
+      <div class="review-item-header">
+        <span class="review-q-num">📅 ${new Date(h.date).toLocaleString()}</span>
+        <span class="review-status ${h.percentage >= 40 ? 'status-correct':'status-wrong'}">${h.percentage >= 40 ? 'PASS':'FAIL'}</span>
+      </div>
+      <div style="font-weight:600;">${h.trade} — ${h.examTitle}</div>
+      <div style="font-size:0.85rem;color:var(--text-muted);margin-top:4px;">Score: ${h.score}/${h.total} &nbsp;•&nbsp; ${h.percentage.toFixed(1)}% &nbsp;•&nbsp; Correct: ${h.correct} | Wrong: ${h.wrong} | Skipped: ${h.skipped}</div>
+    </div>`).join('');
+}
+
+// Profile
+document.getElementById('profileContent').innerHTML = `
+  <div style="display:flex;flex-direction:column;gap:0.75rem;">
+    ${[['👤 Name', user.name],['📞 Mobile', user.mobile],['✉️ Email', user.email],['⚧️ Gender', user.gender],['📋 Scheme', user.scheme],['🔧 Trade', user.trade],['🌐 Language', user.lang],['🏛️ State', user.state],['🏫 Institute', user.institute]].map(([k,v]) => `<div class="info-item"><span>${k}</span><span class="info-val">${v}</span></div>`).join('')}
+  </div>`;
+
+let pendingExamId = null;
+function startExam(examId) {
+  pendingExamId = examId;
+  const langSelect = document.getElementById('examLangSelect');
+  if (user && user.lang) {
+    langSelect.value = user.lang;
+  }
+  document.getElementById('startExamModal').classList.add('show');
+}
+
+function confirmStartExam() {
+  if (!pendingExamId) return;
+  const cfg = EXAM_CONFIGS_LIST.find(e => e.id === pendingExamId);
+  const selectedLang = document.getElementById('examLangSelect').value;
+  localStorage.setItem('cbt_current_exam', JSON.stringify({ examId: pendingExamId, ...cfg, trade: user.trade, lang: selectedLang }));
+  window.location.href = 'exam.html';
+}
+</script>
+</body>
+</html>
