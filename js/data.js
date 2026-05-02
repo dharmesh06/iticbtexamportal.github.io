@@ -3177,6 +3177,3 @@ const PORTAL_STATS = {
   totalTrades: 20,
   totalQuestions: 10000
 };
-
-
-
